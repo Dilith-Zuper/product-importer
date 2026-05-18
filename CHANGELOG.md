@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [v0.2.0] - 2026-05-18
+
 ### Added
 - QXO catalog support — new parallel `qxo_*` tables alongside `srs_*` in the same Supabase project.
   - `qxo-create-tables.sql` — DDL for `qxo_branches`, `qxo_products`, `qxo_variants`, `qxo_branch_sku` with indexes for branch-scoped queries.
