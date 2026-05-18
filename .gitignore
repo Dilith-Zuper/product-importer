@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Generated exports — all xlsx in this folder are outputs from scripts
+*.xlsx
+brandwise catalog/
+SRS Importer — Help Article.docx
+catalog-description.txt
+enrichment-changes-*.json
+
+# Large source data (regenerable from upstream)
+SRS catalog.json
+hackathon_data.json
+roofmedic_data.json
+
+# Customer data (sensitive — sourced from Supabase / customer accounts)
+us_east_zuper_service.*.csv
+us_west_zuper_service.*.csv
+
+# Third-party scratch / unrelated entries
+no-as-a-service-main/
+no-as-a-service-main.zip
+sumoquotetozuper
+random/
+
+# Claude Code local state
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
