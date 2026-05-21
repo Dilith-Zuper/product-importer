@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+- `abc_sync.py` — fetches ABC Supply product catalog via OAuth2 client-credentials API (316K+ items, 317 pages) and upserts into `abc_products` Supabase table. Reads Supabase credentials from `.env`, supports checkpoint/resume across runs, token auto-refresh every 25 min, exponential backoff on 429s.
+
 ## [v0.2.0] - 2026-05-18
 
 ### Added

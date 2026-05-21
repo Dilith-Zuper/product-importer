@@ -35,6 +35,9 @@ random/
 # Claude Code local state
 .claude/
 
+# Sync state
+abc_sync_checkpoint.json
+
 # Logs
 *.log
 npm-debug.log*

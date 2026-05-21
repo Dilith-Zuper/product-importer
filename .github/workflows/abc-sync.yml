@@ -1,0 +1,28 @@
+name: ABC Supply Sync
+
+on:
+  workflow_dispatch:  # manual trigger from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # 6-hour cap; full sync takes ~3 hrs
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run ABC sync
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ABC_CLIENT_ID: ${{ secrets.ABC_CLIENT_ID }}
+          ABC_CLIENT_SECRET: ${{ secrets.ABC_CLIENT_SECRET }}
+        run: python -u abc_sync.py
