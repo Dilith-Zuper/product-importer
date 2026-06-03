@@ -170,7 +170,7 @@ def main():
         backoff = 2
         while True:
             try:
-                supabase.table("abc_products").upsert(rows, on_conflict="item_number").execute()
+                supabase.table("abc_items").upsert(rows, on_conflict="item_number").execute()
                 break
             except (httpx.ReadError, httpx.ConnectError, httpx.RemoteProtocolError) as e:
                 log(f"[warn] Supabase connection error on page {page}: {e}. Waiting {backoff}s...")

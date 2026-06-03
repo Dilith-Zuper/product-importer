@@ -7,7 +7,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Added
-- `abc_sync.py` — fetches ABC Supply product catalog via OAuth2 client-credentials API (316K+ items, 317 pages) and upserts into `abc_products` Supabase table. Reads Supabase credentials from `.env`, supports checkpoint/resume across runs, token auto-refresh every 25 min, exponential backoff on 429s.
+- `abc_sync.py` — fetches ABC Supply product catalog via OAuth2 client-credentials API (316K+ items, 317 pages) and upserts into the ABC items table. Reads Supabase credentials from `.env`, supports checkpoint/resume across runs, token auto-refresh every 25 min, exponential backoff on 429s.
+- **ABC Supply enrichment pipeline (Phase 3-4)** — full parity with SRS/QXO so the Zuper importer wizard can treat ABC as a third catalog source.
+  - `abc-add-enrichment-columns.sql` — variant-level + product-level enrichment columns on the ABC items table (manufacturer_norm, product_category_norm, product_line, family_tier, accessory_tier, is_universal, is_big3_brand, suggested_price, is_restricted) + indexes.
+  - `enrich-abc-brand-norm.py` — normalizes ABC's 1,523 raw `supplier_name` values into ~100 canonical brands matching the SRS title-case convention (Gaf, Certainteed, Owens Corning, James Hardie, ...). Strips LLC/INC/CORP/-ROOFING/-SIDING suffixes; placeholders ("MUST ASSIGN A VALID SUPPLIER") → NULL. Sets `is_big3_brand`. Result: 18,666 Big 3 SKUs.
+  - `enrich-abc-category-norm.py` — maps ABC's 54 raw `category_name` values onto SRS-canonical names (SHINGLES, COMMERCIAL, UNDERLAYMENT, ...). "Steep Slope Roofing Accessories" (35K rows) is sub-classified by `product_type_name` keywords. Sets `is_universal`. Result: 70,996 universal accessory SKUs, 5,513 unmapped tail (categories outside roofing scope).
+  - `fix-abc-shingles-reclassify.py` — re-classifies misplaced SHINGLES rows (H&R, Starter, etc. that fell into the shingle bucket due to ambiguous category mapping).
+  - `enrich-abc-product-line-and-tier.py` — copies `brand_line_name` → `product_line`; classifies all 316K rows into family_tier good/better/best/addon via brand+line keyword rules (mirrors SRS) and category fallbacks. Result: 1,472 good / 253,059 better / 403 best / 61,446 addon.
+  - `enrich-abc-price-fallback.py` — applies SRS-derived (category, family_tier) median prices to ABC's `suggested_price` column. 87,564 ABC SKUs priced from SRS data.
+  - `enrich-abc-proposal-line-item.py` + `lib/abc_classifier.py` — maps each ABC item to one of the 41 fixed `proposal_line_items`. Direct category map for SRS-canonical names, name-keyword sub-classifiers (underlayment/flashing/vent/pipe/gutter/nail) ported from the QXO classifier. Generates `abc-unmapped-categories.json` coverage report. Result: 246,865 / 316,380 items mapped (78%); unmapped tail is TOOLS/SAFETY, OTHER, DECKING (correctly excluded).
+  - `enrich-abc-accessory-tier.py` — sub-classifies family_tier='better' families into good_accessory/better_accessory/best_accessory by price quartile within (product_category_norm, manufacturer_norm). Tiering at the family level (one tier per family_id), then applied to all items in that family. Result: 44,350 good / 189,422 better / 19,287 best (item-level).
+  - `find-abc-accessory-gaps.py` — queries `abc_items` directly (not the view, which times out under 316K-row GROUP BY) for each of 15 universal accessory slots and reports the cheapest candidate family_ids. Used to populate `zuper-importer/lib/abc-accessory-catalog.ts`.
+  - `abc-rename-and-views.sql` — renames raw `abc_products` to `abc_items`, then exposes Postgres views `abc_products` (grouped by family_id, one row per "product") + `abc_variants` (1:1 with items). Views align with the SRS/QXO `CatalogConfig` contract so the Zuper importer wizard reads ABC through the same code paths.
+
+### Changed
+- All ABC enrichment scripts (and `abc_sync.py`, `abc-add-enrichment-columns.sql`, `analyze_abc_deep.py`, `analyze_three_sources.py`, `verify_abc_*.py`) now target the `abc_items` table directly. The wizard-facing `abc_products` name is now a view.
 
 ## [v0.2.0] - 2026-05-18
 
