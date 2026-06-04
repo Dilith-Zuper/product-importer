@@ -61,6 +61,41 @@ CATEGORY_MAP = {
     "Doors":                                              "OTHER",
     "Other Products":                                     "OTHER",
     "Solar Products":                                     "OTHER",
+    # ── v2 additions: previously fell through to NULL → "Other" Zuper category ──
+    # Insulation (covers the CertaPRO/EcoTouch/AttiCat/PINK Next Gen products
+    # that surfaced as "Product Category is Mandatory" failures in v1)
+    "Batts, Rolls & Loose Fill Insulation":               "COMMERCIAL",
+    "All Other Insulation":                               "COMMERCIAL",
+    # Acoustic ceiling systems
+    "Standard Ceiling Panels":                            "COMMERCIAL",
+    "Ceiling Grid Systems":                               "COMMERCIAL",
+    "Specialty Ceiling Panels":                           "COMMERCIAL",
+    # Additional siding categories ABC carries
+    "Wood Siding, Soffit & Accessories":                  "SIDING",
+    "PVC Siding, Soffit & Accessories":                   "SIDING",
+    "Aluminum Cladding Systems":                          "SIDING",
+    "PVC Cladding Systems":                               "SIDING",
+    # Non-roofing categories — explicitly mapped to OTHER for coverage hygiene
+    # (functionally equivalent to leaving them NULL since validate route adds an
+    # OTHER Zuper category for non-SRS uploads anyway).
+    "Other Outdoor Living Products":                      "OTHER",
+    "Window & Door Accessories":                          "OTHER",
+    "Pool & Patio Extrusions":                            "OTHER",
+    "Porch Room Products":                                "OTHER",
+    "Motorized Applications":                             "OTHER",
+    "Metal Framing":                                      "OTHER",
+    "Pool and Patio Accessories":                         "OTHER",
+    "Pool and Patio Doors":                               "OTHER",
+    "Lattice":                                            "OTHER",
+    "Pool and Patio Roofing":                             "OTHER",
+    "Hurricane Protection":                               "OTHER",
+    "Screen & Spline":                                    "OTHER",
+    "Metal Framing Accessories":                          "OTHER",
+    "Large Opening Enclosure Systems":                    "OTHER",
+    "FRP Panels & Accessories":                           "OTHER",
+    "Wallboard Accessories":                              "OTHER",
+    "Decorative Colonial / Bahama Shutters":              "OTHER",
+    "Storm Panels":                                       "OTHER",
 }
 
 # Sub-classify "Steep Slope Roofing Accessories" by product_type_name (substring match, case-insensitive)
