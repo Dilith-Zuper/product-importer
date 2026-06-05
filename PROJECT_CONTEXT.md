@@ -680,7 +680,7 @@ Drip Edge, Starter, Hip & Ridge, Step Flashing, Ice & Water, Underlayment (felt 
 **GitHub:** `https://github.com/Dilith-Zuper/zuper-importer`  
 **Live URL:** Deployed on Vercel (auto-deploys from main branch)  
 **Stack:** Next.js 14 (App Router, TypeScript), Tailwind CSS, Zustand + persist middleware, Supabase JS client  
-**Last updated:** 2026-05-18 (v4 — Step 3/4 UX polish, category sanitization for Zuper, validate route chunked + hardened error reporting)
+**Last updated:** 2026-06-05 (v5 — ABC + QXO catalog sources live through the full wizard incl. Step 11 proposal templates; fixed ABC/QXO proposals dropping all non-service line items due to a product_id key-space mismatch; template names now source-suffixed. SRS details below predate ABC/QXO — treat §17 as multi-source where it says SRS.)
 
 ### What it does
 A 9-step wizard that imports the SRS Distribution product catalog into a Zuper customer account and creates Good/Better/Best CPQ proposal templates. Used by Zuper CSMs during customer onboarding.
@@ -754,6 +754,34 @@ product_id: String(srs_product_id)   // SRS ID stamped as external reference
 product_type: 'PARTS'
 formula: formulaUid                   // NOT formula_uid — common mistake
 ```
+
+**⚠️ ABC/QXO product_id key-space — the proposal-template gotcha (2026-06-05):**
+SRS `product_id` is numeric end-to-end, so it's keyed identically everywhere. ABC
+(`PFam_3359303`) and QXO (`product_key`) are **text** PKs, and the pipeline carries
+them in two different forms — this is the source of a class of "proposals only have
+services, no materials" bugs:
+- **Upload** (`app/api/upload/route.ts`) strips non-digits (`toNum`) → `3359303`.
+  That digit-only form is what gets stamped into Zuper's `product_id`, keyed into
+  `productIdMap` (`product_id → Zuper product_uid`), grouped for variants, and used
+  for idempotency. **Canonical key for the whole Zuper-facing flow = digit-only.**
+- **proposal-preview** (`app/api/proposal-preview/route.ts`) stamps each line item's
+  `product_id` straight from `cfg.cols.productPk` — i.e. the **raw text** PK
+  (`PFam_3359303`), NOT the digit-only form.
+- **create-proposals** (`app/api/create-proposals/route.ts`) bridges the two with
+  `resolveZuperProduct(rawId)`: tries the raw key first (SRS hits), then falls back
+  to the digit-stripped form (ABC/QXO hit). Without this, every material/gutter/
+  siding line item fails the `productIdMap` lookup and is silently skipped, leaving
+  only the Services section (services use a separate `serviceIdMap` keyed by
+  `service.id`). The route now also reports a per-brand skipped-item count in its SSE
+  `done` event instead of dropping silently. If you ever re-stamp ids in preview or
+  upload, keep these two ends in the same key-space or this regresses.
+
+**Template names carry a ` - <SOURCE>` suffix** (`Owens Corning Roofing Proposal - ABC`).
+Zuper rejects duplicate `template_name` per account, so the same brand imported from
+SRS and ABC into one account would otherwise collide. Suffix = `catalogSource.toUpperCase()`
+(SRS / ABC / QXO), set in `components/wizard/Step10Proposals.tsx`. Note: create-proposals
+is **not** idempotent on re-run — a second run with the same suffix collides with the
+first run's templates; delete the prior `… - <SOURCE>` templates in Zuper before re-running.
 
 **Option/variant mapping:**
 - `srs_variants.color_name` → Zuper `option_values[].option_value`
@@ -920,4 +948,4 @@ The vendor catalog step (Step 9 Vendor) creates an SRS Distribution vendor in Zu
 - Cleanup wizard — CSM tool to delete all products from a prior import in one click
 - `exclude_default` and `is_private_label` flags on `srs_products` — not yet populated, reserved for future rule engine
 
-*End of context file. Last updated: 2026-05-18 (v4 — Select-all brand toggle on Gutters/Siding, dual back-nav on Preview, SRS→Zuper category-name sanitizer that fixes slash-rejection 400s for specialty product lines, validate route product-id fetch chunked into 500-batch groups to avoid 25 KB URL crashes, validate catch block hardened with console.error and try-wrapped enqueue/close, ChecklistItem detail wraps on failure).*
+*End of context file. Last updated: 2026-06-05 (v5 — ABC/QXO proposal product_id key-space gotcha + `resolveZuperProduct` fallback documented in §17; source-suffixed template names; note that create-proposals isn't re-run idempotent. Prior v4 — Select-all brand toggle on Gutters/Siding, dual back-nav on Preview, SRS→Zuper category-name sanitizer for slash-rejection 400s, validate route product-id fetch chunked into 500-batch groups, validate catch block hardened, ChecklistItem detail wraps on failure).*
