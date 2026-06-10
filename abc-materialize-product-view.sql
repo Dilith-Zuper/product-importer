@@ -22,24 +22,30 @@
 DROP MATERIALIZED VIEW IF EXISTS abc_products;
 DROP VIEW IF EXISTS abc_products;
 
+-- Categorical columns use MODE() (most common value), not MIN(): families can
+-- contain stray items (e.g. one "Pneumatic Accessories" row inside the 30-item
+-- CertainTeed Landmark Pro family) and MIN() lets the stray's tier/category
+-- hijack the whole family ('addon' < 'good' alphabetically).
 CREATE MATERIALIZED VIEW abc_products AS
 SELECT
   family_id                                          AS product_id,
   MIN(family_name)                                   AS product_name,
-  MIN(product_category_norm)                         AS product_category,
-  MIN(manufacturer_norm)                             AS manufacturer_norm,
-  MIN(product_line)                                  AS product_line,
-  MIN(family_tier)                                   AS family_tier,
-  MIN(accessory_tier)                                AS accessory_tier,
-  MIN(proposal_line_item)                            AS proposal_line_item,
+  MODE() WITHIN GROUP (ORDER BY product_category_norm) AS product_category,
+  MODE() WITHIN GROUP (ORDER BY manufacturer_norm)   AS manufacturer_norm,
+  MODE() WITHIN GROUP (ORDER BY product_line)        AS product_line,
+  MODE() WITHIN GROUP (ORDER BY family_tier)         AS family_tier,
+  MODE() WITHIN GROUP (ORDER BY accessory_tier)      AS accessory_tier,
+  MODE() WITHIN GROUP (ORDER BY proposal_line_item)  AS proposal_line_item,
   BOOL_OR(is_universal)                              AS is_universal,
   BOOL_OR(is_big3_brand)                             AS is_big3_brand,
   AVG(suggested_price)::numeric(10,2)                AS suggested_price,
   MIN(item_description)                              AS product_description,
-  COALESCE(
-    JSONB_AGG(DISTINCT order_uom) FILTER (WHERE order_uom IS NOT NULL),
-    NULL
-  )                                                  AS product_uom,
+  -- Single dominant UOM, not a JSONB array: JSONB_AGG(DISTINCT) sorts
+  -- alphabetically so ["BD","SQ"] would make the wizard pick BD over the
+  -- costing UOM (SQ). MODE() returns the family's most common order_uom
+  -- (= the costing UOM picked by abc_sync.py), and toZuperUom() accepts
+  -- a plain string.
+  MODE() WITHIN GROUP (ORDER BY order_uom)           AS product_uom,
   MIN(variant_image_url)                             AS product_image_url,
   FALSE                                              AS exclude_default
 FROM abc_items

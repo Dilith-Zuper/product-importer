@@ -23,6 +23,11 @@ const conn = process.env.SUPABASE_DB_URL
 (async () => {
   const client = new Client({ connectionString: conn, ssl: { rejectUnauthorized: false } });
   await client.connect();
+  // The pooler session defaults to read-only on this project; it's not a
+  // replica (pg_is_in_recovery() = false), so flip it for this session.
+  await client.query('SET default_transaction_read_only = off');
+  // The refresh re-aggregates 316K rows (~2-3 min) — disable the statement timeout.
+  await client.query('SET statement_timeout = 0');
   console.log('Connected. Refreshing abc_products materialized view...');
   const t0 = Date.now();
   await client.query('REFRESH MATERIALIZED VIEW abc_products');
