@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Fixed
+- ABC UOM data was never captured — `abc_items.order_uom` / `uoms` were NULL for all 316K rows, so every ABC product uploaded to Zuper as "EA" (e.g. PFam_3273039 Tamko Elite Glass-Seal shingles, which ABC quotes per SQ/BD). `abc_sync.py` now extracts the API's `uoms` array and picks `order_uom` by role: costing (the UOM ABC quotes prices in) > stocking > first. `abc-materialize-product-view.sql` aggregates it back into `abc_products.product_uom` (was hardcoded NULL). Requires a full re-sync + matview recreate. Note: ABC `suggested_price` remains the SRS-median synthetic estimate, tied to no UOM — real per-UOM ABC pricing needs the ABC pricing API (not integrated).
+
 ### Added
 - `match-aa-to-qxo.js` — one-off matcher that maps A&A's 128 free-text Zuper parts (`a&a_product_import.xlsx`) onto the QXO catalog and writes `A&A_QXO_Match.xlsx`. Scores each part against all 76,812 `qxo_products` via token overlap + brand + dimension signals (reuses `lib/qxo-brand-norm.js`, `lib/html-entities.js`, `lib/utils.js` `fetchAll`), buckets confidence (exact/strong/weak/none), flags labor/freight rows as non-product, returns `variant_sku`/`manufacturer_number`/`product_number`, and annotates which of the 28 Washington branches stock each match via `qxo_branch_sku`. First run: 16 exact / 36 strong / 50 weak / 26 none, 8 non-product, 23 WA-stocked.
 - `abc_sync.py` — fetches ABC Supply product catalog via OAuth2 client-credentials API (316K+ items, 317 pages) and upserts into the ABC items table. Reads Supabase credentials from `.env`, supports checkpoint/resume across runs, token auto-refresh every 25 min, exponential backoff on 429s.

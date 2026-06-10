@@ -14,9 +14,9 @@
 
 
 -- ── STEP 1: Drop old view + create materialized view ────────────────────
--- product_uom is omitted here because JSONB_AGG(DISTINCT) over 316K rows is
--- the slowest aggregation and not worth the cost — UOMs are reconstructed in
--- the upload route from variant data when needed.
+-- product_uom aggregates the per-item order_uom (costing UOM picked by
+-- abc_sync.py). JSONB_AGG(DISTINCT) is the slowest aggregation here but only
+-- runs at REFRESH time, never on wizard queries.
 
 -- Drop both forms — the first attempt may have left a materialized view behind.
 DROP MATERIALIZED VIEW IF EXISTS abc_products;
@@ -36,7 +36,10 @@ SELECT
   BOOL_OR(is_big3_brand)                             AS is_big3_brand,
   AVG(suggested_price)::numeric(10,2)                AS suggested_price,
   MIN(item_description)                              AS product_description,
-  NULL::jsonb                                        AS product_uom,
+  COALESCE(
+    JSONB_AGG(DISTINCT order_uom) FILTER (WHERE order_uom IS NOT NULL),
+    NULL
+  )                                                  AS product_uom,
   MIN(variant_image_url)                             AS product_image_url,
   FALSE                                              AS exclude_default
 FROM abc_items

@@ -59,6 +59,17 @@ def should_refresh(token_fetched_at):
     return elapsed >= (TOKEN_REFRESH_MIN * 60)
 
 
+def pick_order_uom(uoms):
+    """Costing UOM (what ABC quotes prices in) wins; fallback stocking, then first."""
+    if not uoms:
+        return None
+    for role in ("costing", "stocking"):
+        for u in uoms:
+            if u.get("description") == role and u.get("code"):
+                return u["code"]
+    return uoms[0].get("code")
+
+
 def flatten_item(item):
     color  = item.get("color") or {}
     finish = item.get("finish") or {}
@@ -69,6 +80,7 @@ def flatten_item(item):
     mc     = pt.get("materialComposition") or {}
     warr   = mc.get("warranty") or {}
     brand  = warr.get("brandLine") or {}
+    uoms   = item.get("uoms") or []
 
     return {
         "item_number":           item.get("itemNumber"),
@@ -91,6 +103,8 @@ def flatten_item(item):
         "product_type_name":     pt.get("label"),
         "brand_line_code":       brand.get("code"),
         "brand_line_name":       brand.get("label"),
+        "order_uom":             pick_order_uom(uoms),
+        "uoms":                  uoms or None,
         "last_modified_date":    item.get("lastModifiedDate"),
         "updated_at":            datetime.now(timezone.utc).isoformat(),
     }
