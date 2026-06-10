@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Added
+- `match-aa-to-qxo.js` — one-off matcher that maps A&A's 128 free-text Zuper parts (`a&a_product_import.xlsx`) onto the QXO catalog and writes `A&A_QXO_Match.xlsx`. Scores each part against all 76,812 `qxo_products` via token overlap + brand + dimension signals (reuses `lib/qxo-brand-norm.js`, `lib/html-entities.js`, `lib/utils.js` `fetchAll`), buckets confidence (exact/strong/weak/none), flags labor/freight rows as non-product, returns `variant_sku`/`manufacturer_number`/`product_number`, and annotates which of the 28 Washington branches stock each match via `qxo_branch_sku`. First run: 16 exact / 36 strong / 50 weak / 26 none, 8 non-product, 23 WA-stocked.
 - `abc_sync.py` — fetches ABC Supply product catalog via OAuth2 client-credentials API (316K+ items, 317 pages) and upserts into the ABC items table. Reads Supabase credentials from `.env`, supports checkpoint/resume across runs, token auto-refresh every 25 min, exponential backoff on 429s.
 - **ABC Supply enrichment pipeline (Phase 3-4)** — full parity with SRS/QXO so the Zuper importer wizard can treat ABC as a third catalog source.
   - `abc-add-enrichment-columns.sql` — variant-level + product-level enrichment columns on the ABC items table (manufacturer_norm, product_category_norm, product_line, family_tier, accessory_tier, is_universal, is_big3_brand, suggested_price, is_restricted) + indexes.
