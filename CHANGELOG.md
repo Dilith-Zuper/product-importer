@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Fixed
+- ABC Big 3 tier rules brought to SRS parity in `enrich-abc-product-line-and-tier.py` (found in 2026-06-10 product review): CertainTeed Landmark PRO better→**good** and base Landmark good→**addon** (SRS canon: PRO is the current standard, base is the below-standard entry); OC base Duration better→**good** and Oakridge good→**addon**; GAF split "timberline hd" into HDZ→**good** / prior-gen HD→**addon** and Natural Shadow good→**addon**. Before this, ABC CertainTeed Good packages led with the wrong shingle vs the same brand on SRS. Requires re-running the script + matview refresh.
+
+### Added
+- `refresh-abc-products.js` — one-command `REFRESH MATERIALIZED VIEW abc_products` via pg (uses `SUPABASE_DB_URL` or builds the direct connection from `.env`). The wizard reads the matview, so every sync/enrichment run must end with this.
+- `ABC-RUNBOOK.md` — full ABC pipeline order, the matview-refresh rule, parallel-sync worker cap (≤2-3, gateway 502s beyond), and known v1 limitations.
+- `abc_sync_parallel.py` — thread-pool variant of abc_sync.py (2 workers ≈ 2× sequential; checkpoint stores the exact done-page set, seeds from the sequential checkpoint, 5xx/timeouts retry with capped backoff).
 - ABC UOM data was never captured — `abc_items.order_uom` / `uoms` were NULL for all 316K rows, so every ABC product uploaded to Zuper as "EA" (e.g. PFam_3273039 Tamko Elite Glass-Seal shingles, which ABC quotes per SQ/BD). `abc_sync.py` now extracts the API's `uoms` array and picks `order_uom` by role: costing (the UOM ABC quotes prices in) > stocking > first. `abc-materialize-product-view.sql` aggregates it back into `abc_products.product_uom` (was hardcoded NULL). Requires a full re-sync + matview recreate. Note: ABC `suggested_price` remains the SRS-median synthetic estimate, tied to no UOM — real per-UOM ABC pricing needs the ABC pricing API (not integrated).
 
 ### Added

@@ -35,10 +35,11 @@ DRY_RUN = "--dry-run" in sys.argv
 # ── Brand+line tier rules — match substring in brand_line_name (case-insensitive) ──
 # Format: (manufacturer_norm, line_substring, tier)
 BRAND_LINE_RULES = [
-    # ---- GAF ----
+    # ---- GAF ---- (mirrors SRS enrich-family-tier.js: HDZ is the current
+    # standard; prior-gen HD and Natural Shadow are addon. "timberline hdz"
+    # must precede "timberline hd" — first match wins.)
     # GOOD = current flagship entry product
-    ("Gaf", "timberline hd",          "good"),    # HDZ, HD
-    ("Gaf", "timberline natural",     "good"),    # Natural Shadow
+    ("Gaf", "timberline hdz",         "good"),    # current standard
     # BETTER = upgraded same family
     ("Gaf", "timberline uhdz",        "better"),
     ("Gaf", "timberline ultra",       "better"),
@@ -49,6 +50,8 @@ BRAND_LINE_RULES = [
     ("Gaf", "slateline",              "best"),
     ("Gaf", "woodland",               "best"),
     # ADDON = legacy, specialty, impact, solar
+    ("Gaf", "timberline natural",     "addon"),   # Natural Shadow — SRS: addon
+    ("Gaf", "timberline hd",          "addon"),   # prior gen (after hdz above)
     ("Gaf", "royal sovereign",        "addon"),   # 3-tab legacy
     ("Gaf", "armorshield",            "addon"),
     ("Gaf", "solar",                  "addon"),
@@ -56,10 +59,14 @@ BRAND_LINE_RULES = [
     ("Gaf", "truslate",               "addon"),   # synthetic slate
     ("Gaf", "country mansion",        "addon"),
 
-    # ---- CertainTeed ----
-    ("Certainteed", "landmark pro",          "better"),
+    # ---- CertainTeed ---- (mirrors SRS: Landmark PRO is the current
+    # standard = good; base Landmark is the entry product BELOW current
+    # standard = addon. Specific Landmark variants before the base rule.)
+    ("Certainteed", "landmark pro",          "good"),
     ("Certainteed", "landmark premium",      "better"),
-    ("Certainteed", "landmark",              "good"),   # base Landmark
+    ("Certainteed", "landmark ir",           "addon"),  # impact upgrade
+    ("Certainteed", "landmark tl",           "addon"),  # specialty thick laminate
+    ("Certainteed", "landmark",              "addon"),  # base entry — below current standard
     ("Certainteed", "belmont",               "better"),
     ("Certainteed", "presidential",          "best"),
     ("Certainteed", "grand manor",           "best"),
@@ -74,15 +81,16 @@ BRAND_LINE_RULES = [
     ("Certainteed", "solaris",               "addon"),
     ("Certainteed", "solstice",              "addon"),
 
-    # ---- Owens Corning ----
+    # ---- Owens Corning ---- (mirrors SRS: base Duration is the current
+    # standard = good; Oakridge is the economy entry = addon.)
     ("Owens Corning", "duration max",        "better"),
     ("Owens Corning", "duration premium",    "better"),
     ("Owens Corning", "duration designer",   "best"),
     ("Owens Corning", "duration flex",       "addon"),
     ("Owens Corning", "duration cool",       "addon"),
     ("Owens Corning", "duration storm",      "addon"),
-    ("Owens Corning", "duration",            "better"),   # base Duration line (after specific variants above)
-    ("Owens Corning", "oakridge",            "good"),
+    ("Owens Corning", "duration",            "good"),    # base Duration — current standard (after specific variants above)
+    ("Owens Corning", "oakridge",            "addon"),   # economy entry — SRS: addon
     ("Owens Corning", "woodcrest",           "best"),
     ("Owens Corning", "woodmoor",            "best"),
     ("Owens Corning", "berkshire",           "best"),
