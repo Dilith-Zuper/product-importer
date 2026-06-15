@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+- `srs-add-order-uom-column.sql` / `apply-srs-order-uom-column.js` / `enrich-order-uom.js` — new `srs_products.order_uom` column populated with the dominant `order_uom` (mode) across each product's unrestricted `srs_variants`, falling back to `product_uom[0]` for the 27 products with no variant UOM data. All 19,807 products populated.
+
 ### Fixed
+- SRS `product_uom[0]` (the value zuper-importer's `toZuperUom()` used as "the" Zuper UOM) is the raw source array's first element, which is frequently `PAL` (pallet — a near-universal secondary/bulk unit on almost every variant) rather than the actual order unit. Verified 11,236/19,807 products (57%) had `product_uom[0]` ≠ the dominant variant `order_uom`, and 7,533 (38%) would upload with the wrong Zuper UOM (e.g. `EA` instead of `PC`/`RL`/`BX`/`BDL`). Same class of bug fixed for ABC in `9c1e6a2`; fix is the new `order_uom` column above — zuper-importer now reads it.
 - ABC Big 3 tier rules brought to SRS parity in `enrich-abc-product-line-and-tier.py` (found in 2026-06-10 product review): CertainTeed Landmark PRO better→**good** and base Landmark good→**addon** (SRS canon: PRO is the current standard, base is the below-standard entry); OC base Duration better→**good** and Oakridge good→**addon**; GAF split "timberline hd" into HDZ→**good** / prior-gen HD→**addon** and Natural Shadow good→**addon**. Before this, ABC CertainTeed Good packages led with the wrong shingle vs the same brand on SRS. Requires re-running the script + matview refresh.
 
 ### Added
