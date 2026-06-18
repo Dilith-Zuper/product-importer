@@ -1,14 +1,27 @@
 /**
- * Reusable: backfill missing COLOR options on any Zuper account that was imported
- * from the SRS catalog. Products that have colors in SRS but were uploaded with an
+ * Reusable: backfill missing COLOR / SIZE options on any Zuper account that was
+ * imported from the SRS catalog. Products that vary in SRS but were uploaded with an
  * empty option block get their `option.option_values` repopulated via GET → PUT
  * (round-trips the whole product, changes ONLY `option`). This is the generalized
  * form of the High Impact Roofing remediation.
  *
- * Flags match the wizard builder by default: SHINGLES → customer_selection/mandate
- * = true; everything else → false (use --selection all to make every color product
- * customer-selectable). Colors come from srs_variants (deduped, N/A stripped, cap 50).
- * No SKUs here — those are the separate vendor catalog.
+ * Option axis is chosen per product from srs_variants (deduped, N/A stripped, cap 50):
+ *   - both color & size vary  → COMPOSITE values ("Black — 36\" x 144'"), built from
+ *                               the REAL variant combinations (not a cartesian product);
+ *                               option_label 'Variant'
+ *   - color present            → color values; option_label 'Color'
+ *   - only size varies (>1)    → size values;  option_label 'Size'
+ * Use --colors-only to reproduce the legacy color-only behavior.
+ *
+ * Zuper hard-caps option_values at 50. When a composite would exceed that, we fall back
+ * to the largest single axis that fits (loading it in full beats an arbitrary 50-combo
+ * slice); only if even that axis is >50 do we truncate. Every fallback/truncation is
+ * reported on screen and as a `note` in the results JSON.
+ *
+ * Selection flags by default: SHINGLES color → customer_selection/mandate = true;
+ * everything else (color, size, composite) → false, i.e. a non-mandatory tag
+ * (--selection all makes every product customer-selectable, non-mandatory).
+ * No SKUs here — those are the separate vendor catalog (keyed by color).
  *
  * Read-only against SRS (Supabase). Writes to Zuper only in --test-one / --run.
  *
@@ -26,6 +39,9 @@
  * Options:
  *   --label "Name"          output-file prefix (default: resolved company name)
  *   --selection wizard|all  customer_selection behavior (default: wizard)
+ *   --colors-only           legacy: load color options only, skip size/composite
+ *   --upgrade               also re-write products that already have options when the
+ *                           catalog now implies a different set (e.g. color → composite)
  *
  * Examples:
  *   node backfill-account-options.js --key XXX --region us-west-1c --label "High Impact" --test-one
@@ -58,7 +74,13 @@ const API_KEY = (typeof ARGS.key === 'string' && ARGS.key) || process.env.ZUPER_
 const MODE = ARGS.run ? 'run' : ARGS['test-one'] ? 'test-one' : ARGS['dry-run'] ? 'dry-run' : null;
 const LIMIT = typeof ARGS.limit !== 'undefined' ? Number(ARGS.limit) : Infinity;
 const SELECTION = ARGS.selection === 'all' ? 'all' : 'wizard';
+const COLORS_ONLY = !!ARGS['colors-only'];
+// --upgrade: also re-process products that ALREADY have an option block, replacing it
+// when the catalog now implies a different set (e.g. a color-only product that should
+// become composite once sizes are loaded). Off by default — default only fills empties.
+const UPGRADE = !!ARGS.upgrade;
 const CONCURRENCY = 6;
+const OPTION_CAP = 50;
 
 let H;   // set after we have the key
 
@@ -102,9 +124,63 @@ async function resolveListSegment(base) {
   return 'products';
 }
 
+// ── option axis selection ─────────────────────────────────────────────────────
+// Decide what to load for a product from its SRS variants. `pairs` is the list of
+// real (color, size) tuples in variant order (each side may be null when N/A). We
+// load whichever axis actually VARIES — a constant color (e.g. one "Bronze") on a
+// product whose real choice is its 5 sizes must not collapse to just ["Bronze"].
+// Returns { kind, option_label, values, note } or null when there's nothing selectable.
+//   - both axes vary (>1 each) → composite ("Color — Size") from REAL pairs (no cartesian)
+//   - only color varies        → color values
+//   - only size varies         → size values
+//   - neither varies, 1 color  → that single color (legacy behavior)
+//
+// Zuper hard-caps option_values at OPTION_CAP (50). When a composite exceeds that, we
+// fall back to the largest SINGLE axis that still fits (loading it in full beats an
+// arbitrary 50-combo slice); only if even that axis is >50 do we truncate. `note` is
+// set whenever we fell back or truncated, so callers can surface it.
+// --colors-only collapses size/composite out, leaving only the color paths.
+function buildOptionValues(colors, sizes, pairs) {
+  const cap = (arr) => arr.slice(0, OPTION_CAP);
+  const cVary = colors.size > 1, sVary = sizes.size > 1;
+  const colorVals = [...colors], sizeVals = [...sizes];
+
+  if (!COLORS_ONLY && cVary && sVary) {
+    const seen = new Set(), combos = [];
+    for (const [c, s] of pairs) {
+      const label = [c, s].filter(realOpt).map(x => x.trim()).join(' — ');
+      if (!label || seen.has(label)) continue;
+      seen.add(label); combos.push(label);
+    }
+    if (combos.length) {
+      if (combos.length <= OPTION_CAP) return { kind: 'composite', option_label: 'Variant', values: combos, note: '' };
+      // Overflow — pick the largest single axis that fits; else the largest, capped.
+      const axes = [
+        { kind: 'color', option_label: 'Color', vals: colorVals },
+        { kind: 'size',  option_label: 'Size',  vals: sizeVals },
+      ].sort((a, b) => b.vals.length - a.vals.length);
+      const pick = axes.find(a => a.vals.length <= OPTION_CAP) || axes[0];
+      const truncated = pick.vals.length > OPTION_CAP;
+      const note = `composite ${combos.length} combos > ${OPTION_CAP} cap → fell back to ${pick.kind} axis (${Math.min(pick.vals.length, OPTION_CAP)}${truncated ? ` of ${pick.vals.length}, still truncated` : ' — full'})`;
+      return { kind: pick.kind, option_label: pick.option_label, values: cap(pick.vals), note };
+    }
+  }
+  if (cVary) return { kind: 'color', option_label: 'Color', values: cap(colorVals), note: capNote('color', colorVals.length) };
+  if (!COLORS_ONLY && sVary) return { kind: 'size', option_label: 'Size', values: cap(sizeVals), note: capNote('size', sizeVals.length) };
+  if (colors.size >= 1) return { kind: 'color', option_label: 'Color', values: cap(colorVals), note: capNote('color', colorVals.length) };
+  return null;
+}
+
+function capNote(kind, n) {
+  return n > OPTION_CAP ? `${kind} ${n} > ${OPTION_CAP} cap → truncated to ${OPTION_CAP}` : '';
+}
+
 // ── payload (GET → PUT, replace only `option`) ────────────────────────────────
-function buildPutPayload(g, colors, isShingles) {
-  const sel = SELECTION === 'all' ? { cs: true, mc: false } : { cs: isShingles, mc: isShingles };
+function buildPutPayload(g, opt, isShingles) {
+  // SHINGLES color stays a mandatory customer choice; size/composite/other color are
+  // non-mandatory tags. --selection all makes everything customer-selectable (non-mandatory).
+  const mandatory = isShingles && opt.kind === 'color';
+  const sel = SELECTION === 'all' ? { cs: true, mc: false } : { cs: mandatory, mc: mandatory };
   const metaData = (g.meta_data || []).map((m, i) => ({
     hide_field: !!m.hide_field, hide_to_fe: !!m.hide_to_fe, id: i, label: m.label,
     read_only: false, type: m.type, dependent_on: '', dependent_options: [],
@@ -127,8 +203,8 @@ function buildPutPayload(g, colors, isShingles) {
     tax: { tax_exempt: g.tax?.tax_exempt ?? false, tax_name: '', tax_rate: '' },
     markup: g.markup ?? null, product_files: g.product_files ?? [],
     option: {
-      customer_selection: sel.cs, mandate_customer_selection: sel.mc, option_label: 'Color',
-      option_values: colors.map(c => ({ option_value: c, option_image: '', is_available: true })),
+      customer_selection: sel.cs, mandate_customer_selection: sel.mc, option_label: opt.option_label,
+      option_values: opt.values.map(v => ({ option_value: v, option_image: '', is_available: true })),
     },
   };
   if (g.formula?.formula_uid) product.formula = g.formula.formula_uid;
@@ -151,40 +227,73 @@ async function loadMissing(base, listSegment) {
   console.log(`\nScanned ${prods.length} products.`);
   const candidates = prods
     .filter(p => p.product_type === 'PARTS' && /^\d+$/.test(String(p.product_id ?? '')))
-    .filter(p => !(Array.isArray(p.option?.option_values) && p.option.option_values.length > 0))
+    // Default: only products with an empty option block. --upgrade also considers
+    // already-optioned products (processOne then no-ops unless the set changed).
+    .filter(p => UPGRADE || !(Array.isArray(p.option?.option_values) && p.option.option_values.length > 0))
     .map(p => ({ uid: p.product_uid, pid: Number(p.product_id), name: p.product_name }));
 
   const ids = candidates.map(c => c.pid);
-  const colorsByPid = new Map();
+  // Per-pid: distinct colors, distinct sizes, and real (color,size) pairs in variant
+  // order (the pairing is what composite needs — a cartesian product would invent
+  // combos that don't exist in the catalog).
+  const optsByPid = new Map();
+  const ensure = (pid) => {
+    let e = optsByPid.get(pid);
+    if (!e) { e = { colors: new Set(), sizes: new Set(), pairs: [] }; optsByPid.set(pid, e); }
+    return e;
+  };
   for (let i = 0; i < ids.length; i += 300) {
     const chunk = ids.slice(i, i + 300);
-    const v = await fetchAll(supabase, 'srs_variants', 'product_id,color_name,is_restricted',
+    const v = await fetchAll(supabase, 'srs_variants', 'product_id,color_name,size_name,is_restricted',
       { filters: [{ op: 'in', args: ['product_id', chunk] }, { op: 'eq', args: ['is_restricted', false] }], orderBy: 'variant_id' });
     for (const r of v) {
-      if (!realOpt(r.color_name)) continue;
-      const set = colorsByPid.get(r.product_id) || new Set();
-      set.add(r.color_name.trim());
-      colorsByPid.set(r.product_id, set);
+      const c = realOpt(r.color_name) ? r.color_name.trim() : null;
+      const s = realOpt(r.size_name) ? r.size_name.trim() : null;
+      if (!c && !s) continue;
+      const e = ensure(r.product_id);
+      if (c) e.colors.add(c);
+      if (s) e.sizes.add(s);
+      e.pairs.push([c, s]);
     }
   }
-  const missing = candidates.filter(c => (colorsByPid.get(c.pid)?.size ?? 0) > 0);
-  console.log(`Color-bearing SRS parts missing options in Zuper: ${missing.length}`);
-  return { missing, colorsByPid };
+  // Keep a product only if it actually has something selectable to load. A lone
+  // single size is not an option (mirrors the audit's `sizes > 1` rule).
+  const missing = candidates.filter(c => {
+    const e = optsByPid.get(c.pid);
+    if (!e) return false;
+    return e.colors.size >= 1 || (!COLORS_ONLY && e.sizes.size > 1);
+  });
+  console.log(`SRS parts missing options in Zuper (color/size/composite): ${missing.length}`);
+  return { missing, optsByPid };
 }
 
-async function processOne({ uid, pid }, colorsByPid, base, { write }) {
+// Same set of option_value strings already live in Zuper? Then there's nothing to do.
+function sameValues(existingOptionValues, values) {
+  const cur = new Set((existingOptionValues || []).map(o => String(o.option_value)));
+  if (cur.size !== values.length) return false;
+  return values.every(v => cur.has(v));
+}
+
+async function processOne({ uid, pid }, optsByPid, base, { write }) {
   const { json } = await getJson(`${base}product/${uid}`);
   const g = Array.isArray(json?.data) ? json.data[0] : json?.data;
   if (!g) return { uid, pid, status: 'get_failed' };
-  if (Array.isArray(g.option?.option_values) && g.option.option_values.length > 0) return { uid, pid, status: 'already_has_options' };
-  const colors = [...(colorsByPid.get(pid) || [])].slice(0, 50);
-  if (colors.length === 0) return { uid, pid, status: 'no_srs_colors' };
+  const existing = Array.isArray(g.option?.option_values) ? g.option.option_values : [];
+  const hadOptions = existing.length > 0;
+  // Without --upgrade we never touch a product that already has options.
+  if (hadOptions && !UPGRADE) return { uid, pid, status: 'already_has_options' };
+  const e = optsByPid.get(pid);
+  const opt = e ? buildOptionValues(e.colors, e.sizes, e.pairs) : null;
+  if (!opt) return { uid, pid, status: 'no_srs_options' };
+  // --upgrade: skip when the live option set already matches what we'd write.
+  if (hadOptions && sameValues(existing, opt.values)) return { uid, pid, status: 'already_ok', kind: opt.kind, count: opt.values.length };
   const isShingles = (g.product_category?.category_name || '').toUpperCase() === 'SHINGLES';
-  const payload = buildPutPayload(g, colors, isShingles);
-  if (!write) return { uid, pid, status: 'dry_run', colors: colors.length, isShingles, payload, before: g };
+  const payload = buildPutPayload(g, opt, isShingles);
+  const action = hadOptions ? 'upgraded' : 'updated';
+  if (!write) return { uid, pid, status: 'dry_run', action, kind: opt.kind, count: opt.values.length, note: opt.note, isShingles, payload, before: g };
   const res = await getJson(`${base}product/${uid}`, { method: 'PUT', body: JSON.stringify(payload) });
   const ok = res.ok && (res.json?.type === 'success' || res.json?.data);
-  return { uid, pid, status: ok ? 'updated' : 'put_failed', colors: colors.length, message: ok ? '' : (res.json?.message ?? JSON.stringify(res.json)) };
+  return { uid, pid, status: ok ? action : 'put_failed', kind: opt.kind, count: opt.values.length, note: opt.note, message: ok ? '' : (res.json?.message ?? JSON.stringify(res.json)) };
 }
 
 // ── main ──────────────────────────────────────────────────────────────────────
@@ -199,11 +308,11 @@ async function main() {
   if (!ver.ok || !company) { console.log(`Key/connection check failed (status ${ver.status}) for ${base}`); process.exit(1); }
   const label = (typeof ARGS.label === 'string' && ARGS.label) || company;
   const prefix = slug(label);
-  console.log(`\n=== Color-option backfill  [${MODE}]  account: ${company}  (${base}) ===`);
-  console.log(`Selection mode: ${SELECTION}\n`);
+  console.log(`\n=== Option backfill  [${MODE}]  account: ${company}  (${base}) ===`);
+  console.log(`Selection mode: ${SELECTION}${COLORS_ONLY ? '   (colors-only)' : '   (color + size + composite)'}${UPGRADE ? '   (--upgrade: re-write changed sets)' : ''}\n`);
 
   const listSegment = await resolveListSegment(base);
-  const { missing, colorsByPid } = await loadMissing(base, listSegment);
+  const { missing, optsByPid } = await loadMissing(base, listSegment);
 
   let work = missing;
   if (MODE === 'test-one') work = missing.slice(0, 1);
@@ -216,8 +325,9 @@ async function main() {
     const before = await getJson(`${base}product/${m.uid}`);
     const bg = Array.isArray(before.json?.data) ? before.json.data[0] : before.json?.data;
     console.log(`  BEFORE option_values: ${JSON.stringify(bg?.option?.option_values)}`);
-    const r = await processOne(m, colorsByPid, base, { write: true });
-    console.log(`  PUT status: ${r.status}  colors sent: ${r.colors}  ${r.message || ''}`);
+    const r = await processOne(m, optsByPid, base, { write: true });
+    console.log(`  PUT status: ${r.status}  kind: ${r.kind ?? '-'}  values sent: ${r.count ?? 0}  ${r.message || ''}`);
+    if (r.note) console.log(`  ⚠ ${r.note}`);
     const after = await getJson(`${base}product/${m.uid}`);
     const ag = Array.isArray(after.json?.data) ? after.json.data[0] : after.json?.data;
     console.log(`  AFTER option_values: ${JSON.stringify((ag?.option?.option_values || []).map(o => o.option_value))}`);
@@ -225,16 +335,29 @@ async function main() {
     for (const f of ['product_name', 'price', 'purchase_price', 'uom', 'brand']) console.log(`    ${f}: ${JSON.stringify(bg?.[f])} -> ${JSON.stringify(ag?.[f])}`);
     console.log(`    category_uid: ${bg?.product_category?.category_uid} -> ${ag?.product_category?.category_uid}`);
     console.log(`    formula_uid: ${bg?.formula?.formula_uid} -> ${ag?.formula?.formula_uid}`);
-    console.log(`    customer_selection: ${ag?.option?.customer_selection}  mandate: ${ag?.option?.mandate_customer_selection}`);
+    console.log(`    option_label: ${JSON.stringify(ag?.option?.option_label)}  customer_selection: ${ag?.option?.customer_selection}  mandate: ${ag?.option?.mandate_customer_selection}`);
     return;
   }
 
   if (MODE === 'dry-run') {
     const sample = [];
-    for (const m of work.slice(0, Math.min(work.length, 50))) sample.push(await processOne(m, colorsByPid, base, { write: false }));
+    for (const m of work.slice(0, Math.min(work.length, 50))) sample.push(await processOne(m, optsByPid, base, { write: false }));
     const outFile = path.join(__dirname, `${prefix}-backfill-dryrun.json`);
     fs.writeFileSync(outFile, JSON.stringify({ account: company, count: work.length, sample }, null, 2));
-    console.log(`Dry-run: ${work.length} products would be updated. Sample of ${sample.length} payloads → ${path.basename(outFile)}.`);
+    if (UPGRADE) {
+      // Under --upgrade most candidates already match (no-op); only sampled rows tell
+      // us the real change rate, so report that instead of the full candidate count.
+      const changed = sample.filter(r => r.status === 'dry_run').length;
+      const noop = sample.filter(r => r.status === 'already_ok').length;
+      console.log(`Dry-run (--upgrade): ${work.length} candidates scanned. In the ${sample.length}-product sample, ${changed} would change, ${noop} already match. Payloads → ${path.basename(outFile)}.`);
+    } else {
+      console.log(`Dry-run: ${work.length} products would be updated. Sample of ${sample.length} payloads → ${path.basename(outFile)}.`);
+    }
+    const noted = sample.filter(r => r.note);
+    if (noted.length) {
+      console.log(`\n⚠ ${noted.length}/${sample.length} sampled products hit the ${OPTION_CAP}-option cap (full live run may have more):`);
+      for (const r of noted.slice(0, 20)) console.log(`    pid=${r.pid}  ${r.note}`);
+    }
     return;
   }
 
@@ -243,19 +366,29 @@ async function main() {
   let done = 0;
   for (let i = 0; i < work.length; i += CONCURRENCY) {
     const batch = work.slice(i, i + CONCURRENCY);
-    const r = await Promise.all(batch.map(m => processOne(m, colorsByPid, base, { write: true }).catch(e => ({ uid: m.uid, pid: m.pid, status: 'error', message: e.message }))));
+    const r = await Promise.all(batch.map(m => processOne(m, optsByPid, base, { write: true }).catch(e => ({ uid: m.uid, pid: m.pid, status: 'error', message: e.message }))));
     results.push(...r);
     done += batch.length;
     process.stdout.write(`  ${done}/${work.length}\r`);
   }
-  const tally = {};
-  for (const r of results) tally[r.status] = (tally[r.status] || 0) + 1;
+  const tally = {}, kindTally = {};
+  for (const r of results) {
+    tally[r.status] = (tally[r.status] || 0) + 1;
+    if ((r.status === 'updated' || r.status === 'upgraded') && r.kind) kindTally[r.kind] = (kindTally[r.kind] || 0) + 1;
+  }
   console.log('\n\n--- Result ---');
   for (const [k, v] of Object.entries(tally)) console.log(`  ${k}: ${v}`);
+  if (Object.keys(kindTally).length) console.log(`  updated by axis: ${Object.entries(kindTally).map(([k, v]) => `${k} ${v}`).join(', ')}`);
   const outFile = path.join(__dirname, `${prefix}-backfill-results.json`);
   fs.writeFileSync(outFile, JSON.stringify({ account: company, results }, null, 2));
   const fails = results.filter(r => ['put_failed', 'error', 'get_failed'].includes(r.status));
   if (fails.length) console.log(`  ${fails.length} failures — see ${path.basename(outFile)}`);
+  const noted = results.filter(r => r.note);
+  if (noted.length) {
+    console.log(`\n⚠ ${noted.length} product(s) exceeded Zuper's ${OPTION_CAP}-option cap (fell back to a single axis / truncated — see "note" in ${path.basename(outFile)}):`);
+    for (const r of noted.slice(0, 20)) console.log(`    pid=${r.pid}  ${r.note}`);
+    if (noted.length > 20) console.log(`    … and ${noted.length - 20} more`);
+  }
   console.log(`✓ Wrote ${path.basename(outFile)}`);
 }
 

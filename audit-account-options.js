@@ -1,8 +1,9 @@
 /**
  * Reusable READ-ONLY audit: for any Zuper account imported from SRS, report which
- * products SHOULD have color options (per srs_variants) but were uploaded with an
- * empty option block — the footprint of the variant-pagination bug. Pairs with
- * backfill-account-options.js (run this to check, that to fix).
+ * products SHOULD have options (color, size, or composite per srs_variants) but were
+ * uploaded with an empty option block. Pairs with backfill-account-options.js (run
+ * this to check, that to fix) — the buckets here mirror exactly what the backfill
+ * will load: color, size-only (>1 size), and both → composite.
  *
  * Does NOT write to Zuper. GETs against Zuper + reads against Supabase + a local
  * Excel report.
@@ -121,9 +122,13 @@ async function main() {
     const v = await fetchAll(supabase, 'srs_variants', 'product_id,color_name,size_name,is_restricted',
       { filters: [{ op: 'in', args: ['product_id', chunk] }, { op: 'eq', args: ['is_restricted', false] }], orderBy: 'variant_id' });
     for (const r of v) {
-      const e = srsByPid.get(r.product_id) || { colors: new Set(), sizes: new Set() };
-      if (realOpt(r.color_name)) e.colors.add(r.color_name.trim());
-      if (realOpt(r.size_name)) e.sizes.add(r.size_name.trim());
+      const c = realOpt(r.color_name) ? r.color_name.trim() : null;
+      const sz = realOpt(r.size_name) ? r.size_name.trim() : null;
+      if (!c && !sz) continue;
+      const e = srsByPid.get(r.product_id) || { colors: new Set(), sizes: new Set(), pairs: [] };
+      if (c) e.colors.add(c);
+      if (sz) e.sizes.add(sz);
+      e.pairs.push([c, sz]);   // real combos in variant order — composite preview uses these, not a cartesian
       srsByPid.set(r.product_id, e);
     }
   }
@@ -135,32 +140,54 @@ async function main() {
     for (const r of rows) srsProd.set(r.product_id, r);
   }
 
-  // 4. Classify
+  // 4. Classify — buckets mirror the backfill's axis choice:
+  //    both color & size vary → composite; color present → color; only size>1 → size.
   const rowsOut = [];
-  let inSrs = 0, shouldColor = 0, hasOpt = 0, missedColor = 0, sizeOnly = 0, okColor = 0, notInSrs = 0;
+  let inSrs = 0, shouldOpt = 0, hasOpt = 0, missedColor = 0, missedSize = 0, missedComposite = 0, okOpt = 0, notInSrs = 0;
   for (const pid of ids) {
     const z = zByPid.get(pid), s = srsByPid.get(pid);
     if (!s) { notInSrs++; continue; }
     inSrs++;
     const colors = [...s.colors], sizes = [...s.sizes];
-    const expectColor = colors.length > 0, expectSize = sizes.length > 1, zHas = z.optCount > 0;
+    const cVary = colors.length > 1, sVary = sizes.length > 1;
+    // What the backfill would load for this product (null = nothing selectable).
+    // Mirror backfill's buildOptionValues precedence: load the axis that VARIES.
+    let axis = null, expected = [];
+    if (cVary && sVary) {
+      axis = 'composite';
+      const seen = new Set();
+      for (const [c, sz] of (s.pairs || [])) {
+        const label = [c, sz].filter(Boolean).join(' — ');
+        if (label && !seen.has(label)) { seen.add(label); expected.push(label); }
+      }
+    }
+    else if (cVary) { axis = 'color'; expected = colors; }
+    else if (sVary) { axis = 'size'; expected = sizes; }
+    else if (colors.length >= 1) { axis = 'color'; expected = colors; }
+    const zHas = z.optCount > 0;
     if (zHas) hasOpt++;
-    if (expectColor) shouldColor++;
+    if (axis) shouldOpt++;
     const base2 = { product_id: pid, name: srsProd.get(pid)?.product_name || z.name, category: srsProd.get(pid)?.product_category || '', brand: srsProd.get(pid)?.manufacturer_norm || '', zuper_uid: z.uid, zuper_optvalues: z.optCount };
-    if (expectColor && !zHas) { missedColor++; rowsOut.push({ ...base2, kind: 'MISSED color options', expected_count: colors.length, expected: colors.slice(0, 20).join(', ') }); }
-    else if (expectColor && zHas) okColor++;
-    else if (!expectColor && expectSize && !zHas) { sizeOnly++; rowsOut.push({ ...base2, kind: 'size-only (never uploaded by design)', expected_count: sizes.length, expected: sizes.slice(0, 20).join(', ') }); }
+    if (axis && !zHas) {
+      if (axis === 'color') missedColor++;
+      else if (axis === 'size') missedSize++;
+      else missedComposite++;
+      rowsOut.push({ ...base2, kind: `MISSED ${axis} options (fixable)`, expected_count: expected.length, expected: expected.slice(0, 20).join(', ') });
+    } else if (axis && zHas) okOpt++;
   }
 
   // 5. Report
+  const missedTotal = missedColor + missedSize + missedComposite;
   console.log('\n--- Summary ---');
   console.log(`  account numeric PARTS:                 ${ids.length}`);
   console.log(`  matched to SRS catalog:                ${inSrs}  (not in SRS: ${notInSrs})`);
-  console.log(`  should have COLOR options (SRS):       ${shouldColor}`);
-  console.log(`    ✓ present in Zuper:                  ${okColor}`);
-  console.log(`    ✗ MISSED (empty in Zuper):           ${missedColor}`);
+  console.log(`  should have options (SRS):             ${shouldOpt}`);
+  console.log(`    ✓ present in Zuper:                  ${okOpt}`);
+  console.log(`    ✗ MISSED (empty in Zuper):           ${missedTotal}`);
+  console.log(`        color:                           ${missedColor}`);
+  console.log(`        size-only:                       ${missedSize}`);
+  console.log(`        composite (color+size):          ${missedComposite}`);
   console.log(`  any product with non-empty options:    ${hasOpt}`);
-  console.log(`  size-only w/o color, empty in Zuper:   ${sizeOnly}`);
 
   const wb = new ExcelJS.Workbook();
   const ws = wb.addWorksheet('Missing options', { views: [{ state: 'frozen', ySplit: 1 }] });
@@ -180,11 +207,12 @@ async function main() {
   rowsOut.sort((a, b) => (a.kind < b.kind ? -1 : a.kind > b.kind ? 1 : 0) || b.expected_count - a.expected_count);
   rowsOut.forEach(r => {
     const row = ws.addRow(r);
-    const bg = r.kind.startsWith('MISSED') ? 'FFFAD9D5' : 'FFFDF3D6';
+    // color = pink, size = yellow, composite = blue
+    const bg = r.kind.includes('color') ? 'FFFAD9D5' : r.kind.includes('size') ? 'FFFDF3D6' : 'FFD6E4FA';
     row.eachCell({ includeEmpty: true }, c => { c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: bg } }; c.font = { size: 9 }; });
   });
   await wb.xlsx.writeFile(OUT);
-  console.log(`\n✓ Wrote ${path.basename(OUT)}  (${rowsOut.length} rows: ${missedColor} missed-color + ${sizeOnly} size-only)`);
+  console.log(`\n✓ Wrote ${path.basename(OUT)}  (${rowsOut.length} rows: ${missedColor} color + ${missedSize} size-only + ${missedComposite} composite)`);
 }
 
 main().catch(e => { console.error('\nFatal:', e.message, e.stack); process.exit(1); });
