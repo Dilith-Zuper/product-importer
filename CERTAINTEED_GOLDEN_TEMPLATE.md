@@ -109,18 +109,26 @@ A&A's "Pending Selection" pseudo-color (it defeats the mandate).
 ## Sanity check — computed quantities (sample 25-square hip roof)
 
 Roof: 2500 sqft, 15% waste, ridges 35, hips 45, eaves 140, rakes 60, valleys 24, drip edge 200.
-Quantities computed from the **account's live formulas** wired into the template:
 
-| Line | Formula | Qty | Notes |
-|---|---|---|---|
-| Shingles | shingles_squares | **400** ⚠ | `RoofArea*(1+waste)/100` — treats waste token as a FRACTION. Returns 400 sq if waste=`15`, ~29 sq if waste=`0.15`. **Latent account-wide bug** (existing OC shingle uses the same formula), missing `/100` on the waste term. |
-| Hip & Ridge | hip_ridge_cap_bundles | 3 | round-up ✓ |
-| Starter | starter_shingles_bundles | 1.67 | NO_ROUNDING — fractional bundle |
-| Ice & Water | ice_and_water_shield_rolls | 2.73 | NO_ROUNDING — fractional roll |
-| Synthetic underlayment | synthetic_underlayment_rolls | 2.5 | NO_ROUNDING |
-| Drip Edge | drip_edge_pieces | 20 | ✓ |
-| Ridge Vent | ridge_vents_pieces | 9 | round-up ✓ (`Ridges/4`) |
-| Valley Metal | valley_metal_pieces | 2.4 | NO_ROUNDING — fractional |
-| Coil Nails | coil_nails_boxes | 3 | round-up ✓ |
+The account's stock formulas were **system formulas** (`is_custom:false`) that can't be edited
+(403 "System formulas cannot be updated") — and editing them would hit every template anyway.
+So the fix was scoped to this template: **corrected `ct_*` custom formulas** were created and the
+template's line items re-pointed at them. Every other template keeps using the stock formulas.
 
-**Recommended fixes (account-level, optional):** correct `shingles_squares` to `RoofArea*(1+waste/100)/100` (or confirm the account enters waste as a fraction), and switch the NO_ROUNDING material formulas (starter / ice&water / synthetic / valley) to NEXT_WHOLE_NUMBER so they don't quote fractional rolls/bundles. These are shared formulas — fixing them affects every template on the account, so do it deliberately.
+| Line | Formula (now) | Before | After | Fix |
+|---|---|---|---|---|
+| Shingles | `ct_shingles_squares` | **400** 🔴 | **29** ✓ | added `/100` on waste → `RoofArea*(1+waste/100)/100`, round up |
+| Hip & Ridge | hip_ridge_cap_bundles | 3 | 3 ✓ | unchanged (already round-up) |
+| Starter | `ct_starter_shingles_bundles` | 1.67 | 2 ✓ | NO_ROUNDING → round-up |
+| Ice & Water | `ct_ice_and_water_shield_rolls` | 2.73 | 3 ✓ | round-up |
+| Synthetic underlayment | `ct_synthetic_underlayment_rolls` | 2.5 | 3 ✓ | round-up |
+| Drip Edge | drip_edge_pieces | 20 | 20 ✓ | unchanged |
+| Ridge Vent | ridge_vents_pieces | 9 | 9 ✓ | unchanged (`Ridges/4`) |
+| Valley Metal | `ct_valley_metal_pieces` | 2.4 | 3 ✓ | round-up |
+| Coil Nails | coil_nails_boxes | 3 | 3 ✓ | unchanged |
+| Labor (Tear-Off / Install) | `ct_shingles_squares` | 400 🔴 | 29 ✓ | re-pointed off the broken shingle formula |
+
+Custom formula UIDs saved in `certainteed-golden-custom-formulas.json`; the original system-formula
+definitions backed up in `certainteed-golden-formula-backup.json`. The stock `shingles_squares` and the
+NO_ROUNDING formulas remain on the account untouched (used by other templates) — fix those separately
+if you want them corrected account-wide.

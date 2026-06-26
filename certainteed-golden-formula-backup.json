@@ -1,0 +1,208 @@
+[
+  {
+    "formula": {
+      "expression": "($1 * ($2 + $3)) / $4",
+      "expression_map": [
+        {
+          "key": "$4",
+          "type": "CONSTANT",
+          "value": 100
+        },
+        {
+          "key": "$3",
+          "type": "MEASUREMENT",
+          "field_name": "Suggested Waste Percentage %",
+          "measurement_token_uid": "77364c7e-81b4-4334-8543-ab0def3b5a08",
+          "measurement_category_uid": "938f2d10-1ff3-4d53-ad4f-568dbf79786f"
+        },
+        {
+          "key": "$2",
+          "type": "CONSTANT",
+          "value": 1
+        },
+        {
+          "key": "$1",
+          "type": "MEASUREMENT",
+          "field_name": "Total Roof Area",
+          "measurement_token_uid": "81b8a72e-5a17-4fa4-b2ef-e73b7154ad06",
+          "measurement_category_uid": "be575b22-9c67-4e1d-9957-03830d31d06a"
+        }
+      ],
+      "rounding_mechanism": "NO_ROUNDING",
+      "formatted_expression": "(Total Roof Area * (1 + Suggested Waste Percentage %)) / 100"
+    },
+    "formula_uid": "b2376cc3-ad26-4f26-9232-ebced14f431c",
+    "formula_name": "Shingles (squares)",
+    "formula_key": "shingles_squares",
+    "formula_category": {
+      "category_key": "AREA_MEASUREMENT",
+      "category_name": "Measurement",
+      "is_active": true
+    },
+    "formula_description": "Default formula for Shingles (squares)",
+    "is_custom": false,
+    "is_active": true,
+    "is_deleted": false,
+    "created_at": "2026-03-10T10:13:50.335Z",
+    "updated_at": "2026-03-10T10:13:50.335Z"
+  },
+  {
+    "formula": {
+      "expression": "($1 + $2) / $3",
+      "expression_map": [
+        {
+          "key": "$3",
+          "type": "CONSTANT",
+          "value": 120
+        },
+        {
+          "key": "$2",
+          "type": "MEASUREMENT",
+          "field_name": "Total Rakes Length",
+          "measurement_token_uid": "31281bb4-fef1-420a-b249-c555a3f258a5",
+          "measurement_category_uid": "be575b22-9c67-4e1d-9957-03830d31d06a"
+        },
+        {
+          "key": "$1",
+          "type": "MEASUREMENT",
+          "field_name": "Total Eaves Length",
+          "measurement_token_uid": "5a879428-ade9-4edf-aa6b-474501645b15",
+          "measurement_category_uid": "be575b22-9c67-4e1d-9957-03830d31d06a"
+        }
+      ],
+      "rounding_mechanism": "NO_ROUNDING",
+      "formatted_expression": "(Total Eaves Length + Total Rakes Length) / 120"
+    },
+    "formula_uid": "71473b45-1761-49ea-a89d-138089b6e7c7",
+    "formula_name": "Starter Shingles (bundles)",
+    "formula_key": "starter_shingles_bundles",
+    "formula_category": {
+      "category_key": "AREA_MEASUREMENT",
+      "category_name": "Measurement",
+      "is_active": true
+    },
+    "formula_description": "Default formula for Starter Shingles (bundles)",
+    "is_custom": false,
+    "is_active": true,
+    "is_deleted": false,
+    "created_at": "2026-03-10T10:13:50.335Z",
+    "updated_at": "2026-06-24T12:07:49.589Z"
+  },
+  {
+    "formula": {
+      "expression": "(($1 + $2) * $3) / $4",
+      "expression_map": [
+        {
+          "key": "$4",
+          "type": "CONSTANT",
+          "value": 66
+        },
+        {
+          "key": "$3",
+          "type": "CONSTANT",
+          "value": 1.1
+        },
+        {
+          "key": "$2",
+          "type": "MEASUREMENT",
+          "field_name": "Total Valleys Length",
+          "measurement_token_uid": "00449cb5-6b0b-4059-8303-5c890d89cb49",
+          "measurement_category_uid": "be575b22-9c67-4e1d-9957-03830d31d06a"
+        },
+        {
+          "key": "$1",
+          "type": "MEASUREMENT",
+          "field_name": "Total Eaves Length",
+          "measurement_token_uid": "5a879428-ade9-4edf-aa6b-474501645b15",
+          "measurement_category_uid": "be575b22-9c67-4e1d-9957-03830d31d06a"
+        }
+      ],
+      "rounding_mechanism": "NO_ROUNDING",
+      "formatted_expression": "((Total Eaves Length + Total Valleys Length) * 1.1) / 66"
+    },
+    "formula_uid": "ffd962cc-35cd-4735-a357-6bf1b5743bec",
+    "formula_name": "Ice and Water Shield (rolls)",
+    "formula_key": "ice_and_water_shield_rolls",
+    "formula_category": {
+      "category_key": "AREA_MEASUREMENT",
+      "category_name": "Measurement",
+      "is_active": true
+    },
+    "formula_description": "Default formula for Ice and Water Shield (rolls)",
+    "is_custom": false,
+    "is_active": true,
+    "is_deleted": false,
+    "created_at": "2026-03-10T10:13:50.335Z",
+    "updated_at": "2026-03-10T10:13:50.335Z"
+  },
+  {
+    "formula": {
+      "expression": "$1 / $2",
+      "expression_map": [
+        {
+          "key": "$2",
+          "type": "CONSTANT",
+          "value": 1000
+        },
+        {
+          "key": "$1",
+          "type": "MEASUREMENT",
+          "field_name": "Total Roof Area",
+          "measurement_token_uid": "81b8a72e-5a17-4fa4-b2ef-e73b7154ad06",
+          "measurement_category_uid": "be575b22-9c67-4e1d-9957-03830d31d06a"
+        }
+      ],
+      "rounding_mechanism": "NO_ROUNDING",
+      "formatted_expression": "Total Roof Area / 1000"
+    },
+    "formula_uid": "573b9f59-914a-4d87-b5ae-bb2468b56080",
+    "formula_name": "Synthetic Underlayment (rolls)",
+    "formula_key": "synthetic_underlayment_rolls",
+    "formula_category": {
+      "category_key": "AREA_MEASUREMENT",
+      "category_name": "Measurement",
+      "is_active": true
+    },
+    "formula_description": "Default formula for Synthetic Underlayment (rolls)",
+    "is_custom": false,
+    "is_active": true,
+    "is_deleted": false,
+    "created_at": "2026-03-10T10:13:50.335Z",
+    "updated_at": "2026-03-10T10:13:50.335Z"
+  },
+  {
+    "formula": {
+      "expression": "$1 / $2",
+      "expression_map": [
+        {
+          "key": "$2",
+          "type": "CONSTANT",
+          "value": 10
+        },
+        {
+          "key": "$1",
+          "type": "MEASUREMENT",
+          "field_name": "Total Valleys Length",
+          "measurement_token_uid": "00449cb5-6b0b-4059-8303-5c890d89cb49",
+          "measurement_category_uid": "be575b22-9c67-4e1d-9957-03830d31d06a"
+        }
+      ],
+      "rounding_mechanism": "NO_ROUNDING",
+      "formatted_expression": "Total Valleys Length / 10"
+    },
+    "formula_uid": "e6042ed4-c34b-4c11-be4f-d0dcf6824b1b",
+    "formula_name": "Valley Metal (pieces)",
+    "formula_key": "valley_metal_pieces",
+    "formula_category": {
+      "category_key": "AREA_MEASUREMENT",
+      "category_name": "Measurement",
+      "is_active": true
+    },
+    "formula_description": "Default formula for Valley Metal (pieces)",
+    "is_custom": false,
+    "is_active": true,
+    "is_deleted": false,
+    "created_at": "2026-03-10T10:13:50.335Z",
+    "updated_at": "2026-03-10T10:13:50.335Z"
+  }
+]
