@@ -1,0 +1,65 @@
+{
+  "1432": {
+    "product_uid": "60b525df-3a5b-487f-a9b3-61a75a7c38e8",
+    "name": "CertainTeed Presidential Starter",
+    "tier": "Best",
+    "cat": "Roofing Materials",
+    "uom": "Bundle",
+    "formula_key": "starter_shingles_bundles",
+    "colors": 0
+  },
+  "75603": {
+    "product_uid": "65cb348a-465d-4e7f-899a-55ed447dde66",
+    "name": "CertainTeed WinterGuard Sand Waterproofing Underlayment",
+    "tier": null,
+    "cat": "Ice & Water",
+    "uom": "RL",
+    "formula_key": "ice_and_water_shield_rolls",
+    "colors": 0
+  },
+  "75650": {
+    "product_uid": "bfd4aee4-9af7-4673-8b6f-e9d3693690dc",
+    "name": "CertainTeed Landmark PRO AR Shingles",
+    "tier": "Better",
+    "cat": "Shingles",
+    "uom": "BDL",
+    "formula_key": "shingles_squares",
+    "colors": 28
+  },
+  "75662": {
+    "product_uid": "12411e0d-10e1-4e4f-84be-cf80b86fc4e5",
+    "name": "CertainTeed Presidential Shake AR Shingles",
+    "tier": "Best",
+    "cat": "Shingles",
+    "uom": "BDL",
+    "formula_key": "shingles_squares",
+    "colors": 7
+  },
+  "75663": {
+    "product_uid": "528bb6bd-8e40-4af7-b52d-c80679aab875",
+    "name": "CertainTeed Landmark AR Shingles",
+    "tier": "Good",
+    "cat": "Shingles",
+    "uom": "BDL",
+    "formula_key": "shingles_squares",
+    "colors": 28
+  },
+  "75668": {
+    "product_uid": "8d846724-b548-4545-bd00-7bfa6c9c769a",
+    "name": "CertainTeed Mountain Ridge AR Hip & Ridge",
+    "tier": "Best",
+    "cat": "Hip & Ridge",
+    "uom": "BDL",
+    "formula_key": "hip_ridge_cap_bundles",
+    "colors": 0
+  },
+  "78755": {
+    "product_uid": "011eb6ed-6a49-4b49-9150-8dc3a6bbb346",
+    "name": "Chem Link DuraSil High Performance Silicone Sealant",
+    "tier": null,
+    "cat": "Caulk",
+    "uom": "EA",
+    "formula_key": null,
+    "colors": 0
+  }
+}

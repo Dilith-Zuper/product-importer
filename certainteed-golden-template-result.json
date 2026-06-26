@@ -1,0 +1,35 @@
+{
+  "templateUid": "2962f307-5e5a-4a40-a4ef-d229cc250e95",
+  "options": [
+    {
+      "option_name": "Good",
+      "option_image": "",
+      "option_description": "",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "4f435957-aa39-4f09-b73a-cec71f5ad1d9",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Better",
+      "option_image": "",
+      "option_description": "",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "6d97cbc7-9e78-4214-bc07-b36565be7a55",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Best",
+      "option_image": "",
+      "option_description": "",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "2611ee27-9282-4613-9e2d-08def711a957",
+      "option_group_uid": null
+    }
+  ],
+  "catUid": "96b23fdd-ff1f-4e74-bbb2-f397bde60fa4",
+  "statusUid": "590cae00-48ed-441c-829f-fb07d008b8e8",
+  "layoutUid": "7c75a34a-ad78-439a-b68a-56928856dc2a"
+}

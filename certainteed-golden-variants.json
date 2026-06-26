@@ -1,0 +1,1285 @@
+{
+  "1432": {
+    "label": "Presidential Starter",
+    "total": 5,
+    "available": 5,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Aged Bark",
+        "size": "40\" x 13-1/4\"",
+        "code": "CERSTPRSAGB",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Autumn Blend",
+        "size": "40\" x 13-1/4\"",
+        "code": "CERSTPRSAB",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Charcoal Black",
+        "size": "40\" x 13-1/4\"",
+        "code": "CERSTPRSCHB",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Country Gray",
+        "size": "40\" x 13-1/4\"",
+        "code": "CERSTPRSOLCGR",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Shadow Gray",
+        "size": "40\" x 13-1/4\"",
+        "code": "CERSTPRSSHG",
+        "uom": "BD",
+        "img": true
+      }
+    ]
+  },
+  "1454": {
+    "label": "RoofRunner Synthetic",
+    "total": 21,
+    "available": 1,
+    "restricted_or_private": 20,
+    "colors": [
+      {
+        "color": "White with Blue",
+        "size": "4' x 250'",
+        "code": "CERURR",
+        "uom": "RL",
+        "img": true
+      }
+    ]
+  },
+  "75603": {
+    "label": "WinterGuard Sand I&W",
+    "total": 2,
+    "available": 2,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": null,
+        "size": "3' x 32-1/2'",
+        "code": "CER653369",
+        "uom": "RL",
+        "img": true
+      },
+      {
+        "color": null,
+        "size": "3' x 65'",
+        "code": "CER653370",
+        "uom": "RL",
+        "img": true
+      }
+    ]
+  },
+  "75606": {
+    "label": "Ridge Vent Unfiltered",
+    "total": 1,
+    "available": 1,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Black",
+        "size": "12\" x 4'",
+        "code": "CERRVWN",
+        "uom": "PC",
+        "img": true
+      }
+    ]
+  },
+  "75621": {
+    "label": "SwiftStart Starter",
+    "total": 2,
+    "available": 2,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Black",
+        "size": "38-3/4\" x 15-1/4\"",
+        "code": "CERSTSW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Black",
+        "size": "9\" x 33.5'",
+        "code": "CER421080",
+        "uom": "RL",
+        "img": false
+      }
+    ]
+  },
+  "75647": {
+    "label": "Shadow Ridge AR H&R",
+    "total": 52,
+    "available": 52,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Autumn Blend",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9ABPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Birchwood",
+        "size": "36\" x 30'",
+        "code": "CERHRBW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Birchwood",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CER622913",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Black Walnut",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9BKWPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Black Walnut",
+        "size": "36\" x 30'",
+        "code": "CERHRBKW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Burnt Sienna",
+        "size": "36\" x 30'",
+        "code": "CER622915",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Burnt Sienna",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9BUSPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Charcoal & Moire Black",
+        "size": "36\" x 30'",
+        "code": "CER622917NO",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Charcoal Black",
+        "size": "36\" x 30'",
+        "code": "CERHRCHB",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Cinder Black",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9CIBPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Coastal Blue",
+        "size": "36\" x 30'",
+        "code": "CERHRATB",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Cobblestone Gray",
+        "size": "36\" x 30'",
+        "code": "CER622919",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Colonial Slate",
+        "size": "36\" x 30'",
+        "code": "CER622921",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Cottage Red",
+        "size": "36\" x 30'",
+        "code": "CER621826",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Driftwood",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9DWPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Driftwood",
+        "size": "36\" x 30'",
+        "code": "CERHRDW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Espresso",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CER653017",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Espresso",
+        "size": "36\" x 30'",
+        "code": "CER652401",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Georgetown Gray",
+        "size": "36\" x 30'",
+        "code": "CER622927",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Georgetown Gray",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9GTGPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Granite Gray",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9GRGPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Granite Gray",
+        "size": "36\" x 30'",
+        "code": "CERHRGRG",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Heather Blend",
+        "size": "36\" x 30'",
+        "code": "CER621880",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Heather Blend",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9HBPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Hunter Green",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CER621990WI",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Hunter Green",
+        "size": "36\" x 30'",
+        "code": "CER621885",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mission Brown",
+        "size": "36\" x 30'",
+        "code": "CERHRMSB",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mist White",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9MWWI",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mist White",
+        "size": "36\" x 30'",
+        "code": "CERHRMW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Moire & Charcoal Black",
+        "size": "36\" x 30'",
+        "code": "CER622917",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Moire Black",
+        "size": "36\" x 30'",
+        "code": "CER621890",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Moire Black",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9MOBPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mojave Tan",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERHRMOT45",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mojave Tan",
+        "size": "36\" x 30'",
+        "code": "CERHRMOT",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Painted Desert",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9PDWI",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Pewter",
+        "size": "36\" x 30'",
+        "code": "CERHRPESK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Pewterwood",
+        "size": "36\" x 30'",
+        "code": "CERHRPEW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Prairie Wood",
+        "size": "36\" x 30'",
+        "code": "CER622476",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Red Oak",
+        "size": "36\" x 30'",
+        "code": "CER622923",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Resawn Shake",
+        "size": "36\" x 30'",
+        "code": "CER621961",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Resawn Shake",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9RSPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Shadow Gray",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9SHG",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Shenandoah",
+        "size": "36\" x 30'",
+        "code": "CERHRSH",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Silver Birch",
+        "size": "36\" x 30'",
+        "code": "CER621904",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Silver Birch",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERHRSIB45WI",
+        "uom": "EA",
+        "img": true
+      },
+      {
+        "color": "Solaris Graphite",
+        "size": "36\" x 30'",
+        "code": "CER651529",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Solaris Weathered Wood",
+        "size": "36\" x 30'",
+        "code": "CER651444",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Sunrise Cedar",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERHRSC45",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Sunrise Cedar",
+        "size": "36\" x 30'",
+        "code": "CERHRSC",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Thunderstorm Gray",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERHRTHG",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Weathered Wood",
+        "size": "36\" x 30'",
+        "code": "CERHRWW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Weathered Wood",
+        "size": "39-3/8\" x 13-1/4\"",
+        "code": "CERSR9WWPO",
+        "uom": "BD",
+        "img": true
+      }
+    ]
+  },
+  "75650": {
+    "label": "Landmark PRO AR",
+    "total": 28,
+    "available": 28,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Birchwood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER627871",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Cinder Black",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER648137",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Atlantic Blue",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARATBAV",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Birchwood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARBWNO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Black Walnut",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER648138",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Burnt Sienna",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARBUSOX",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Charcoal Black",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARCHBPT",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Coastal Blue",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER651228",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Cobblestone Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARCSGSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Colonial Slate",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER627911",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Driftwood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARDWSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Espresso",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER679156",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Evergreen",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER660807",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Georgetown Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARGEGSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Granite Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARGRGPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Heather Blend",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARHBSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Mission Brown",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARMSBSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Moire Black",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARMOBJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Mojave Tan",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARMOTPE",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Pewter",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARPESK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Pewterwood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARPEWNO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Prairie Wood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARPRWAV",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Red Oak",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER651159",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Resawn Shake",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARRESSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Shenandoah",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARSHSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Sunrise Cedar",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPROARSCCOX",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Weathered Wood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLPMDARWWJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Silver Birch",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER652208",
+        "uom": "BD",
+        "img": true
+      }
+    ]
+  },
+  "75662": {
+    "label": "Presidential Shake AR",
+    "total": 7,
+    "available": 7,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Aged Bark",
+        "size": "14-1/4\" x 40\"",
+        "code": "CERPRSFRSAGBFR",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Autumn Blend",
+        "size": "14-1/4\" x 40\"",
+        "code": "CERPRSFRSABFR",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Charcoal Black",
+        "size": "14-1/4\" x 40\"",
+        "code": "CERPRSSARCB",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Classic Weathered Wood",
+        "size": "14-1/4\" x 40\"",
+        "code": "CERPRSARCWW",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Country Gray",
+        "size": "14-1/4\" x 40\"",
+        "code": "CER627586",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Shadow Gray",
+        "size": "14-1/4\" x 40\"",
+        "code": "CERPRSFRSSHGFR",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Weathered Wood",
+        "size": "14-1/4\" x 40\"",
+        "code": "CERPRSWW",
+        "uom": "BD",
+        "img": true
+      }
+    ]
+  },
+  "75663": {
+    "label": "Landmark AR",
+    "total": 28,
+    "available": 28,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Birchwood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARBWPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Black Walnut",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARBKWWI",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Burnt Sienna",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARBUSJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Charcoal Black",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARCHBPE",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Cinder Black",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARCIBPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Cobblestone Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARCSGJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Colonial Slate",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARCOSJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Cottage Red",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARCRSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Driftwood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARDWJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Georgetown Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER652292",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Granite Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARGRGPO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Heather Blend",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARHBJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Hunter Green",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARHUGSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Burnt Sienna",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLMDARBUSEN",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Georgetown Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER647290",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Moire Black",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER647287",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Max Def Weathered Wood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER647289",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mission Brown",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARMSBSK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Moire Black",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER652810",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mojave Tan",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARMOTOX",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Pewter",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARPEJO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Pewterwood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARPWNO",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Resawn Shake",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARRESAV",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Silver Birch",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER676043",
+        "uom": "BD",
+        "img": false
+      },
+      {
+        "color": "Sunrise Cedar",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARSCOX",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Terra Cotta",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CER639118",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Thunderstorm Gray",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLTHGSH",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Weathered Wood",
+        "size": "13-1/4\" x 38-3/4\"",
+        "code": "CERLARWWJO",
+        "uom": "BD",
+        "img": true
+      }
+    ]
+  },
+  "75668": {
+    "label": "Mountain Ridge AR H&R",
+    "total": 21,
+    "available": 21,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Aged Bark & Burnt Sienna",
+        "size": "10\" x 20'",
+        "code": "CERMR10BUSAGB",
+        "uom": "BX",
+        "img": false
+      },
+      {
+        "color": "Autumn Blend",
+        "size": "10\" x 20'",
+        "code": "CERMR10AUB",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Birchwood",
+        "size": "10\" x 20'",
+        "code": "CERMR10BW",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Black Walnut",
+        "size": "10\" x 20'",
+        "code": "CERMR10BKW",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Charcoal & Moire Black",
+        "size": "10\" x 20'",
+        "code": "CERMR10MOB",
+        "uom": "BX",
+        "img": false
+      },
+      {
+        "color": "Cinder Black",
+        "size": "10\" x 20'",
+        "code": "CERMR10CIB",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Country Gray & Weathered Wood",
+        "size": "10\" x 20'",
+        "code": "CERMR10WW",
+        "uom": "BX",
+        "img": false
+      },
+      {
+        "color": "Driftwood",
+        "size": "10\" x 20'",
+        "code": "CERMR10DW",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Espresso",
+        "size": "10\" x 20'",
+        "code": "CER652487",
+        "uom": "BX",
+        "img": false
+      },
+      {
+        "color": "Georgetown Gray & Platinum",
+        "size": "10\" x 20'",
+        "code": "CERMR10GEG",
+        "uom": "BX",
+        "img": false
+      },
+      {
+        "color": "Granite Gray",
+        "size": "10\" x 20'",
+        "code": "CERMR10GRG",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Heather Blend",
+        "size": "10\" x 20'",
+        "code": "CERMR10HB",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Hunter Green & Yosemite",
+        "size": "10\" x 20'",
+        "code": "CERMR10HY",
+        "uom": "BX",
+        "img": false
+      },
+      {
+        "color": "Mountain Timber",
+        "size": "10\" x 20'",
+        "code": "CERMR10MT",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Old Overton",
+        "size": "10\" x 20'",
+        "code": "CERMR10OO",
+        "uom": "BX",
+        "img": false
+      },
+      {
+        "color": "Resawn Shake",
+        "size": "10\" x 20'",
+        "code": "CERMR10CN",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Shadow Gray",
+        "size": "10\" x 20'",
+        "code": "CERMR10SHG",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Shenandoah",
+        "size": "10\" x 20'",
+        "code": "CERMR10SH",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Silver Birch",
+        "size": "10\" x 20'",
+        "code": "CERMR10SIB",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Terra Cotta",
+        "size": "10\" x 20'",
+        "code": "CERMR10TC",
+        "uom": "BX",
+        "img": true
+      },
+      {
+        "color": "Thunderstorm Gray",
+        "size": "10\" x 20'",
+        "code": "CERMR10TG",
+        "uom": "BX",
+        "img": true
+      }
+    ]
+  },
+  "78755": {
+    "label": "Chem Link DuraSil",
+    "total": 1,
+    "available": 1,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Clear",
+        "size": "10.1 oz",
+        "code": "CHEDSTR",
+        "uom": "TB",
+        "img": true
+      }
+    ]
+  },
+  "118113": {
+    "label": "Klauer Roof-to-Wall",
+    "total": 3,
+    "available": 3,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Black",
+        "size": "4\" x 4\" 30 GA",
+        "code": "KLA88011BK71",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Mill",
+        "size": "4\" x 4\" 30 GA",
+        "code": "KLA88011GV10",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Teritone",
+        "size": "4\" x 4\" 30 GA",
+        "code": "KLA88011TT60",
+        "uom": "PC",
+        "img": false
+      }
+    ]
+  },
+  "158439": {
+    "label": "Steel Roll Valley Metal",
+    "total": 1,
+    "available": 1,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Mill",
+        "size": "16\" x 50' 26 GA",
+        "code": "METV1650",
+        "uom": "EA",
+        "img": false
+      }
+    ]
+  },
+  "190492": {
+    "label": "Aluminum Drip Edge",
+    "total": 10,
+    "available": 10,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Black",
+        "size": "2\"",
+        "code": "CERAL1061054",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Black",
+        "size": "1-1/2\"",
+        "code": "CERAL1060054",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Colonial",
+        "size": "1-1/2\"",
+        "code": "CERAL1060001",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Colonial",
+        "size": "2\"",
+        "code": "CERAL1061001",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Musket Brown",
+        "size": "1-1/2\"",
+        "code": "CERAL1060049",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Musket Brown",
+        "size": "2\"",
+        "code": "CERAL1061049",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Natural Clay",
+        "size": "1-1/2\"",
+        "code": "CERAL1060060",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Natural Clay",
+        "size": "2\"",
+        "code": "CERAL1061060",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Wolf White",
+        "size": "1-1/2\"",
+        "code": "CERAL1060191",
+        "uom": "PC",
+        "img": false
+      },
+      {
+        "color": "Wolf White",
+        "size": "2\"",
+        "code": "CERAL1061191",
+        "uom": "PC",
+        "img": false
+      }
+    ]
+  },
+  "195798": {
+    "label": "Berger Step Flashing",
+    "total": 2,
+    "available": 2,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Brown/Black",
+        "size": "6\" x 8\"",
+        "code": "BERSF57BRBK",
+        "uom": "BD",
+        "img": true
+      },
+      {
+        "color": "Mill",
+        "size": "6\" x 8\"",
+        "code": "BERSF68MI",
+        "uom": "BD",
+        "img": true
+      }
+    ]
+  },
+  "195820": {
+    "label": "Coil Nails",
+    "total": 1,
+    "available": 1,
+    "restricted_or_private": 0,
+    "colors": [
+      {
+        "color": "Mill",
+        "size": "1-3/4\"",
+        "code": "COIL134",
+        "uom": "BX",
+        "img": true
+      }
+    ]
+  }
+}
