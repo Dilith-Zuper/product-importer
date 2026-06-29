@@ -12,7 +12,8 @@ The goal: when a roofing customer answers a few questions (roof type, brand pref
 
 **Owner:** Dilith — dilith@zuper.co  
 **Company:** Zuper Inc.  
-**Working directory:** `D:\OneDrive - Zuper,inc\Documents\Projects\product importer`
+**Working directory:** `D:\OneDrive - Zuper,inc\Documents\Projects\product importer`  
+**GitHub:** https://github.com/Dilith-Zuper/product-importer (private) — default branch `main`
 
 ---
 

@@ -21,10 +21,12 @@ Semantic versioning under the **0.x** line until the pipeline hits a stability m
    ```
    git tag -a v0.X.Y -m "Release v0.X.Y"
    ```
-5. Push commit + tag once a remote is configured:
+5. Push commit + tag:
    ```
-   git push origin master v0.X.Y
+   git push origin main v0.X.Y
    ```
+
+**Repo:** https://github.com/Dilith-Zuper/product-importer (private) — default branch `main`.
 
 ## Rolling back
 
@@ -32,7 +34,7 @@ This is a local data pipeline — no deployed surface to roll back. To inspect o
 
 ```
 git checkout v0.X.Y           # inspect that tree
-git revert <bad-sha>          # undo a bad commit on master
+git revert <bad-sha>          # undo a bad commit on main
 git reset --hard v0.X.Y       # only on local branches, never after push
 ```
 
