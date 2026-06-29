@@ -1,9 +1,15 @@
 /**
  * Reusable: backfill missing COLOR / SIZE options on any Zuper account that was
- * imported from the SRS catalog. Products that vary in SRS but were uploaded with an
- * empty option block get their `option.option_values` repopulated via GET → PUT
- * (round-trips the whole product, changes ONLY `option`). This is the generalized
- * form of the High Impact Roofing remediation.
+ * imported from a source catalog (SRS or QXO). Products that vary in the catalog but
+ * were uploaded with an empty option block get their `option.option_values`
+ * repopulated via GET → PUT (round-trips the whole product, changes ONLY `option`).
+ * This is the generalized form of the High Impact Roofing remediation.
+ *
+ * --source qxo audits/fixes a QXO-imported account: account product_ids are matched
+ * back to qxo_products by digit-stripping the "C-…" product_key (the wizard upload's
+ * own stamping rule), and options are COLOR-ONLY — QXO has no single size column and
+ * the wizard uploads it color-only. The SRS↔QXO difference lives in
+ * lib/account-catalog.js, shared with audit-account-options.js.
  *
  * Option axis is chosen per product from srs_variants (deduped, N/A stripped, cap 50):
  *   - both color & size vary  → COMPOSITE values ("Black — 36\" x 144'"), built from
@@ -37,6 +43,7 @@
  *   --dry-run [--limit N]   build payloads, write JSON sample, no writes
  *   --run [--limit N]       live backfill (bounded concurrency)
  * Options:
+ *   --source srs|qxo        catalog to resolve options from (default srs)
  *   --label "Name"          output-file prefix (default: resolved company name)
  *   --selection wizard|all  customer_selection behavior (default: wizard)
  *   --colors-only           legacy: load color options only, skip size/composite
@@ -52,11 +59,10 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
-const { fetchAll } = require('./lib/utils');
+const { getCatalogConfig, indexAccountProducts, realOpt } = require('./lib/account-catalog');
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY, { auth: { persistSession: false } });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const realOpt = s => s && String(s).trim() && !['n/a', 'na'].includes(String(s).trim().toLowerCase());
 const slug = s => String(s || 'account').trim().replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '') || 'account';
 
 // ── args ──────────────────────────────────────────────────────────────────────
@@ -71,10 +77,15 @@ function parseArgs(argv) {
 }
 const ARGS = parseArgs(process.argv.slice(2));
 const API_KEY = (typeof ARGS.key === 'string' && ARGS.key) || process.env.ZUPER_API_KEY;
+const SOURCE = (typeof ARGS.source === 'string' ? ARGS.source : 'srs').toLowerCase();
+const CFG = getCatalogConfig(SOURCE);     // throws on an unknown --source
+// Whether the source carries a usable size axis. QXO is color-only (no single size
+// column; the wizard uploads it color-only), so size/composite are disabled for it.
+const INCLUDE_SIZE = CFG.includeSize;
 const MODE = ARGS.run ? 'run' : ARGS['test-one'] ? 'test-one' : ARGS['dry-run'] ? 'dry-run' : null;
 const LIMIT = typeof ARGS.limit !== 'undefined' ? Number(ARGS.limit) : Infinity;
 const SELECTION = ARGS.selection === 'all' ? 'all' : 'wizard';
-const COLORS_ONLY = !!ARGS['colors-only'];
+const COLORS_ONLY = !!ARGS['colors-only'] || !INCLUDE_SIZE;
 // --upgrade: also re-process products that ALREADY have an option block, replacing it
 // when the catalog now implies a different set (e.g. a color-only product that should
 // become composite once sizes are loaded). Off by default — default only fills empties.
@@ -235,26 +246,12 @@ async function loadMissing(base, listSegment) {
   const ids = candidates.map(c => c.pid);
   // Per-pid: distinct colors, distinct sizes, and real (color,size) pairs in variant
   // order (the pairing is what composite needs — a cartesian product would invent
-  // combos that don't exist in the catalog).
-  const optsByPid = new Map();
-  const ensure = (pid) => {
-    let e = optsByPid.get(pid);
-    if (!e) { e = { colors: new Set(), sizes: new Set(), pairs: [] }; optsByPid.set(pid, e); }
-    return e;
-  };
-  for (let i = 0; i < ids.length; i += 300) {
-    const chunk = ids.slice(i, i + 300);
-    const v = await fetchAll(supabase, 'srs_variants', 'product_id,color_name,size_name,is_restricted',
-      { filters: [{ op: 'in', args: ['product_id', chunk] }, { op: 'eq', args: ['is_restricted', false] }], orderBy: 'variant_id' });
-    for (const r of v) {
-      const c = realOpt(r.color_name) ? r.color_name.trim() : null;
-      const s = realOpt(r.size_name) ? r.size_name.trim() : null;
-      if (!c && !s) continue;
-      const e = ensure(r.product_id);
-      if (c) e.colors.add(c);
-      if (s) e.sizes.add(s);
-      e.pairs.push([c, s]);
-    }
+  // combos that don't exist in the catalog). Source-specific resolution (SRS numeric
+  // PK vs QXO digit-stripped product_key; color_name/size_name vs color-only) lives in
+  // lib/account-catalog.js.
+  const { optsByZid: optsByPid, collisions } = await indexAccountProducts(supabase, SOURCE, ids);
+  if (collisions.length) {
+    console.log(`⚠ ${collisions.length} account id(s) had >1 ${SOURCE.toUpperCase()} key digit-strip to the same product_id (using first).`);
   }
   // Keep a product only if it actually has something selectable to load. A lone
   // single size is not an option (mirrors the audit's `sizes > 1` rule).
@@ -308,8 +305,8 @@ async function main() {
   if (!ver.ok || !company) { console.log(`Key/connection check failed (status ${ver.status}) for ${base}`); process.exit(1); }
   const label = (typeof ARGS.label === 'string' && ARGS.label) || company;
   const prefix = slug(label);
-  console.log(`\n=== Option backfill  [${MODE}]  account: ${company}  (${base}) ===`);
-  console.log(`Selection mode: ${SELECTION}${COLORS_ONLY ? '   (colors-only)' : '   (color + size + composite)'}${UPGRADE ? '   (--upgrade: re-write changed sets)' : ''}\n`);
+  console.log(`\n=== Option backfill  [${MODE}]  account: ${company}  catalog: ${SOURCE.toUpperCase()}  (${base}) ===`);
+  console.log(`Selection mode: ${SELECTION}${COLORS_ONLY ? (INCLUDE_SIZE ? '   (colors-only)' : '   (colors-only — source has no size axis)') : '   (color + size + composite)'}${UPGRADE ? '   (--upgrade: re-write changed sets)' : ''}\n`);
 
   const listSegment = await resolveListSegment(base);
   const { missing, optsByPid } = await loadMissing(base, listSegment);

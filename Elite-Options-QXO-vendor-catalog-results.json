@@ -1,0 +1,16 @@
+{
+  "account": "Elite Options Contracting",
+  "vendor": "QXO",
+  "vendor_uid": "4c88e181-1451-4a19-9977-be605321cc3b",
+  "sku_field": "variant_sku",
+  "posted": 0,
+  "chunks_ok": 0,
+  "chunks_failed": 1,
+  "failures": [
+    {
+      "at": 0,
+      "status": 400,
+      "message": "Vendor SKU should be unique for each product in the catalog"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "templateUid": "858f618d-b9a6-41fb-8347-90f2f4b5e44c",
+  "options": [
+    {
+      "option_name": "Good",
+      "option_image": "",
+      "option_description": "GAF Essentials Package",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "74a813e5-ce10-4e07-b4fe-e339cf998475",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Better",
+      "option_image": "",
+      "option_description": "GAF Peace of Mind Package",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "b7a2d829-6a47-4098-a370-d4751702646e",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Best",
+      "option_image": "",
+      "option_description": "GAF Total Home Protection Package",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "4621cf25-c57e-49a7-9a63-f79687d4d5a8",
+      "option_group_uid": null
+    }
+  ],
+  "catUid": "96b23fdd-ff1f-4e74-bbb2-f397bde60fa4",
+  "statusUid": "590cae00-48ed-441c-829f-fb07d008b8e8",
+  "layoutUid": "7c75a34a-ad78-439a-b68a-56928856dc2a",
+  "published": true
+}
