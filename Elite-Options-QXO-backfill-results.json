@@ -1,0 +1,626 @@
+{
+  "account": "Elite Options Contracting",
+  "results": [
+    {
+      "uid": "736048da-f4b1-40db-a2f2-1c12cb00e378",
+      "pid": 351591,
+      "status": "updated",
+      "kind": "color",
+      "count": 9,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "28f9dc7b-8b28-4446-8a11-0480256283cf",
+      "pid": 463948,
+      "status": "updated",
+      "kind": "color",
+      "count": 6,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "6c7e7708-c6fd-4bda-879f-5771057fb706",
+      "pid": 438925,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "e06278e7-8a80-40db-95df-ff879d092940",
+      "pid": 413469,
+      "status": "updated",
+      "kind": "color",
+      "count": 7,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "6956198b-c574-4157-9258-e9876c45e5b5",
+      "pid": 385122,
+      "status": "updated",
+      "kind": "color",
+      "count": 12,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "804f0134-f4db-4700-8284-b262bc0a86e7",
+      "pid": 474453,
+      "status": "updated",
+      "kind": "color",
+      "count": 5,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "1bd4e94e-6502-4bb2-860a-e932a4908773",
+      "pid": 414121,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "c0e18082-6179-48f3-8698-56a9b268a95a",
+      "pid": 734881,
+      "status": "updated",
+      "kind": "color",
+      "count": 7,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "59180da0-a216-4f30-b2de-58755a53a142",
+      "pid": 352592,
+      "status": "updated",
+      "kind": "color",
+      "count": 50,
+      "note": "color 57 > 50 cap → truncated to 50",
+      "message": ""
+    },
+    {
+      "uid": "d4dff329-953b-413d-81fe-812db2e3f6dd",
+      "pid": 443951,
+      "status": "updated",
+      "kind": "color",
+      "count": 29,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "97abd1d8-ef37-46a1-bf5e-8d6e78423ed1",
+      "pid": 456565,
+      "status": "updated",
+      "kind": "color",
+      "count": 9,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "dca110e9-f879-42ea-a719-c0fc0612e756",
+      "pid": 355089,
+      "status": "updated",
+      "kind": "color",
+      "count": 15,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "02056217-5ad2-4569-b008-865f1b93756d",
+      "pid": 368433,
+      "status": "updated",
+      "kind": "color",
+      "count": 8,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "14e33488-a8c3-4b2d-a4aa-f925a2be243e",
+      "pid": 31985,
+      "status": "updated",
+      "kind": "color",
+      "count": 8,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "9f3fa9b5-f4ec-4650-abd4-b283a17c181c",
+      "pid": 313696,
+      "status": "updated",
+      "kind": "color",
+      "count": 5,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "ad494cbd-570f-4f11-9d0a-eaecd9fc9d98",
+      "pid": 697776,
+      "status": "updated",
+      "kind": "color",
+      "count": 35,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "bf78c574-e6e0-4017-85d1-eb5b11298f3e",
+      "pid": 319258,
+      "status": "updated",
+      "kind": "color",
+      "count": 35,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "8fab49bf-133f-48ea-b0b2-c6349f22708b",
+      "pid": 680157,
+      "status": "updated",
+      "kind": "color",
+      "count": 6,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "e6dc6249-1a09-4bde-b176-6779daa79201",
+      "pid": 531738,
+      "status": "updated",
+      "kind": "color",
+      "count": 12,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "bed97d47-0389-462f-9d00-19f64d4b0cbe",
+      "pid": 295009,
+      "status": "updated",
+      "kind": "color",
+      "count": 26,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "0e98d67b-d663-4a23-a3ff-6b726b162550",
+      "pid": 396849,
+      "status": "updated",
+      "kind": "color",
+      "count": 12,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "419c4302-ced2-42c6-8279-7ad18e896663",
+      "pid": 371302,
+      "status": "updated",
+      "kind": "color",
+      "count": 11,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "0060a78c-fec9-4b6a-889b-a5e015db08fb",
+      "pid": 479566,
+      "status": "updated",
+      "kind": "color",
+      "count": 28,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "3692df37-255f-43d5-9056-b85bb997f8b5",
+      "pid": 531592,
+      "status": "updated",
+      "kind": "color",
+      "count": 13,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "9d63eef1-e116-4938-9f3d-742331ec30af",
+      "pid": 43786,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "5a74fd02-7a54-43b6-aec7-2bee404a525f",
+      "pid": 299795,
+      "status": "updated",
+      "kind": "color",
+      "count": 9,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "323f6899-4c70-4f1a-bd74-efcfde432021",
+      "pid": 453017,
+      "status": "updated",
+      "kind": "color",
+      "count": 32,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "8acea237-2771-4a2d-bbb5-afa153ddcacb",
+      "pid": 413378,
+      "status": "updated",
+      "kind": "color",
+      "count": 37,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "3674d5ab-14e0-432d-ba71-eac8bee8f3b1",
+      "pid": 609225,
+      "status": "updated",
+      "kind": "color",
+      "count": 11,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "ca12e062-f891-44a3-aa97-228e7b0b9c80",
+      "pid": 397591,
+      "status": "updated",
+      "kind": "color",
+      "count": 29,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "aa3efbd9-085d-46e2-bfd9-83e00d893706",
+      "pid": 754512,
+      "status": "updated",
+      "kind": "color",
+      "count": 26,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "6a56a508-b9d6-4acc-940d-18cc07e4e762",
+      "pid": 755418,
+      "status": "updated",
+      "kind": "color",
+      "count": 7,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "cbeec0af-f1ea-4810-b872-3e3e51b7a086",
+      "pid": 397527,
+      "status": "updated",
+      "kind": "color",
+      "count": 31,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "5d8b2dfb-c867-4000-9195-6684b91d6a7c",
+      "pid": 755523,
+      "status": "updated",
+      "kind": "color",
+      "count": 7,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "3c466b42-f66d-4d53-a67c-dc79ba94f019",
+      "pid": 701021,
+      "status": "updated",
+      "kind": "color",
+      "count": 19,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "554c89e7-344e-4e98-b87e-2dbaa17a8046",
+      "pid": 618277,
+      "status": "updated",
+      "kind": "color",
+      "count": 50,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "d9b54ac4-ffde-4884-a2ab-8eaf6acaa7bc",
+      "pid": 697744,
+      "status": "updated",
+      "kind": "color",
+      "count": 11,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "e3b5fd87-ce56-47bc-a704-34c4f5b87695",
+      "pid": 752346,
+      "status": "updated",
+      "kind": "color",
+      "count": 11,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "2efe8878-84f4-44b9-992b-25906ab60ea9",
+      "pid": 595620,
+      "status": "updated",
+      "kind": "color",
+      "count": 12,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "e6211932-ee32-4620-bb9c-32b8c51731a5",
+      "pid": 451101,
+      "status": "updated",
+      "kind": "color",
+      "count": 10,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "36ea9d6e-19c6-41c1-9eaa-d312848ad7c1",
+      "pid": 755031,
+      "status": "updated",
+      "kind": "color",
+      "count": 15,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "d8bedcb9-d0ab-4d6a-b192-28ad4f715604",
+      "pid": 685605,
+      "status": "updated",
+      "kind": "color",
+      "count": 3,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "a7a45678-a57a-42c1-8db9-3d8293e20859",
+      "pid": 453839,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "4fc338a6-dee1-4d1e-974a-15976309790c",
+      "pid": 388584,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "f2be8d5b-5f49-4657-b61a-dd821cabc281",
+      "pid": 330256,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "62cbe78e-9606-42d7-aefe-3cca3e36ddab",
+      "pid": 290490,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "48546656-b9a8-4762-96bb-a15da2b095ca",
+      "pid": 660281,
+      "status": "updated",
+      "kind": "color",
+      "count": 5,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "f6e2c3f7-0b36-4a6b-8a7f-8e9dd906b061",
+      "pid": 598518,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "fd3fa389-5933-4a68-a89d-58f437ae2034",
+      "pid": 577784,
+      "status": "updated",
+      "kind": "color",
+      "count": 22,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "88f622ca-28a9-42de-a203-7d74b1c19528",
+      "pid": 40770,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "68718733-6a70-46b4-bca2-6c5020e38b77",
+      "pid": 576972,
+      "status": "updated",
+      "kind": "color",
+      "count": 6,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "e3c36f41-15b3-4447-a4cd-a13dfdd9c004",
+      "pid": 663159,
+      "status": "updated",
+      "kind": "color",
+      "count": 3,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "224e16c5-70e9-4d23-bca1-3dfac622dfe9",
+      "pid": 660311,
+      "status": "updated",
+      "kind": "color",
+      "count": 5,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "2da37fb4-68fe-47a4-9d3b-d0dc81fecc21",
+      "pid": 643468,
+      "status": "updated",
+      "kind": "color",
+      "count": 8,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "3dfba940-1bf6-4f99-b5ba-5ff76820aa2a",
+      "pid": 577602,
+      "status": "updated",
+      "kind": "color",
+      "count": 15,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "b86156db-764c-4d63-b9c2-cfa510640e3b",
+      "pid": 715604,
+      "status": "updated",
+      "kind": "color",
+      "count": 37,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "e98e4a0e-7bd6-4a4e-af23-dd857aaa1408",
+      "pid": 568048,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "cbf0db67-beb9-4002-b057-e8893b2adaa9",
+      "pid": 568224,
+      "status": "updated",
+      "kind": "color",
+      "count": 9,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "eedc7929-a038-4138-b369-5594dab043cb",
+      "pid": 589823,
+      "status": "updated",
+      "kind": "color",
+      "count": 9,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "cd50c329-24a3-46d7-ac15-9068408458ce",
+      "pid": 568037,
+      "status": "updated",
+      "kind": "color",
+      "count": 9,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "3d56f4c9-75a6-402c-a766-7356828656b7",
+      "pid": 563640,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "458be7b2-1aed-4aed-bca6-f581c69ef94f",
+      "pid": 322844,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "31ee98a8-33b4-4ba4-a9e8-714241045d57",
+      "pid": 322850,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "e4c4d23f-306a-464b-8688-41593aafdd55",
+      "pid": 322857,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "da18fb95-48d1-4b1b-8caa-4cf7f1f134e1",
+      "pid": 322826,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "5c38c182-7fa4-462a-b954-2669387e0713",
+      "pid": 322832,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "d6b89623-1755-49e3-a87a-6f915edab84e",
+      "pid": 322838,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "a5e721c5-01cc-436d-af99-5b3535062017",
+      "pid": 577610,
+      "status": "updated",
+      "kind": "color",
+      "count": 4,
+      "note": "",
+      "message": ""
+    },
+    {
+      "uid": "10e2d7a3-19d7-4a52-a5ea-474e5ccd7ce0",
+      "pid": 668717,
+      "status": "updated",
+      "kind": "color",
+      "count": 1,
+      "note": "",
+      "message": ""
+    }
+  ]
+}

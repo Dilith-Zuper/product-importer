@@ -1,29 +1,35 @@
 /**
- * Reusable READ-ONLY audit: for any Zuper account imported from SRS, report which
- * products SHOULD have options (color, size, or composite per srs_variants) but were
- * uploaded with an empty option block. Pairs with backfill-account-options.js (run
- * this to check, that to fix) — the buckets here mirror exactly what the backfill
- * will load: color, size-only (>1 size), and both → composite.
+ * Reusable READ-ONLY audit: for any Zuper account imported from a source catalog
+ * (SRS or QXO), report which products SHOULD have options (color, size, or composite
+ * per the catalog's variants) but were uploaded with an empty option block. Pairs with
+ * backfill-account-options.js (run this to check, that to fix) — the buckets here
+ * mirror exactly what the backfill will load: color, size-only (>1 size), and both →
+ * composite.
+ *
+ * The two catalogs differ only in how an account product resolves back to the catalog
+ * (SRS: numeric product_id is the PK; QXO: digit-strip the "C-…" product_key) and what
+ * option axes exist (QXO is color-only, matching the wizard upload). All of that lives
+ * in lib/account-catalog.js, shared with the backfill.
  *
  * Does NOT write to Zuper. GETs against Zuper + reads against Supabase + a local
  * Excel report.
  *
  * Connection (pick one):  --login <name> | --region <region> | --base <url>
  * Auth:                    --key <apiKey>   (or ZUPER_API_KEY in the environment)
- * Options:                 --label "Name"   (output-file prefix; default company name)
+ * Options:                 --source srs|qxo (catalog to audit against; default srs)
+ *                          --label "Name"   (output-file prefix; default company name)
  *
- *   node audit-account-options.js --key XXX --region us-west-1c --label "High Impact"
+ *   node audit-account-options.js --key XXX --region us-west-1c --source qxo --label "A&A"
  */
 
 require('dotenv').config();
 const path = require('path');
 const ExcelJS = require('exceljs');
 const { createClient } = require('@supabase/supabase-js');
-const { fetchAll } = require('./lib/utils');
+const { getCatalogConfig, indexAccountProducts } = require('./lib/account-catalog');
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY, { auth: { persistSession: false } });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const realOpt = s => s && String(s).trim() && !['n/a', 'na'].includes(String(s).trim().toLowerCase());
 const slug = s => String(s || 'account').trim().replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '') || 'account';
 
 function parseArgs(argv) {
@@ -37,6 +43,7 @@ function parseArgs(argv) {
 }
 const ARGS = parseArgs(process.argv.slice(2));
 const API_KEY = (typeof ARGS.key === 'string' && ARGS.key) || process.env.ZUPER_API_KEY;
+const SOURCE = (typeof ARGS.source === 'string' ? ARGS.source : 'srs').toLowerCase();
 let H;
 
 async function resolveBaseUrl() {
@@ -84,9 +91,11 @@ async function main() {
   const ver = await getJson(`${base}user/company`);
   const company = ver.json?.data?.company_name ?? ver.json?.company_name ?? null;
   if (!ver.ok || !company) { console.log(`Key/connection check failed (status ${ver.status}) for ${base}`); process.exit(1); }
+  const cfg = getCatalogConfig(SOURCE);     // throws on an unknown --source
+  const SRC = SOURCE.toUpperCase();
   const label = (typeof ARGS.label === 'string' && ARGS.label) || company;
   const OUT = path.join(__dirname, `${slug(label)}-options-audit.xlsx`);
-  console.log(`\n=== Options audit (read-only)  account: ${company}  (${base}) ===\n`);
+  console.log(`\n=== Options audit (read-only)  account: ${company}  catalog: ${SRC}  (${base}) ===\n`);
 
   // 1. Page through all Zuper products
   const listSegment = await resolveListSegment(base);
@@ -103,7 +112,7 @@ async function main() {
   }
   console.log(`\nFetched ${products.length} products (total_records ${total}).`);
 
-  // 2. Numeric (SRS) PARTS → option_values count
+  // 2. Numeric PARTS → option_values count (both catalogs stamp a plain int product_id)
   const zByPid = new Map();
   for (const p of products) {
     if (p.product_type !== 'PARTS') continue;
@@ -113,51 +122,35 @@ async function main() {
     zByPid.set(Number(id), { name: p.product_name || '', uid: p.product_uid, optCount: Array.isArray(ov) ? ov.length : 0 });
   }
   const ids = [...zByPid.keys()];
-  console.log(`Numeric SRS PARTS in account: ${ids.length}`);
+  console.log(`Numeric PARTS in account: ${ids.length}`);
 
-  // 3. SRS variants + products for cross-reference
-  const srsByPid = new Map();
-  for (let i = 0; i < ids.length; i += 300) {
-    const chunk = ids.slice(i, i + 300);
-    const v = await fetchAll(supabase, 'srs_variants', 'product_id,color_name,size_name,is_restricted',
-      { filters: [{ op: 'in', args: ['product_id', chunk] }, { op: 'eq', args: ['is_restricted', false] }], orderBy: 'variant_id' });
-    for (const r of v) {
-      const c = realOpt(r.color_name) ? r.color_name.trim() : null;
-      const sz = realOpt(r.size_name) ? r.size_name.trim() : null;
-      if (!c && !sz) continue;
-      const e = srsByPid.get(r.product_id) || { colors: new Set(), sizes: new Set(), pairs: [] };
-      if (c) e.colors.add(c);
-      if (sz) e.sizes.add(sz);
-      e.pairs.push([c, sz]);   // real combos in variant order — composite preview uses these, not a cartesian
-      srsByPid.set(r.product_id, e);
-    }
-  }
-  const srsProd = new Map();
-  for (let i = 0; i < ids.length; i += 300) {
-    const chunk = ids.slice(i, i + 300);
-    const rows = await fetchAll(supabase, 'srs_products', 'product_id,product_name,product_category,manufacturer_norm',
-      { filters: [{ op: 'in', args: ['product_id', chunk] }], orderBy: 'product_id' });
-    for (const r of rows) srsProd.set(r.product_id, r);
+  // 3. Resolve account ids → catalog product + option axes (source-specific; lib/account-catalog).
+  const { prodByZid, optsByZid, collisions, notInCatalog } = await indexAccountProducts(supabase, SOURCE, ids);
+  if (collisions.length) {
+    console.log(`\n⚠ ${collisions.length} account id(s) had >1 ${SRC} key digit-strip to the same product_id (using first):`);
+    for (const c of collisions.slice(0, 10)) console.log(`    ${c.zid} ← ${c.keys.join(', ')}`);
   }
 
   // 4. Classify — buckets mirror the backfill's axis choice:
   //    both color & size vary → composite; color present → color; only size>1 → size.
+  //    Size/composite are only possible when the source carries size (QXO is color-only).
+  const includeSize = cfg.includeSize;
   const rowsOut = [];
-  let inSrs = 0, shouldOpt = 0, hasOpt = 0, missedColor = 0, missedSize = 0, missedComposite = 0, okOpt = 0, notInSrs = 0;
+  let inCat = 0, shouldOpt = 0, hasOpt = 0, missedColor = 0, missedSize = 0, missedComposite = 0, okOpt = 0, notInCat = notInCatalog;
   for (const pid of ids) {
-    const z = zByPid.get(pid), s = srsByPid.get(pid);
-    if (!s) { notInSrs++; continue; }
-    inSrs++;
-    const colors = [...s.colors], sizes = [...s.sizes];
+    const z = zByPid.get(pid), s = optsByZid.get(pid);
+    if (!s) { continue; }     // not-in-catalog (counted in notInCat) or no real options
+    inCat++;
+    const colors = [...s.colors], sizes = includeSize ? [...s.sizes] : [];
     const cVary = colors.length > 1, sVary = sizes.length > 1;
     // What the backfill would load for this product (null = nothing selectable).
     // Mirror backfill's buildOptionValues precedence: load the axis that VARIES.
     let axis = null, expected = [];
-    if (cVary && sVary) {
+    if (includeSize && cVary && sVary) {
       axis = 'composite';
       const seen = new Set();
       for (const [c, sz] of (s.pairs || [])) {
-        const label = [c, sz].filter(Boolean).join(' — ');
+        const label = [c, includeSize ? sz : null].filter(Boolean).join(' — ');
         if (label && !seen.has(label)) { seen.add(label); expected.push(label); }
       }
     }
@@ -167,7 +160,8 @@ async function main() {
     const zHas = z.optCount > 0;
     if (zHas) hasOpt++;
     if (axis) shouldOpt++;
-    const base2 = { product_id: pid, name: srsProd.get(pid)?.product_name || z.name, category: srsProd.get(pid)?.product_category || '', brand: srsProd.get(pid)?.manufacturer_norm || '', zuper_uid: z.uid, zuper_optvalues: z.optCount };
+    const prod = prodByZid.get(pid);
+    const base2 = { product_id: pid, name: prod?.name || z.name, category: prod?.category || '', brand: prod?.brand || '', zuper_uid: z.uid, zuper_optvalues: z.optCount };
     if (axis && !zHas) {
       if (axis === 'color') missedColor++;
       else if (axis === 'size') missedSize++;
@@ -180,8 +174,8 @@ async function main() {
   const missedTotal = missedColor + missedSize + missedComposite;
   console.log('\n--- Summary ---');
   console.log(`  account numeric PARTS:                 ${ids.length}`);
-  console.log(`  matched to SRS catalog:                ${inSrs}  (not in SRS: ${notInSrs})`);
-  console.log(`  should have options (SRS):             ${shouldOpt}`);
+  console.log(`  matched to ${SRC} catalog:${' '.repeat(Math.max(1, 22 - SRC.length))}${inCat}  (not in ${SRC}: ${notInCat})`);
+  console.log(`  should have options (${SRC}):${' '.repeat(Math.max(1, 13 - SRC.length))}${shouldOpt}`);
   console.log(`    ✓ present in Zuper:                  ${okOpt}`);
   console.log(`    ✗ MISSED (empty in Zuper):           ${missedTotal}`);
   console.log(`        color:                           ${missedColor}`);
@@ -192,7 +186,7 @@ async function main() {
   const wb = new ExcelJS.Workbook();
   const ws = wb.addWorksheet('Missing options', { views: [{ state: 'frozen', ySplit: 1 }] });
   ws.columns = [
-    { key: 'product_id', header: 'SRS product_id', width: 14 },
+    { key: 'product_id', header: `${SRC} product_id`, width: 14 },
     { key: 'name', header: 'Product Name', width: 50 },
     { key: 'category', header: 'Category', width: 22 },
     { key: 'brand', header: 'Brand', width: 18 },

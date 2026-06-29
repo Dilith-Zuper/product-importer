@@ -1,0 +1,5606 @@
+{
+  "account": "High Impact Roofing & Exteriors",
+  "count": 4820,
+  "sample": [
+    {
+      "uid": "b9f422a6-ab89-451f-b5d6-60a456be6e0e",
+      "pid": 92052,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 3,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "Copper W-Valley",
+          "product_id": "92052",
+          "is_available": true,
+          "product_category": "21f8ab00-d7c1-44fa-bf0b-4c3709fcc1ef",
+          "price": 64.38,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 64.38,
+          "brand": "",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Best"
+            }
+          ],
+          "uom": "EA",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "b9f422a6-ab89-451f-b5d6-60a456be6e0e",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "24\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "18\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "24\" x 8'",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          },
+          "formula": "b07d3cfb-74b4-4b6a-8a3b-6a2ccf910228"
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "b9f422a6-ab89-451f-b5d6-60a456be6e0e",
+        "prefix": "",
+        "product_id": "92052",
+        "product_category": {
+          "category_uid": "21f8ab00-d7c1-44fa-bf0b-4c3709fcc1ef",
+          "category_name": "W-VALLEY",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "",
+        "specification": "",
+        "uom": "EA",
+        "product_name": "Copper W-Valley",
+        "product_description": "",
+        "plain_text_description": "",
+        "markdown_description": "",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31710dd503a06933ea43d2"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31710dd503a06933ea43d3"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31710dd503a06933ea43d4"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31710dd503a06933ea43d5"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Best",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31710dd503a06933ea43d6"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a31710dd503a06933ea43da",
+            "created_at": "2026-06-16T15:51:41.865Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 64.38,
+        "purchase_price": 64.38,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_rate": null,
+          "tax_name": "",
+          "tax_exempt": false
+        },
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": {
+          "_id": "69dcee552eda79df76acf57c",
+          "formula_uid": "b07d3cfb-74b4-4b6a-8a3b-6a2ccf910228",
+          "formula_name": "Valley Metal (pieces)",
+          "formula_key": "valley_metal_pieces",
+          "formula": {
+            "expression": "$1 / $2",
+            "expression_map": [
+              {
+                "key": "$1",
+                "type": "MEASUREMENT",
+                "field_name": "Total Valleys Length",
+                "measurement_token_uid": "30350ec4-c00e-4a92-b91f-61852427c31a",
+                "measurement_category_uid": "6bf77b58-3797-4205-9fb5-daca024d68ac"
+              },
+              {
+                "key": "$2",
+                "type": "CONSTANT",
+                "value": 10
+              }
+            ],
+            "rounding_mechanism": "NO_ROUNDING"
+          },
+          "is_deleted": false
+        },
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Color",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "14b70d8a-7981-4b96-81a7-a88989b82bde",
+              "option_value": "Copper",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31710dd503a06933ea43df"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.600Z",
+        "custom_field_internal_object": {
+          "product_color_selected_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_product_tier_1": "Best"
+        },
+        "product_no": 318
+      }
+    },
+    {
+      "uid": "652fdacd-0fe3-46d3-ae3d-64337bf43156",
+      "pid": 192633,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "79357561-1fe1-49a8-85cb-ddd8406b398d",
+      "pid": 165619,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "composite",
+      "count": 33,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "TopShield Aluminum B-Style Ledge Jumpers",
+          "product_id": "165619",
+          "is_available": true,
+          "product_category": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "price": 9.45,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>The TopShield Aluminum Offset Ledge Jumper is a versatile solution for extending your downspout outward, particularly when faced with obstacles such as ledges on your wall. Offered in both type A and B, these jumpers play a crucial role in connecting the downspout to the gutter in situations where space is limited for two elbows.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 9.45,
+          "brand": "TopShield",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Best"
+            }
+          ],
+          "uom": "EA",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "79357561-1fe1-49a8-85cb-ddd8406b398d",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Variant",
+            "option_values": [
+              {
+                "option_value": "White — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "White — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Almond — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Black — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Charcoal Gray — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Cameo — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Desert Sand — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Everest — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Jeffereson Tan — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "London Brown — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Linen — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Musket Brown — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Pebble Clay — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Royal Brown — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Rugged Canyon — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Wicker — 2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Almond — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Black — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Charcoal Gray — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Cameo — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Dark Bronze — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Desert Sand — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Harbor Gray — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Jeffereson Tan — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "London Brown — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Linen — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Musket Brown — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Montana — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Pebble Clay — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Royal Brown — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Terra Bronze — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Wicker — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Rugged Canyon — 3\" x 4\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "79357561-1fe1-49a8-85cb-ddd8406b398d",
+        "prefix": "",
+        "product_id": "165619",
+        "product_category": {
+          "category_uid": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "category_name": "GUTTER/ALUMINUM/COIL",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "TopShield",
+        "specification": "",
+        "uom": "EA",
+        "product_name": "TopShield Aluminum B-Style Ledge Jumpers",
+        "product_description": "<p>The TopShield Aluminum Offset Ledge Jumper is a versatile solution for extending your downspout outward, particularly when faced with obstacles such as ledges on your wall. Offered in both type A and B, these jumpers play a crucial role in connecting the downspout to the gutter in situations where space is limited for two elbows.</p>",
+        "plain_text_description": "The TopShield Aluminum Offset Ledge Jumper is a versatile solution for extending your downspout outward, particularly when faced with obstacles such as ledges on your wall. Offered in both type A and B, these jumpers play a crucial role in connecting the downspout to the gutter in situations where space is limited for two elbows.",
+        "markdown_description": "The TopShield Aluminum Offset Ledge Jumper is a versatile solution for extending your downspout outward, particularly when faced with obstacles such as ledges on your wall. Offered in both type A and B, these jumpers play a crucial role in connecting the downspout to the gutter in situations where space is limited for two elbows.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717950d0c8c6edae7112"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717950d0c8c6edae7113"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717950d0c8c6edae7114"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717950d0c8c6edae7115"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Best",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717950d0c8c6edae7116"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a31717950d0c8c6edae712c",
+            "created_at": "2026-06-16T15:53:29.911Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 9.45,
+        "purchase_price": 9.45,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_rate": null,
+          "tax_name": "",
+          "tax_exempt": false
+        },
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Color",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "dbbe4a53-3682-4346-943e-a60ded4a4a5d",
+              "option_value": "White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae712e"
+            },
+            {
+              "option_uid": "252dd60c-d897-41a5-95d4-9ee83ed9ff6a",
+              "option_value": "Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae712f"
+            },
+            {
+              "option_uid": "8f50163c-4416-464a-8f56-ad6a450d6cd6",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7130"
+            },
+            {
+              "option_uid": "480ae348-b70b-4d36-9b6c-e5d6c6b6f4df",
+              "option_value": "Charcoal Gray",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7131"
+            },
+            {
+              "option_uid": "9d30b748-724d-42d4-8a13-3c48ea74613a",
+              "option_value": "Cameo",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7132"
+            },
+            {
+              "option_uid": "62e8bd12-bca7-4b3d-aee6-97cf9101f17b",
+              "option_value": "Desert Sand",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7133"
+            },
+            {
+              "option_uid": "0b6f84e9-83e3-46d8-8a03-476a816e0d6d",
+              "option_value": "Everest",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7134"
+            },
+            {
+              "option_uid": "8bb4bb92-b006-447c-897c-4ed9ae2fc4a8",
+              "option_value": "Jeffereson Tan",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7135"
+            },
+            {
+              "option_uid": "44f1a190-2571-491e-b723-7f47fc7972e0",
+              "option_value": "London Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7136"
+            },
+            {
+              "option_uid": "242e82b6-61e3-4582-99cd-8a322219a994",
+              "option_value": "Linen",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7137"
+            },
+            {
+              "option_uid": "386f19b6-9b88-47c1-be14-dc5d52bf09c9",
+              "option_value": "Musket Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7138"
+            },
+            {
+              "option_uid": "528a5523-d425-402c-8943-b89de7acbec0",
+              "option_value": "Pebble Clay",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7139"
+            },
+            {
+              "option_uid": "aff9a77d-b809-4e37-bd3e-0385a49e2a13",
+              "option_value": "Royal Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae713a"
+            },
+            {
+              "option_uid": "3ff12aa0-4e64-4ad0-9e37-297f7cfec4d0",
+              "option_value": "Rugged Canyon",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae713b"
+            },
+            {
+              "option_uid": "aacac0fe-da6c-4bd0-ba69-f0d60cdccfb7",
+              "option_value": "Wicker",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae713c"
+            },
+            {
+              "option_uid": "ea4e79cc-675f-4e53-b70f-ae0704caf56e",
+              "option_value": "Dark Bronze",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae713d"
+            },
+            {
+              "option_uid": "52a7238b-b43c-4266-893c-3da03562eb91",
+              "option_value": "Harbor Gray",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae713e"
+            },
+            {
+              "option_uid": "de374ba4-6874-47c3-bd45-a06237b7feb0",
+              "option_value": "Montana",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae713f"
+            },
+            {
+              "option_uid": "4b41beab-1539-4d81-bee8-83ad5e71a1e7",
+              "option_value": "Terra Bronze",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717950d0c8c6edae7140"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.693Z",
+        "custom_field_internal_object": {
+          "product_color_1": null,
+          "product_color_selected_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_display_color_selection_1": null,
+          "product_product_tier_1": "Best"
+        },
+        "product_no": 319
+      }
+    },
+    {
+      "uid": "6abc66ea-04df-4756-86d2-1d67ee42ceeb",
+      "pid": 165623,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 35
+    },
+    {
+      "uid": "e37b3940-869e-4456-be34-62ed69791698",
+      "pid": 165617,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "composite",
+      "count": 22,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "TopShield Aluminum Outside Box Miter",
+          "product_id": "165617",
+          "is_available": true,
+          "product_category": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "price": 9.45,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>The TopShield Aluminum Box Miter is a purposeful solution crafted to seamlessly connect two sections of a gutter, creating a precise 90-degree corner where needed. Available in both inside and outside configurations, with sizes of 5 inch and 6 inch, this box iter allows for the easy junction of two separate gutters at a right angle.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 9.45,
+          "brand": "TopShield",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Best"
+            }
+          ],
+          "uom": "PC",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "e37b3940-869e-4456-be34-62ed69791698",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Variant",
+            "option_values": [
+              {
+                "option_value": "80 Degree White — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Almond — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Desert Sand — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Musket Brown — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Pebblestone Clay — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "White — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Wicker — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "80 Degree White — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Almond — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Desert Sand — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Musket Brown — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Pebblestone Clay — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Royal Brown — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "White — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Wicker — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Royal Brown — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Black — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Dark Bronze — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Black — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Jefferson Tan — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Dark Bronze — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Charcoal Gray — 5\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "e37b3940-869e-4456-be34-62ed69791698",
+        "prefix": "",
+        "product_id": "165617",
+        "product_category": {
+          "category_uid": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "category_name": "GUTTER/ALUMINUM/COIL",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "TopShield",
+        "specification": "",
+        "uom": "PC",
+        "product_name": "TopShield Aluminum Outside Box Miter",
+        "product_description": "<p>The TopShield Aluminum Box Miter is a purposeful solution crafted to seamlessly connect two sections of a gutter, creating a precise 90-degree corner where needed. Available in both inside and outside configurations, with sizes of 5 inch and 6 inch, this box iter allows for the easy junction of two separate gutters at a right angle.</p>",
+        "plain_text_description": "The TopShield Aluminum Box Miter is a purposeful solution crafted to seamlessly connect two sections of a gutter, creating a precise 90-degree corner where needed. Available in both inside and outside configurations, with sizes of 5 inch and 6 inch, this box iter allows for the easy junction of two separate gutters at a right angle.",
+        "markdown_description": "The TopShield Aluminum Box Miter is a purposeful solution crafted to seamlessly connect two sections of a gutter, creating a precise 90-degree corner where needed. Available in both inside and outside configurations, with sizes of 5 inch and 6 inch, this box iter allows for the easy junction of two separate gutters at a right angle.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171798096bff071034c7f"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171798096bff071034c80"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171798096bff071034c81"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171798096bff071034c82"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Best",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171798096bff071034c83"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a3171798096bff071034c92",
+            "created_at": "2026-06-16T15:53:29.913Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 9.45,
+        "purchase_price": 9.45,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_rate": null,
+          "tax_name": "",
+          "tax_exempt": false
+        },
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Color",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "2d7c2494-3232-475a-86fa-a8e37db9251b",
+              "option_value": "80 Degree White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c94"
+            },
+            {
+              "option_uid": "e4f986f7-6621-4d36-ad37-5331772e3b47",
+              "option_value": "Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c95"
+            },
+            {
+              "option_uid": "a4ec779d-0e06-40ad-82de-03c64d7044c6",
+              "option_value": "Desert Sand",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c96"
+            },
+            {
+              "option_uid": "7723117f-bfe2-4801-bd20-518fa47c5c77",
+              "option_value": "Musket Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c97"
+            },
+            {
+              "option_uid": "e6e63e1b-27d9-4b0c-987c-654ce8ca5184",
+              "option_value": "Pebblestone Clay",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c98"
+            },
+            {
+              "option_uid": "8961f110-c0a2-486e-bc0a-f12af5c62050",
+              "option_value": "White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c99"
+            },
+            {
+              "option_uid": "2af69d5a-ea8e-4402-8946-2cc0fb75835d",
+              "option_value": "Wicker",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c9a"
+            },
+            {
+              "option_uid": "7f36ba29-6917-4c28-bcca-d60f822202f7",
+              "option_value": "Royal Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c9b"
+            },
+            {
+              "option_uid": "eb549276-32cd-49a4-ac8f-40c341ae2be8",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c9c"
+            },
+            {
+              "option_uid": "98ddf33a-b3c7-4f44-8471-17d97a1b4533",
+              "option_value": "Dark Bronze",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c9d"
+            },
+            {
+              "option_uid": "4044f1e6-cc28-4d88-8237-ca73d8f9c3a3",
+              "option_value": "Jefferson Tan",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c9e"
+            },
+            {
+              "option_uid": "f9d09855-0a5c-46a8-af02-843cd74d8b42",
+              "option_value": "Charcoal Gray",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171798096bff071034c9f"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.696Z",
+        "custom_field_internal_object": {
+          "product_color_selected_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_product_tier_1": "Best"
+        },
+        "product_no": 323
+      }
+    },
+    {
+      "uid": "dd5c7b20-f431-4e68-9c85-7186b5092ff5",
+      "pid": 165622,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "composite",
+      "count": 21,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "TopShield Aluminum Outside Bay Strip Miter",
+          "product_id": "165622",
+          "is_available": true,
+          "product_category": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "price": 9.45,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>The TopShield Aluminum Bay Strip Miter is a specialized solution designed to accommodate 45-degree angle corners with precision. Available in both inside and outside designs, and sizes ranging from 5 inch to 7 inch, it offers versatility for various applications.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 9.45,
+          "brand": "TopShield",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Best"
+            }
+          ],
+          "uom": "EA",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "dd5c7b20-f431-4e68-9c85-7186b5092ff5",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Variant",
+            "option_values": [
+              {
+                "option_value": "80 Degree White — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Royal Brown — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "White — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "80 Degree White — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "White — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Almond — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Desert Sand — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Musket Brown — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Pebblestone Clay — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Wicker — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Almond — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Desert Sand — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Musket Brown — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Royal Brown — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Wicker — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Cameo — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Pebblestone Clay — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Black — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Terra Bronze — 5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Evergreen — 6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Rugged Canyon — 6\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "dd5c7b20-f431-4e68-9c85-7186b5092ff5",
+        "prefix": "",
+        "product_id": "165622",
+        "product_category": {
+          "category_uid": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "category_name": "GUTTER/ALUMINUM/COIL",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "TopShield",
+        "specification": "",
+        "uom": "EA",
+        "product_name": "TopShield Aluminum Outside Bay Strip Miter",
+        "product_description": "<p>The TopShield Aluminum Bay Strip Miter is a specialized solution designed to accommodate 45-degree angle corners with precision. Available in both inside and outside designs, and sizes ranging from 5 inch to 7 inch, it offers versatility for various applications.</p>",
+        "plain_text_description": "The TopShield Aluminum Bay Strip Miter is a specialized solution designed to accommodate 45-degree angle corners with precision. Available in both inside and outside designs, and sizes ranging from 5 inch to 7 inch, it offers versatility for various applications.",
+        "markdown_description": "The TopShield Aluminum Bay Strip Miter is a specialized solution designed to accommodate 45-degree angle corners with precision. Available in both inside and outside designs, and sizes ranging from 5 inch to 7 inch, it offers versatility for various applications.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a317179472fd8b76f248e90"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a317179472fd8b76f248e91"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a317179472fd8b76f248e92"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a317179472fd8b76f248e93"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Best",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a317179472fd8b76f248e94"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a317179472fd8b76f248ea4",
+            "created_at": "2026-06-16T15:53:29.910Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 9.45,
+        "purchase_price": 9.45,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_rate": null,
+          "tax_name": "",
+          "tax_exempt": false
+        },
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Color",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "63b70934-55d0-4485-a1d2-3a583da35234",
+              "option_value": "80 Degree White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248ea6"
+            },
+            {
+              "option_uid": "6781b376-10c5-40c2-bb92-e1da98c617bd",
+              "option_value": "Royal Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248ea7"
+            },
+            {
+              "option_uid": "c01df240-a666-430b-8c71-36d0d08a2a67",
+              "option_value": "White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248ea8"
+            },
+            {
+              "option_uid": "f6ae5817-cf76-42b6-9d42-f92e25898097",
+              "option_value": "Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248ea9"
+            },
+            {
+              "option_uid": "e7a019bd-3c47-4006-9534-b5877dbb6839",
+              "option_value": "Desert Sand",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eaa"
+            },
+            {
+              "option_uid": "e401ef8c-a467-4e07-b5a6-ca3906e2e69d",
+              "option_value": "Musket Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eab"
+            },
+            {
+              "option_uid": "01db5515-813c-4a15-ac31-22aef64e7a52",
+              "option_value": "Pebblestone Clay",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eac"
+            },
+            {
+              "option_uid": "f290eebf-0a81-4e09-98a3-683dab6fd8df",
+              "option_value": "Wicker",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248ead"
+            },
+            {
+              "option_uid": "c518f952-35ba-4fe8-af03-928b9b537779",
+              "option_value": "Cameo",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eae"
+            },
+            {
+              "option_uid": "3a93059d-0338-4663-baea-c73e1fde4e1a",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eaf"
+            },
+            {
+              "option_uid": "1a913880-d7e5-436d-8f37-a5abca740bbc",
+              "option_value": "Terra Bronze",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eb0"
+            },
+            {
+              "option_uid": "cbf758ca-992a-4353-8310-64e821ffbb02",
+              "option_value": "Evergreen",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eb1"
+            },
+            {
+              "option_uid": "abf08240-4944-486c-b9c5-e3c4a7d7eced",
+              "option_value": "Rugged Canyon",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a317179472fd8b76f248eb2"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.696Z",
+        "custom_field_internal_object": {
+          "product_color_selected_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_product_tier_1": "Best"
+        },
+        "product_no": 322
+      }
+    },
+    {
+      "uid": "1f74e793-a4d1-4133-8246-12f5d12c2916",
+      "pid": 192565,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 2,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "Aluminum Oval Drop Outlet",
+          "product_id": "192565",
+          "is_available": true,
+          "product_category": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "price": 9.45,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 9.45,
+          "brand": "",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Best"
+            }
+          ],
+          "uom": "EA",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "1f74e793-a4d1-4133-8246-12f5d12c2916",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "2\" x 3\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "4\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "1f74e793-a4d1-4133-8246-12f5d12c2916",
+        "prefix": "",
+        "product_id": "192565",
+        "product_category": {
+          "category_uid": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "category_name": "GUTTER/ALUMINUM/COIL",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "",
+        "specification": "",
+        "uom": "EA",
+        "product_name": "Aluminum Oval Drop Outlet",
+        "product_description": "",
+        "plain_text_description": "",
+        "markdown_description": "",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171792fb2e035aeccd471"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171792fb2e035aeccd472"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171792fb2e035aeccd473"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171792fb2e035aeccd474"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Best",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a3171792fb2e035aeccd475"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a3171792fb2e035aeccd479",
+            "created_at": "2026-06-16T15:53:29.911Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 9.45,
+        "purchase_price": 9.45,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_rate": null,
+          "tax_name": "",
+          "tax_exempt": false
+        },
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Color",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "f0258f55-ec92-4ed2-935d-11ff06d3f624",
+              "option_value": "Mill",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a3171792fb2e035aeccd47b"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.697Z",
+        "custom_field_internal_object": {
+          "product_color_1": null,
+          "product_color_selected_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_display_color_selection_1": null,
+          "product_product_tier_1": "Best"
+        },
+        "product_no": 325
+      }
+    },
+    {
+      "uid": "952219ab-439a-43c8-b417-83cc46a7bfdf",
+      "pid": 195785,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "530b7af0-b91b-430e-838a-437900de99cf",
+      "pid": 135477,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "2c482cc4-179a-4db7-8402-412277696259",
+      "pid": 78549,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 4,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "Hidden Hanger",
+          "product_id": "78549",
+          "is_available": true,
+          "product_category": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "price": 9.45,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>Hidden Hangers are the modern equipment used for mounting and/or hanging gutters. They are basically a gutter bracket that clips to the inside of the gutter and screws directly into the fascia board with a steel threaded screw. The name “hidden hanger” comes from the fact that you can’t see the brackets from the ground because they no longer pierce the gutter face like traditional gutter spikes did.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 9.45,
+          "brand": "",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Best"
+            }
+          ],
+          "uom": "PC",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "2c482cc4-179a-4db7-8402-412277696259",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "7\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "5\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "6\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "7\" with Screw",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "2c482cc4-179a-4db7-8402-412277696259",
+        "prefix": "",
+        "product_id": "78549",
+        "product_category": {
+          "category_uid": "43c16303-5c66-4a0d-80bc-a91b73451a70",
+          "category_name": "GUTTER/ALUMINUM/COIL",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "",
+        "specification": "",
+        "uom": "PC",
+        "product_name": "Hidden Hanger",
+        "product_description": "<p>Hidden Hangers are the modern equipment used for mounting and/or hanging gutters. They are basically a gutter bracket that clips to the inside of the gutter and screws directly into the fascia board with a steel threaded screw. The name “hidden hanger” comes from the fact that you can’t see the brackets from the ground because they no longer pierce the gutter face like traditional gutter spikes did.</p>",
+        "plain_text_description": "Hidden Hangers are the modern equipment used for mounting and/or hanging gutters. They are basically a gutter bracket that clips to the inside of the gutter and screws directly into the fascia board with a steel threaded screw. The name “hidden hanger” comes from the fact that you can’t see the brackets from the ground because they no longer pierce the gutter face like traditional gutter spikes did.",
+        "markdown_description": "Hidden Hangers are the modern equipment used for mounting and/or hanging gutters. They are basically a gutter bracket that clips to the inside of the gutter and screws directly into the fascia board with a steel threaded screw. The name “hidden hanger” comes from the fact that you can’t see the brackets from the ground because they no longer pierce the gutter face like traditional gutter spikes did.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b85948ad2860a235af"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b85948ad2860a235b0"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b85948ad2860a235b1"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b85948ad2860a235b2"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Best",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b85948ad2860a235b3"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b85948ad2860a235b4",
+            "created_at": "2026-05-18T15:56:40.702Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 9.45,
+        "purchase_price": 9.45,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "b4ab5e49-b61d-427f-9bde-9a8b32dd6590",
+              "option_value": "Mill",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b85948ad2860a235b5"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.702Z",
+        "custom_field_internal_object": {
+          "product_color_selection_mandatory_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selected_1": null,
+          "product_product_tier_1": "Best"
+        },
+        "product_no": 328
+      }
+    },
+    {
+      "uid": "f03dd43f-21b2-4c61-acce-1fa824295bde",
+      "pid": 75345,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "composite",
+      "count": 4,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "GAF Master Flow RV50G Galvanized Square Vent",
+          "product_id": "75345",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>Helps exhaust heat and moisture from the attic, kitchen or bathroom, to protect from premature deterioration, decrease interior heat, and limit the growth of harmful mold and mildew. This vent provides 50 sq. in. (32,258 m2) of NFA.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "GAF",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "PC",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "f03dd43f-21b2-4c61-acce-1fa824295bde",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Variant",
+            "option_values": [
+              {
+                "option_value": "Black — 15\" x 16 1/2\" x 4\" Square Top/Round Throat",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Brown — 15\" x 16 1/2\" x 4\" Square Top/Round Throat",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Weathered Wood — 15\" x 16 1/2\" x 4\" Round Throat",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Weathered Wood — 15\" x 16 1/2\" x 4\" Square Top/Round Throat",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "f03dd43f-21b2-4c61-acce-1fa824295bde",
+        "prefix": "",
+        "product_id": "75345",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "GAF",
+        "specification": "",
+        "uom": "PC",
+        "product_name": "GAF Master Flow RV50G Galvanized Square Vent",
+        "product_description": "<p>Helps exhaust heat and moisture from the attic, kitchen or bathroom, to protect from premature deterioration, decrease interior heat, and limit the growth of harmful mold and mildew. This vent provides 50 sq. in. (32,258 m2) of NFA.</p>",
+        "plain_text_description": "Helps exhaust heat and moisture from the attic, kitchen or bathroom, to protect from premature deterioration, decrease interior heat, and limit the growth of harmful mold and mildew. This vent provides 50 sq. in. (32,258 m2) of NFA.",
+        "markdown_description": "Helps exhaust heat and moisture from the attic, kitchen or bathroom, to protect from premature deterioration, decrease interior heat, and limit the growth of harmful mold and mildew. This vent provides 50 sq. in. (32,258 m2) of NFA.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b83690759dc75dcba6"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b83690759dc75dcba7"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b83690759dc75dcba8"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b83690759dc75dcba9"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b83690759dc75dcbaa"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b83690759dc75dcbab",
+            "created_at": "2026-05-18T15:56:40.703Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "04f57f79-951a-4d1e-b6b2-cf8fc89744ee",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b83690759dc75dcbac"
+            },
+            {
+              "option_uid": "716cb512-10b8-48aa-a7f0-433d4dc5effc",
+              "option_value": "Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b83690759dc75dcbad"
+            },
+            {
+              "option_uid": "8fa984af-ecb9-4368-967f-e8a7c10d89e9",
+              "option_value": "Weathered Wood",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b83690759dc75dcbae"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.704Z",
+        "custom_field_internal_object": {
+          "product_color_selected_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 329
+      }
+    },
+    {
+      "uid": "eab4bc0f-47f7-4d86-9d8c-c2c3b7d2cf09",
+      "pid": 94650,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "e92d6f0d-5c6f-4da4-b663-92612b6cf16b",
+      "pid": 75368,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 3,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "GAF Cobra Gunable Exhaust Vent",
+          "product_id": "75368",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "GAF",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "RL",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "e92d6f0d-5c6f-4da4-b663-92612b6cf16b",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "8\" x 20'",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "10-1/2\" x 20'",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "10-1/2\" x 50'",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "e92d6f0d-5c6f-4da4-b663-92612b6cf16b",
+        "prefix": "",
+        "product_id": "75368",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "GAF",
+        "specification": "",
+        "uom": "RL",
+        "product_name": "GAF Cobra Gunable Exhaust Vent",
+        "product_description": "<p>The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.</p>",
+        "plain_text_description": "The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.",
+        "markdown_description": "The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b8348032cf8768f3a1"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b8348032cf8768f3a2"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b8348032cf8768f3a3"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b8348032cf8768f3a4"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b8348032cf8768f3a5"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b8348032cf8768f3a6",
+            "created_at": "2026-05-18T15:56:40.711Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "2513651f-5fd4-4c4f-ae48-62040bfdde97",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b8348032cf8768f3a7"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.711Z",
+        "custom_field_internal_object": {
+          "product_color_selection_mandatory_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selected_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 332
+      }
+    },
+    {
+      "uid": "46d1bed6-18a1-45cd-a479-fd383af58faa",
+      "pid": 75347,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "bf777b3b-20aa-455f-b824-9477a5907437",
+      "pid": 75348,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "5ad1dc14-b3f8-4d91-9cfd-aabd90f7e6b7",
+      "pid": 119896,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 9
+    },
+    {
+      "uid": "f03d0b26-19a2-4a39-aac8-ae62f4b527f7",
+      "pid": 190032,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "df84f342-ba62-4a57-b006-b8eb4164cda5",
+      "pid": 75363,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "da484f74-a90f-4bcc-bdde-919235d37512",
+      "pid": 77249,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "db21fa52-c039-4151-8025-6e9079afe14c",
+      "pid": 75395,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 3,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "GAF Master Flow Galvanized Gooseneck Vent",
+          "product_id": "75395",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>Master Flow galvanized goose neck vents are used for attic ventilation or to cover an exhaust pipe through a roof. This vent is made with 26 ga galvanized steel, features a heavy-duty screen to deter entry by birds or small animals.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "GAF",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "EA",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "db21fa52-c039-4151-8025-6e9079afe14c",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "4\" - 9\" x 11\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "10\" - 16\" x 12\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "6\" - 14-3/4\" X 13-1/2\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "db21fa52-c039-4151-8025-6e9079afe14c",
+        "prefix": "",
+        "product_id": "75395",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "GAF",
+        "specification": "",
+        "uom": "EA",
+        "product_name": "GAF Master Flow Galvanized Gooseneck Vent",
+        "product_description": "<p>Master Flow galvanized goose neck vents are used for attic ventilation or to cover an exhaust pipe through a roof. This vent is made with 26 ga galvanized steel, features a heavy-duty screen to deter entry by birds or small animals.</p>",
+        "plain_text_description": "Master Flow galvanized goose neck vents are used for attic ventilation or to cover an exhaust pipe through a roof. This vent is made with 26 ga galvanized steel, features a heavy-duty screen to deter entry by birds or small animals.",
+        "markdown_description": "Master Flow galvanized goose neck vents are used for attic ventilation or to cover an exhaust pipe through a roof. This vent is made with 26 ga galvanized steel, features a heavy-duty screen to deter entry by birds or small animals.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b86d39c82f12fdd086"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b86d39c82f12fdd087"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b86d39c82f12fdd088"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b86d39c82f12fdd089"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b86d39c82f12fdd08a"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b86d39c82f12fdd08b",
+            "created_at": "2026-05-18T15:56:40.733Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "ba3a4cb8-95d2-413e-b6df-e325d3940911",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b86d39c82f12fdd08c"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.734Z",
+        "custom_field_internal_object": {
+          "product_color_selected_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 336
+      }
+    },
+    {
+      "uid": "d774da2f-14e8-4c24-a39f-34ee7b2f87b4",
+      "pid": 75385,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "6d84f41e-7e7c-44a1-9fc5-74f6251e4404",
+      "pid": 75420,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 7
+    },
+    {
+      "uid": "0141bd1e-9a77-4918-b5c7-b39e8a265739",
+      "pid": 75397,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 2,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "GAF Cobra Hand Nail Exhaust Vent",
+          "product_id": "75397",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "GAF",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "RL",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "0141bd1e-9a77-4918-b5c7-b39e8a265739",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "10-1/2\" x 20'",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "10-1/2\" x 50'",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "0141bd1e-9a77-4918-b5c7-b39e8a265739",
+        "prefix": "",
+        "product_id": "75397",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "GAF",
+        "specification": "",
+        "uom": "RL",
+        "product_name": "GAF Cobra Hand Nail Exhaust Vent",
+        "product_description": "<p>The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.</p>",
+        "plain_text_description": "The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.",
+        "markdown_description": "The original Cobra ridge vent, protecting over 2 million homes, comes on a mesh roll for fast and easy installation with no complicated fitting, wrapping, nail gun adapters, connectors or end plugs needed. It features a shingle over design to help blend into the ridge line.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b894c6c4f6dba3c166"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b894c6c4f6dba3c167"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b894c6c4f6dba3c168"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b894c6c4f6dba3c169"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b894c6c4f6dba3c16a"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b894c6c4f6dba3c16b",
+            "created_at": "2026-05-18T15:56:40.741Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "86c0097e-78fc-4e70-969b-e1d87eb5cd78",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b894c6c4f6dba3c16c"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.742Z",
+        "custom_field_internal_object": {
+          "product_color_selection_mandatory_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selected_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 342
+      }
+    },
+    {
+      "uid": "d195a805-9d89-483e-9473-4d880af13261",
+      "pid": 75553,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "composite",
+      "count": 5,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "GAF Master Flow Galvanized Externally Braced Turbine",
+          "product_id": "75553",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>12\" (305 mm) galvanized turbine with stainless dual-bearing system uses the wind to pull heat and moisture from the attic systems for extra durability.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "GAF",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "PC",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "d195a805-9d89-483e-9473-4d880af13261",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Variant",
+            "option_values": [
+              {
+                "option_value": "Weathered Wood — 12\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Mill — 12\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Black — 12\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Brown — 12\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "Mill — 12\" Florida",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "d195a805-9d89-483e-9473-4d880af13261",
+        "prefix": "",
+        "product_id": "75553",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "GAF",
+        "specification": "",
+        "uom": "PC",
+        "product_name": "GAF Master Flow Galvanized Externally Braced Turbine",
+        "product_description": "<p>12\" (305 mm) galvanized turbine with stainless dual-bearing system uses the wind to pull heat and moisture from the attic systems for extra durability.</p>",
+        "plain_text_description": "12\" (305 mm) galvanized turbine with stainless dual-bearing system uses the wind to pull heat and moisture from the attic systems for extra durability.",
+        "markdown_description": "12\" (305 mm) galvanized turbine with stainless dual-bearing system uses the wind to pull heat and moisture from the attic systems for extra durability.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80c54c05470a541f6"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80c54c05470a541f7"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80c54c05470a541f8"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80c54c05470a541f9"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80c54c05470a541fa"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b80c54c05470a541fb",
+            "created_at": "2026-05-18T15:56:40.744Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "1c49c06d-145d-4197-814e-4e5d148d45ea",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80c54c05470a541fc"
+            },
+            {
+              "option_uid": "45db0def-8be1-40c2-89f8-d55081c8ccd3",
+              "option_value": "Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80c54c05470a541fd"
+            },
+            {
+              "option_uid": "99c9fd05-b0cd-41f7-8709-4327ab807d22",
+              "option_value": "Mill",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80c54c05470a541fe"
+            },
+            {
+              "option_uid": "4b0f33de-3b37-4260-9959-dba301b2b8ab",
+              "option_value": "Weathered Wood",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80c54c05470a541ff"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.745Z",
+        "custom_field_internal_object": {
+          "product_color_selection_mandatory_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selected_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 340
+      }
+    },
+    {
+      "uid": "64462697-f090-4f89-875f-021465f89bea",
+      "pid": 75407,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 3,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "GAF Master Flow Galvanized Chimney Cap",
+          "product_id": "75407",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>Easy-to-install galvanized steel chimney caps with epoxy coating help protect against weather infiltration, downdrafts, clogging, and animal infestation.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "GAF",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "EA",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "64462697-f090-4f89-875f-021465f89bea",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "13\" x 13\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "9\" x 13\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "9\" x 9\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "64462697-f090-4f89-875f-021465f89bea",
+        "prefix": "",
+        "product_id": "75407",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "GAF",
+        "specification": "",
+        "uom": "EA",
+        "product_name": "GAF Master Flow Galvanized Chimney Cap",
+        "product_description": "<p>Easy-to-install galvanized steel chimney caps with epoxy coating help protect against weather infiltration, downdrafts, clogging, and animal infestation.</p>",
+        "plain_text_description": "Easy-to-install galvanized steel chimney caps with epoxy coating help protect against weather infiltration, downdrafts, clogging, and animal infestation.",
+        "markdown_description": "Easy-to-install galvanized steel chimney caps with epoxy coating help protect against weather infiltration, downdrafts, clogging, and animal infestation.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b81fddc65f5c69385a"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b81fddc65f5c69385b"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b81fddc65f5c69385c"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b81fddc65f5c69385d"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b81fddc65f5c69385e"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b81fddc65f5c69385f",
+            "created_at": "2026-05-18T15:56:40.748Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "bde734b6-2baf-4b4f-911f-8477ff1694ed",
+              "option_value": "Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b81fddc65f5c693860"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.748Z",
+        "custom_field_internal_object": {
+          "product_color_selected_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 341
+      }
+    },
+    {
+      "uid": "b25a30dc-1009-4c14-b278-d16b8f8b08dc",
+      "pid": 78577,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 50
+    },
+    {
+      "uid": "dfba3a19-8ce3-49ed-8e8a-79ecc16c39ec",
+      "pid": 75405,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "d6ac788a-97ae-4c42-8e8e-f7893d951cbc",
+      "pid": 76822,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "975829de-c4c1-4e2a-ba86-586aeb762c2d",
+      "pid": 78599,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 50
+    },
+    {
+      "uid": "8fb730ab-c713-4ddb-9fd3-801e59908109",
+      "pid": 75549,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "c180d2f9-aea6-4084-99f6-9f006757066c",
+      "pid": 75548,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 5
+    },
+    {
+      "uid": "9fd01ed0-1d60-4da7-9650-f5d3d19114ff",
+      "pid": 87965,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "composite",
+      "count": 29,
+      "note": "",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "TopShield Round Top Gable Vent",
+          "product_id": "87965",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>Well-suited to smaller gables, the arch makes the most of the space and accentuates the height of the gable. If you would like to add a keystone, sold separately, it can be easily adapted to fit. Use with a wide range of siding materials.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "TopShield",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "EA",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "9fd01ed0-1d60-4da7-9650-f5d3d19114ff",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Variant",
+            "option_values": [
+              {
+                "option_value": "001 White — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "002 Black — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "013 Light Almond — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "016 Light Gray — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "023 Wicker — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "030 Paintable — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "048 Almond — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "069 Tan — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "095 Clay — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "117 Bright White — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "123 White — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "172 — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "001 White — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "002 Black — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "008 Clay — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "013 Light Almond — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "016 Light Gray — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "023 Wicker — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "030 Paintable — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "049 Almond — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "069 Tan — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "082 Linen — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "095 Clay — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "112 — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "117 Bright White — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "123 White — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "172 — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "480 — 14\" x 22\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "480 — 22\" x 32\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "9fd01ed0-1d60-4da7-9650-f5d3d19114ff",
+        "prefix": "",
+        "product_id": "87965",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "TopShield",
+        "specification": "",
+        "uom": "EA",
+        "product_name": "TopShield Round Top Gable Vent",
+        "product_description": "<p>Well-suited to smaller gables, the arch makes the most of the space and accentuates the height of the gable. If you would like to add a keystone, sold separately, it can be easily adapted to fit. Use with a wide range of siding materials.</p>",
+        "plain_text_description": "Well-suited to smaller gables, the arch makes the most of the space and accentuates the height of the gable. If you would like to add a keystone, sold separately, it can be easily adapted to fit. Use with a wide range of siding materials.",
+        "markdown_description": "Well-suited to smaller gables, the arch makes the most of the space and accentuates the height of the gable. If you would like to add a keystone, sold separately, it can be easily adapted to fit. Use with a wide range of siding materials.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717a50d0c8c6edae7177"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717a50d0c8c6edae7178"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717a50d0c8c6edae7179"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717a50d0c8c6edae717a"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a31717a50d0c8c6edae717b"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a31717a50d0c8c6edae718f",
+            "created_at": "2026-06-16T15:53:30.987Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_rate": null,
+          "tax_name": "",
+          "tax_exempt": false
+        },
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Color",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "9c89c2ec-a4ee-479d-9c2b-87b207301573",
+              "option_value": "001 White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7191"
+            },
+            {
+              "option_uid": "b84a3700-72ab-4706-89ae-538ca3d09fa3",
+              "option_value": "002 Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7192"
+            },
+            {
+              "option_uid": "b88bb707-5429-448c-a442-5d3a3f4fc39d",
+              "option_value": "013 Light Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7193"
+            },
+            {
+              "option_uid": "307ac0d9-2a3a-4ec8-93cf-9a1fcc822aa4",
+              "option_value": "016 Light Gray",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7194"
+            },
+            {
+              "option_uid": "e1643723-f7e7-4eb5-b5f8-e19d4375d38b",
+              "option_value": "023 Wicker",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7195"
+            },
+            {
+              "option_uid": "601284b4-11a4-4198-be8f-bc8a79c777f0",
+              "option_value": "030 Paintable",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7196"
+            },
+            {
+              "option_uid": "550b070d-1183-4612-980e-3d875122701c",
+              "option_value": "048 Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7197"
+            },
+            {
+              "option_uid": "cd00641c-6baf-4adf-809b-c8d09ad85c22",
+              "option_value": "069 Tan",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7198"
+            },
+            {
+              "option_uid": "4c117f19-0175-4fd0-ad39-a0cfb1077407",
+              "option_value": "095 Clay",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae7199"
+            },
+            {
+              "option_uid": "1b96a5b6-2ced-49ea-b956-46ea52eaf3e9",
+              "option_value": "117 Bright White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae719a"
+            },
+            {
+              "option_uid": "ec8ad427-d075-4155-8d97-a052fa07fd2f",
+              "option_value": "123 White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae719b"
+            },
+            {
+              "option_uid": "0151623a-d19f-48b0-9873-022dfc4a6d30",
+              "option_value": "172",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae719c"
+            },
+            {
+              "option_uid": "d3118b1f-3041-45de-8756-ce7eb36ae925",
+              "option_value": "008 Clay",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae719d"
+            },
+            {
+              "option_uid": "759f05ab-193b-4fca-841e-b043f1befebe",
+              "option_value": "049 Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae719e"
+            },
+            {
+              "option_uid": "d5aca04b-c6c9-479f-ac9c-24ea8724017a",
+              "option_value": "082 Linen",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae719f"
+            },
+            {
+              "option_uid": "311047d1-54a7-4e76-91c6-147d112b7e85",
+              "option_value": "112",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae71a0"
+            },
+            {
+              "option_uid": "4dd763df-9771-4b4d-b732-cc1c9c263b9c",
+              "option_value": "480",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a31717a50d0c8c6edae71a1"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.758Z",
+        "custom_field_internal_object": {
+          "product_color_1": null,
+          "product_color_selected_1": null,
+          "product_color_selection_mandatory_1": null,
+          "product_display_color_selection_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 349
+      }
+    },
+    {
+      "uid": "ad7848b1-0bd7-48ed-9478-da371e6ebed4",
+      "pid": 179685,
+      "status": "already_ok",
+      "kind": "size",
+      "count": 3
+    },
+    {
+      "uid": "9c8ca856-11ea-4553-98bf-5385bef7a12e",
+      "pid": 78592,
+      "status": "dry_run",
+      "action": "upgraded",
+      "kind": "size",
+      "count": 4,
+      "note": "composite 133 combos > 50 cap → fell back to size axis (4 — full)",
+      "isShingles": false,
+      "payload": {
+        "product": {
+          "prefix": "",
+          "product_name": "TopShield Vinyl Octagon Gable Vent",
+          "product_id": "78592",
+          "is_available": true,
+          "product_category": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "price": 37.88,
+          "min_quantity": 1,
+          "currency": "",
+          "quantity": 1,
+          "product_manual_link": "",
+          "product_description": "<p>A unique shape and crisp angles of an octagonal vent really stand out, especially when in a vivid, contrasting color. Use with a wide range of siding materials.</p>",
+          "product_image": "",
+          "product_type": "PARTS",
+          "purchase_price": 37.88,
+          "brand": "TopShield",
+          "track_quantity": true,
+          "specification": "",
+          "has_custom_tax": false,
+          "meta_data": [
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 0,
+              "label": "Color",
+              "read_only": false,
+              "type": "MULTI_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 1,
+              "label": "Color Selected",
+              "read_only": false,
+              "type": "SINGLE_LINE",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 2,
+              "label": "Color Selection Mandatory",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 3,
+              "label": "Display Color Selection",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": ""
+            },
+            {
+              "hide_field": false,
+              "hide_to_fe": false,
+              "id": 4,
+              "label": "Product Tier",
+              "read_only": false,
+              "type": "RADIO",
+              "dependent_on": "",
+              "dependent_options": [],
+              "module_name": "PRODUCT",
+              "value": "Better"
+            }
+          ],
+          "uom": "PC",
+          "is_billable": true,
+          "consider_profitability": true,
+          "is_commissionable": true,
+          "bu_uids": null,
+          "product_uid": "9c8ca856-11ea-4553-98bf-5385bef7a12e",
+          "product_barcode": "",
+          "location_availability": [
+            {
+              "location": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "min_quantity": 1,
+              "quantity": 1,
+              "serial_nos": []
+            }
+          ],
+          "tax": {
+            "tax_exempt": false,
+            "tax_name": "",
+            "tax_rate": ""
+          },
+          "markup": null,
+          "product_files": [],
+          "option": {
+            "customer_selection": false,
+            "mandate_customer_selection": false,
+            "option_label": "Size",
+            "option_values": [
+              {
+                "option_value": "18\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "27\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "32\"",
+                "option_image": "",
+                "is_available": true
+              },
+              {
+                "option_value": "22\"",
+                "option_image": "",
+                "is_available": true
+              }
+            ]
+          }
+        },
+        "vendor": []
+      },
+      "before": {
+        "product_uid": "9c8ca856-11ea-4553-98bf-5385bef7a12e",
+        "prefix": "",
+        "product_id": "78592",
+        "product_category": {
+          "category_uid": "b56ee701-0291-41ca-8ea0-d76bdc41951f",
+          "category_name": "VENTS",
+          "is_deleted": false,
+          "business_unit": []
+        },
+        "product_image": "",
+        "product_barcode": "",
+        "product_files": [],
+        "brand": "TopShield",
+        "specification": "",
+        "uom": "PC",
+        "product_name": "TopShield Vinyl Octagon Gable Vent",
+        "product_description": "<p>A unique shape and crisp angles of an octagonal vent really stand out, especially when in a vivid, contrasting color. Use with a wide range of siding materials.</p>",
+        "plain_text_description": "A unique shape and crisp angles of an octagonal vent really stand out, especially when in a vivid, contrasting color. Use with a wide range of siding materials.",
+        "markdown_description": "A unique shape and crisp angles of an octagonal vent really stand out, especially when in a vivid, contrasting color. Use with a wide range of siding materials.",
+        "product_type": "PARTS",
+        "service_type": "HOURLY",
+        "associated_products": [],
+        "meta_data": [
+          {
+            "label": "Color",
+            "value": "",
+            "type": "MULTI_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80aab432761627253"
+          },
+          {
+            "label": "Color Selected",
+            "value": "",
+            "type": "SINGLE_LINE",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80aab432761627254"
+          },
+          {
+            "label": "Color Selection Mandatory",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80aab432761627255"
+          },
+          {
+            "label": "Display Color Selection",
+            "value": "",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80aab432761627256"
+          },
+          {
+            "label": "Product Tier",
+            "value": "Better",
+            "type": "RADIO",
+            "hide_field": false,
+            "module_name": "PRODUCT",
+            "hide_to_fe": false,
+            "_id": "6a0b36b80aab432761627257"
+          }
+        ],
+        "product_manual_link": "",
+        "location_availability": [
+          {
+            "location": {
+              "location_uid": "d683e1ff-fcef-4acd-9357-bd7571f7a64a",
+              "location_name": "Warehouse",
+              "is_deleted": false
+            },
+            "quantity": 1,
+            "min_quantity": 1,
+            "serial_nos": [],
+            "_id": "6a0b36b80aab432761627258",
+            "created_at": "2026-05-18T15:56:40.758Z"
+          }
+        ],
+        "track_quantity": true,
+        "quantity": 1,
+        "min_quantity": 1,
+        "low_stock": false,
+        "currency": "",
+        "price": 37.88,
+        "purchase_price": 37.88,
+        "has_custom_tax": false,
+        "tax": {
+          "tax_exempt": false
+        },
+        "markup": null,
+        "is_available": true,
+        "is_billable": true,
+        "preferred_vendor": null,
+        "formula": null,
+        "consider_profitability": true,
+        "option": {
+          "option_label": "Variant",
+          "customer_selection": false,
+          "mandate_customer_selection": false,
+          "option_values": [
+            {
+              "option_uid": "991a310e-4e74-4d64-b757-8b228de858ca",
+              "option_value": "001 White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627259"
+            },
+            {
+              "option_uid": "0b06ccd5-7fe7-4095-b4c6-0268b2eaee01",
+              "option_value": "002 Black",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162725a"
+            },
+            {
+              "option_uid": "090aba27-03ae-4e0a-b1fa-0d1281f031f2",
+              "option_value": "008 Clay",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162725b"
+            },
+            {
+              "option_uid": "947f37eb-43e4-4940-b5cc-dc7262a76257",
+              "option_value": "010 Musket Brown",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162725c"
+            },
+            {
+              "option_uid": "be8620bd-50be-4f45-b9b3-ecc92d4d6cd2",
+              "option_value": "013 Light Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162725d"
+            },
+            {
+              "option_uid": "120f8c70-dba9-4bb7-9883-0b4536a9d1a8",
+              "option_value": "016 Light Gray",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162725e"
+            },
+            {
+              "option_uid": "bff8cc49-e6de-4f05-9580-49c1e1806833",
+              "option_value": "017",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162725f"
+            },
+            {
+              "option_uid": "7d5b9c7b-e1c0-4ef5-b3a9-30b863920113",
+              "option_value": "018 Tuxedo Gray",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627260"
+            },
+            {
+              "option_uid": "c47cdedd-7b7e-443a-ba85-924ac4fe0b70",
+              "option_value": "020 Cream",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627261"
+            },
+            {
+              "option_uid": "dc869375-6b04-446b-a72e-e86d78bbdd6a",
+              "option_value": "021 Sandstone Beige",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627262"
+            },
+            {
+              "option_uid": "a82fdd3b-d8e1-44ca-b3d6-56f48b5b55cd",
+              "option_value": "023 Wicker",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627263"
+            },
+            {
+              "option_uid": "904bd75c-1a80-45d0-9357-6e3d6fb2626a",
+              "option_value": "028 Forest Green",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627264"
+            },
+            {
+              "option_uid": "fae02498-4e14-480c-a777-856cdcfe5169",
+              "option_value": "030 Paintable",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627265"
+            },
+            {
+              "option_uid": "e1a94439-a094-4d29-b9c8-26ff58e5d307",
+              "option_value": "034 Parchment",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627266"
+            },
+            {
+              "option_uid": "7de133f5-8021-4418-b809-3b24d80e4f07",
+              "option_value": "040",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627267"
+            },
+            {
+              "option_uid": "1fb01c6f-c355-4b84-8faa-9ad3e5a994c0",
+              "option_value": "041",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627268"
+            },
+            {
+              "option_uid": "e5f4573e-db30-4ae5-bce8-db8f2a9170bb",
+              "option_value": "042",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627269"
+            },
+            {
+              "option_uid": "5c5f5dac-9554-4c3d-9c63-54e5ce724d3e",
+              "option_value": "045 Sandstone Maple",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162726a"
+            },
+            {
+              "option_uid": "ccbaeea0-c0dc-4344-840c-cddb53c07744",
+              "option_value": "048 Almond",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162726b"
+            },
+            {
+              "option_uid": "a824f090-f805-4035-a24d-b9ac5cf5c9ac",
+              "option_value": "059",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162726c"
+            },
+            {
+              "option_uid": "d3cf0121-4480-4107-991d-a98b95c9c8cb",
+              "option_value": "069 Tan",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162726d"
+            },
+            {
+              "option_uid": "c713e184-062d-423c-9a19-64e67bcbcc1f",
+              "option_value": "071",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162726e"
+            },
+            {
+              "option_uid": "3a5a1409-e932-4083-9217-2cbba115d814",
+              "option_value": "078 Wineberry",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162726f"
+            },
+            {
+              "option_uid": "e7cba466-2a31-4f2e-8db7-d2fcb8390183",
+              "option_value": "095 Clay",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627270"
+            },
+            {
+              "option_uid": "b0a143f0-44d1-4782-bd96-f344d12b62ef",
+              "option_value": "098",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627271"
+            },
+            {
+              "option_uid": "f7b0e620-79d0-44cb-ab70-0872cc315ba9",
+              "option_value": "112",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627272"
+            },
+            {
+              "option_uid": "7ca9aef8-f14a-4a1f-abb7-d2932f089d78",
+              "option_value": "114",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627273"
+            },
+            {
+              "option_uid": "4b73f8bc-3704-412e-b85a-a391af89a3c9",
+              "option_value": "117 Bright White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627274"
+            },
+            {
+              "option_uid": "46e58eb6-7007-4e1a-bc88-3e6ce87df05f",
+              "option_value": "118",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627275"
+            },
+            {
+              "option_uid": "a27158e8-5c73-4126-b942-78e877a709ef",
+              "option_value": "123 White",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627276"
+            },
+            {
+              "option_uid": "f865bcd8-c7c2-4bc4-bca8-b282eae5422b",
+              "option_value": "127",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627277"
+            },
+            {
+              "option_uid": "c8769d4d-0336-4fbd-b5a4-f2f222909e41",
+              "option_value": "136",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627278"
+            },
+            {
+              "option_uid": "26115271-ea1a-41ab-ad0b-feb47c303217",
+              "option_value": "137",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627279"
+            },
+            {
+              "option_uid": "3c6ae5c5-e8e9-40bd-8ee8-b297f4555108",
+              "option_value": "155",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162727a"
+            },
+            {
+              "option_uid": "c59263e9-d59c-4d89-9916-d528b30e6ce5",
+              "option_value": "172",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162727b"
+            },
+            {
+              "option_uid": "77a2f2ea-a17e-4803-881e-ef0b98dd5252",
+              "option_value": "173",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162727c"
+            },
+            {
+              "option_uid": "6d12f97f-f3b0-4e4e-842e-ffcf7e511e46",
+              "option_value": "176",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162727d"
+            },
+            {
+              "option_uid": "1ad97a55-1022-4231-849f-d6f9da732ca5",
+              "option_value": "182",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162727e"
+            },
+            {
+              "option_uid": "8ccf0f37-0d62-4f4d-934d-4d1a0dc81b3e",
+              "option_value": "200",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162727f"
+            },
+            {
+              "option_uid": "d99374c2-91b4-411e-b941-e288e94499a5",
+              "option_value": "201",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627280"
+            },
+            {
+              "option_uid": "b3314d77-1778-4c64-bcab-cb205800a327",
+              "option_value": "206",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627281"
+            },
+            {
+              "option_uid": "884a6e60-e54b-4193-8515-aa9e02ff46e3",
+              "option_value": "212",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627282"
+            },
+            {
+              "option_uid": "922757ca-990b-42a9-aeed-b4aae1788fba",
+              "option_value": "215",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627283"
+            },
+            {
+              "option_uid": "69356ba9-f295-44fc-878b-02103a6b7b33",
+              "option_value": "222",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627284"
+            },
+            {
+              "option_uid": "af8ace77-eb03-41c6-9654-bb9693cfe202",
+              "option_value": "232",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627285"
+            },
+            {
+              "option_uid": "e4a2e4a3-7bb8-4aee-9082-7c234b9773a6",
+              "option_value": "235",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627286"
+            },
+            {
+              "option_uid": "81a76159-0386-4013-8ec8-f4e000b6c048",
+              "option_value": "263",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627287"
+            },
+            {
+              "option_uid": "021bcb64-92ae-497a-8f02-63d6f49a24d6",
+              "option_value": "278",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627288"
+            },
+            {
+              "option_uid": "c516c739-71bc-4404-b4e6-cd1870cb072b",
+              "option_value": "293",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab432761627289"
+            },
+            {
+              "option_uid": "63a2a80c-b8f9-4237-ad7e-e1a313b4256b",
+              "option_value": "298",
+              "option_image": "",
+              "is_available": true,
+              "_id": "6a0b36b80aab43276162728a"
+            }
+          ]
+        },
+        "is_supplier_imported_product": false,
+        "is_commissionable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "3fd0a74d-e884-42cb-b231-df6e0c63af95",
+          "first_name": "Garrett",
+          "last_name": "Kurtt",
+          "email": "garrett@highimpactco.com",
+          "external_login_id": null,
+          "home_phone_number": "",
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "(720) 515-4672",
+          "mobile_phone_number": null,
+          "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-04-13T13:23:47.000Z",
+          "updated_at": "2026-05-05T15:15:59.000Z",
+          "last_login_at": "2026-06-16T12:01:06.000Z"
+        },
+        "business_unit": [],
+        "associated_supplier_provider": [],
+        "created_at": "2026-05-18T15:56:40.761Z",
+        "custom_field_internal_object": {
+          "product_color_selection_mandatory_1": null,
+          "product_color_1": null,
+          "product_display_color_selection_1": null,
+          "product_color_selected_1": null,
+          "product_product_tier_1": "Better"
+        },
+        "product_no": 353
+      }
+    },
+    {
+      "uid": "4513e376-c276-4d01-b3d7-c60318b14d35",
+      "pid": 88916,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "f697d08b-0dc5-48ec-bf2d-c26e42fbaad7",
+      "pid": 88504,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 6
+    },
+    {
+      "uid": "dfb6d3d0-b561-4bbb-8dad-e827b088eb64",
+      "pid": 87843,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 50
+    },
+    {
+      "uid": "31d2266a-804d-478d-b8ee-bc47ce591563",
+      "pid": 194897,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "2bb3b54a-e216-4d3d-9fcf-f7c03c0979ec",
+      "pid": 124201,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "1cd5c4b8-2784-4be5-ac71-8cebc869a267",
+      "pid": 79174,
+      "status": "already_ok",
+      "kind": "size",
+      "count": 2
+    },
+    {
+      "uid": "372d7264-a93c-4fcb-926c-4290ac62fb3d",
+      "pid": 181933,
+      "status": "already_ok",
+      "kind": "size",
+      "count": 2
+    },
+    {
+      "uid": "f352226d-f60f-4f09-9d18-0b686094ddc5",
+      "pid": 160156,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "97eded8f-d028-4b08-9c8d-5022922dfef8",
+      "pid": 210704,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "b682fee9-f8fd-47e3-93e1-a41841430403",
+      "pid": 194896,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "399eb566-57c2-401d-8413-7ee8ce14bf22",
+      "pid": 194867,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 5
+    },
+    {
+      "uid": "b7fb7904-4823-4f52-947d-e55cd263e364",
+      "pid": 195820,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 1
+    },
+    {
+      "uid": "93a9545d-46e6-44d7-b155-c5fb7f3223b1",
+      "pid": 160516,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "056dca01-15d9-45bf-b23f-186235a24e5d",
+      "pid": 198212,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 4
+    },
+    {
+      "uid": "8c2bb5c6-4604-4952-a619-ef5af7b5c67a",
+      "pid": 198224,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 3
+    },
+    {
+      "uid": "b277d161-d963-4a02-bc41-8f26b9115228",
+      "pid": 124218,
+      "status": "already_ok",
+      "kind": "color",
+      "count": 2
+    }
+  ]
+}
