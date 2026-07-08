@@ -1,0 +1,226 @@
+{
+  "3896": {
+    "product_uid": "ee0c8966-401c-4105-afc4-921bd0963775",
+    "name": "IKO Royal Estate IR Shingles",
+    "colors": 4,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "3902": {
+    "product_uid": "00dd42e4-e7dc-4460-b149-20417f97d4af",
+    "name": "IKO RoofShake HW Shingles",
+    "colors": 3,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "3911": {
+    "product_uid": "b48db73c-e3c4-4f81-b285-272d246a6e4a",
+    "name": "IKO Marathon Plus AR Shingles",
+    "colors": 11,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "4617": {
+    "product_uid": "c4dbd0ce-86cc-458f-b2f1-8f79e15ed1ee",
+    "name": "IKO Crowne Slate IR Shingles",
+    "colors": 2,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "4679": {
+    "product_uid": "c686e106-16ea-4015-a032-a208300f5a55",
+    "name": "IKO Roofgard Synthetic Underlayment",
+    "colors": 0,
+    "cat": "Underlayment",
+    "fk": "underlayment_synthetic_rolls"
+  },
+  "4680": {
+    "product_uid": "e9c5e568-cf55-4bb0-8168-b8eec38ba6e1",
+    "name": "IKO StormShield Ice & Water Protector",
+    "colors": 0,
+    "cat": "IceWater",
+    "fk": "ice_and_water_shield_rolls"
+  },
+  "4681": {
+    "product_uid": "bcbda345-0738-4e3b-a598-5bba48109246",
+    "name": "IKO GoldShield Ice & Water Protector",
+    "colors": 0,
+    "cat": "IceWater",
+    "fk": "ice_and_water_shield_rolls"
+  },
+  "4682": {
+    "product_uid": "1a168da0-caaa-43e2-bbc3-6c70170ed0f6",
+    "name": "IKO ArmourGard Ice & Water Protector",
+    "colors": 0,
+    "cat": "IceWater",
+    "fk": "ice_and_water_shield_rolls"
+  },
+  "4683": {
+    "product_uid": "a17f7888-67e5-4c7d-8bfa-341edfa4f4b2",
+    "name": "IKO StormTamer Ice & Water Protector",
+    "colors": 0,
+    "cat": "IceWater",
+    "fk": "ice_and_water_shield_rolls"
+  },
+  "4685": {
+    "product_uid": "033703e2-6b54-4540-8708-6c2437f097ff",
+    "name": "IKO Stormtite Synthetic Underlayment",
+    "colors": 0,
+    "cat": "Underlayment",
+    "fk": "underlayment_synthetic_rolls"
+  },
+  "75734": {
+    "product_uid": "93807a97-3860-4878-b354-789df015bc20",
+    "name": "IKO Dynasty AR Class 3 IR with ArmourZone Shingles",
+    "colors": 16,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "75735": {
+    "product_uid": "08518624-338f-46a1-942b-74fa94ea6a47",
+    "name": "IKO Cambridge Cool Plus Non-AR Shingles",
+    "colors": 9,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "75739": {
+    "product_uid": "36deee9f-cb2b-486a-9606-90565175b87a",
+    "name": "IKO Hip & Ridge 12",
+    "colors": 0,
+    "cat": "HipRidge",
+    "fk": "hip_ridge_cap_bundles"
+  },
+  "75741": {
+    "product_uid": "eec62a42-0508-45c3-a37b-c901cb2c6686",
+    "name": "IKO Leading Edge Plus Starter",
+    "colors": 0,
+    "cat": "Starter",
+    "fk": "starter_strip_bundles"
+  },
+  "75743": {
+    "product_uid": "9a078b30-8b5b-494e-9bab-d18d0cd723f0",
+    "name": "IKO Nordic IR ArmourZone AR Shingles",
+    "colors": 11,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "75744": {
+    "product_uid": "c613bdcc-04f6-4960-ba66-350db8bc8f31",
+    "name": "IKO Armour Shingle Starter",
+    "colors": 0,
+    "cat": "Starter",
+    "fk": "starter_strip_bundles"
+  },
+  "75746": {
+    "product_uid": "dcc7699d-4f7c-4525-9080-a2a6a9d343a9",
+    "name": "IKO Dynasty AR Shingles",
+    "colors": 9,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "75747": {
+    "product_uid": "387c9e70-fa9a-4a28-ba79-c9b80b21d8db",
+    "name": "IKO Cambridge Non-AR Shingles",
+    "colors": 13,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "75748": {
+    "product_uid": "9a2df0fb-38a0-47f6-bc9c-851fe37ba2cd",
+    "name": "IKO Armourshake IR Shingles",
+    "colors": 4,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "75749": {
+    "product_uid": "c725da2a-6271-4756-8910-f10064e4a16c",
+    "name": "IKO UltraHP IR Hip & Ridge",
+    "colors": 0,
+    "cat": "HipRidge",
+    "fk": "hip_ridge_cap_bundles"
+  },
+  "75751": {
+    "product_uid": "b1d6b629-8823-469b-83f5-2bab06b51aed",
+    "name": "IKO EdgeSeal Roof Starter",
+    "colors": 0,
+    "cat": "Starter",
+    "fk": "starter_strip_bundles"
+  },
+  "75752": {
+    "product_uid": "7b1477d6-da84-4109-ba08-a0c5a303490c",
+    "name": "IKO UltraHP Hip & Ridge",
+    "colors": 0,
+    "cat": "HipRidge",
+    "fk": "hip_ridge_cap_bundles"
+  },
+  "88171": {
+    "product_uid": "5df0537d-c974-45f4-aff3-8049e5cce1e2",
+    "name": "IKO UltraHP Cool Hip & Ridge",
+    "colors": 0,
+    "cat": "HipRidge",
+    "fk": "hip_ridge_cap_bundles"
+  },
+  "88194": {
+    "product_uid": "01aca817-477f-4e3c-9d75-a8de2ac49d14",
+    "name": "IKO Protecto Ice & Water",
+    "colors": 0,
+    "cat": "IceWater",
+    "fk": "ice_and_water_shield_rolls"
+  },
+  "92747": {
+    "product_uid": "a8ed0007-40bc-400f-9348-5d17baf33d30",
+    "name": "IKO Cambridge Shingles",
+    "colors": 14,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "92749": {
+    "product_uid": "7675cf21-7edb-45c1-858d-c9decce06209",
+    "name": "IKO Cambridge IR ArmourZone Shingles",
+    "colors": 1,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "96356": {
+    "product_uid": "e73656d3-d3c9-471d-a924-7516307fc726",
+    "name": "IKO Biltmore AR Shingles",
+    "colors": 2,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "113070": {
+    "product_uid": "ac05c4fb-8cb3-4d2d-b4d7-456cc45a0fdd",
+    "name": "IKO Dynasty Cool Plus AR Shingles",
+    "colors": 7,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "119521": {
+    "product_uid": "ca0191f0-22ab-43af-be4f-3a1a2add25a6",
+    "name": "IKO Armourshake Class 3 IR AR Shingles",
+    "colors": 4,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "136532": {
+    "product_uid": "695f7984-cd63-4a03-b8ba-5cd8a80bc4e1",
+    "name": "IKO Cambridge Cool Plus AR Shingles",
+    "colors": 1,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "137994": {
+    "product_uid": "8137cd9d-bf43-4db9-ac29-1b35f9595b12",
+    "name": "IKO Regency AR IR ArmourZone Shingles",
+    "colors": 1,
+    "cat": "Shingles",
+    "fk": "shingles_squares"
+  },
+  "184039": {
+    "product_uid": "cfa52c42-2176-4ae3-bb6c-f23ecae8c7e0",
+    "name": "IKO ArmourGard Pro Ice & Water Protector",
+    "colors": 0,
+    "cat": "IceWater",
+    "fk": "ice_and_water_shield_rolls"
+  }
+}

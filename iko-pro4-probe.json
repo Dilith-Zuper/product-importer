@@ -1,0 +1,774 @@
+{
+  "base": "https://us-west-1c.zuperpro.com/api/",
+  "company": "Fisher Roofing",
+  "uoms": [
+    "SQ",
+    "SQFT",
+    "LF",
+    "EA",
+    "PC",
+    "GAL",
+    "HR",
+    "BDL",
+    "PCT",
+    "RL",
+    "BX",
+    "PITCH",
+    "INCH"
+  ],
+  "cats": {
+    "roofing materials": "491b4294-ed89-4396-bbad-651a05e51b1a",
+    "gutter materials": "cbf440a3-eb38-4403-bd53-606ecd5a7930",
+    "metal roofing": "a9607a24-5ea4-4143-95d4-09187a8609c1",
+    "roof": "548c9511-50ae-4a29-ad79-25fd899d871d",
+    "lumber": "ef4a5af3-65f6-4a47-95de-81d187b94b6e",
+    "fastner": "2ee5babc-bac7-4bf2-adbd-05d9cdbceb5f",
+    "vents": "d03b6eba-4e37-4335-bfba-3103ff107a2e",
+    "residential misc": "6d31273e-4188-43c0-808e-121270b5677d",
+    "shingles": "7bed2f5b-3256-4425-8bf9-2c385fd4ff3c",
+    "underlayment": "c6dae803-c210-43b3-8d08-70c5ec2b0a80",
+    "flashing": "46cba380-193c-430e-bcbc-425caf5ae160",
+    "maintenance": "fef65641-1430-42e3-a4e1-5ecda5b4f784",
+    "shakes": "81316aaf-ce20-4bed-a731-7b3f04d812a1",
+    "skylights": "cb87239e-d219-4f85-8be7-ac714da0df94"
+  },
+  "formulas": {
+    "shingles_squares": "9efe6ff1-416e-4bb7-a679-dbdc8791f1cb",
+    "ridge_vents_bundles": "2a4e950c-73dc-4cc6-b660-a8617fa4e8da",
+    "starter_shingles_bundles": "5f63806e-6de6-441f-8b03-91852be775c4",
+    "synthetic_underlayment_rolls": "8cc054a9-600b-4ce1-a1fb-a4ae41cf096e",
+    "hip_ridge_cap_shingles_bundles": "fdef4a90-38a1-4a1a-aa16-8e0cfcda59e9",
+    "valley_metal_pieces": "14419348-c5bc-4794-9b05-5638d0cee49a",
+    "drip_edge_pieces": "8f0dd3c7-037d-4867-a85c-f69561bad767",
+    "ice_and_water_shield_rolls": "e3aa1e08-089f-4a29-be7e-2c47cb56c661",
+    "shingle_qty": "d942351a-f2e5-4ff8-8b75-ace037567fe1",
+    "ice_water_barrier": "d32d4442-92d9-467f-b1b2-1dc56eeb9975",
+    "underlay": "18e84a2e-9c26-4675-9af3-0fa9fcda6964",
+    "valley_waste": "06090b9d-9aed-49a9-ba18-9ef1da6bf5d0",
+    "drip_edge": "c49e0ce0-4f64-4541-b516-d66fbf007d0c",
+    "starter_strip": "fd8aa215-62f0-4f2d-8e81-6c57ff89306e",
+    "hip_ridge_shingle": "84c385e8-38fa-400e-9019-3ce808785f85",
+    "box_vent": "37297757-a872-4626-8676-0b42643b589b",
+    "drip_edge_with_waste": "cef4e313-746d-4e42-8444-834d7a3cd5d6",
+    "shingle": "e10a8ca0-d23b-4ef1-9f3c-3515f774f4df",
+    "shingle_qty_1": "87e60695-1220-493e-a499-af9d9b53a93d",
+    "total_shingle_qty": "f17f6860-638f-4014-af73-b38d0790cc3d",
+    "low_slope_labor": "79821f36-a715-4a28-a98b-36bf36f3558b",
+    "medium_slope_labor": "ab85506f-c233-4e51-b2da-cfb0a8cac6a0",
+    "high_slope_labor": "aa35ef89-fd12-440d-9044-ede6dca2370f",
+    "steep_slope_labor": "9dfc5654-5383-4859-b340-890ffeed7219",
+    "shingles_sf": "f4f879c2-fbfd-463c-893c-2bd3ce89d8aa",
+    "test": "d724547f-e03f-4233-adad-b1aa990c018a"
+  },
+  "tokenCategories": [
+    {
+      "uid": "0e341111-65ba-4cae-bc3b-c5c32e97f3c3",
+      "name": "Roof Waste Factors",
+      "tokens": [
+        "Zero Waste",
+        "+5% Waste",
+        "+10% Waste",
+        "+15% Waste",
+        "+20% Waste",
+        "Suggested Waste Percentage %",
+        "Waste %"
+      ]
+    },
+    {
+      "uid": "0f263c8f-a4bb-4e2e-9e44-f6f1a16984f9",
+      "name": "Roof Measurements",
+      "tokens": [
+        "Total Roof Area",
+        "Total Roof Area (in squares)",
+        "Total Ridges Length",
+        "Total Valleys Length",
+        "Total Rakes Length",
+        "Total Eaves Length",
+        "Total Flashing Length",
+        "Total Step Flashing Length",
+        "Total Transition Line Length",
+        "Total Dormer Length",
+        "Total Drip Edge Length",
+        "Total Eaves Fascia Length",
+        "Total Level Frieze Board Length",
+        "Total Rakes Fascia Length",
+        "Total Sloped Frieze Board Length",
+        "No of Roof Facets",
+        "Total Hip Length",
+        "Total Ridge/Hip Length",
+        "Headwall Flashing",
+        "Drip Edge",
+        "Ice & Water Barrier",
+        "Clerestory",
+        "Parapet Wall",
+        "Coping",
+        "Bends",
+        "RidgeCap",
+        "Starter",
+        "Total Perimeter",
+        "Slope Change",
+        "Total Hips Length",
+        "2-3 Pitch Ice Guard Entire Slope(only use for shingles)",
+        "Gambrel Flashing (Metal Roof)",
+        "SnowGuard (Per Foot)",
+        "Lift Rental (1=Yes, 0=No)"
+      ]
+    },
+    {
+      "uid": "3a09e4d0-dec1-4e70-8593-9ec1e6462113",
+      "name": "Roof Pitch Measurements",
+      "tokens": [
+        "Total Roof Pitch - 0/12",
+        "Total Roof Pitch - 1/12",
+        "Total Roof Pitch - 2/12",
+        "Total Roof Pitch - 3/12",
+        "Total Roof Pitch - 4/12",
+        "Total Roof Pitch - 5/12",
+        "Total Roof Pitch - 6/12",
+        "Total Roof Pitch - 7/12",
+        "Total Roof Pitch - 8/12",
+        "Total Roof Pitch - 9/12",
+        "Total Roof Pitch - 10/12",
+        "Total Roof Pitch - 11/12",
+        "Total Roof Pitch - 12/12",
+        "Total Roof Pitch - >12/12",
+        "Predominant Pitch",
+        "Flat Slope (0/12–1/12)",
+        "Low Slope (2/12–3/12)",
+        "Standard Slope (4/12–6/12)",
+        "Steep Slope (7/12 or greater)"
+      ]
+    },
+    {
+      "uid": "f8c7b106-aa0e-4506-a959-5b0b9e78ef0f",
+      "name": "Siding",
+      "tokens": [
+        "Total Siding Area",
+        "Starter Strip",
+        "Fascia / Soffit",
+        "Frieze Board",
+        "No of Door Counts",
+        "Door Wrap",
+        "Door Area",
+        "No of Garage Door",
+        "Garage Door Wrap",
+        "Garage Door Area",
+        "No of Window",
+        "Window Wrap",
+        "Window Area",
+        "Inside Corner",
+        "Outside Corner",
+        "Horizontal Lap",
+        "Panel Board",
+        "Outdoor Ceiling"
+      ]
+    },
+    {
+      "uid": "5119fe2d-e2e3-4269-8163-aba046fea208",
+      "name": "Gutters",
+      "tokens": [
+        "Gutter Length",
+        "Total Length",
+        "Downspout Length",
+        "Downspout Elbows",
+        "No of Downspouts",
+        "Eave Soffit Depth",
+        "No of End Caps",
+        "No of Inner Elbows",
+        "No of Outer Elbows",
+        "No of Inside Miters",
+        "No of Outside Miters",
+        "No of Non 90 Miter"
+      ]
+    },
+    {
+      "uid": "203b7db9-5cfe-4011-b4eb-ff9b431c7451",
+      "name": "Roof Pitch Measurements (in SQ)",
+      "tokens": [
+        "Total Roof Pitch - 0/12",
+        "Total Roof Pitch - 1/12",
+        "Total Roof Pitch - 2/12",
+        "Total Roof Pitch - 3/12",
+        "Total Roof Pitch - 4/12",
+        "Total Roof Pitch - 5/12",
+        "Total Roof Pitch - 6/12",
+        "Total Roof Pitch - 7/12",
+        "Total Roof Pitch - 8/12",
+        "Total Roof Pitch - 9/12",
+        "Total Roof Pitch - 10/12",
+        "Total Roof Pitch - 11/12",
+        "Total Roof Pitch - 12/12"
+      ]
+    },
+    {
+      "uid": "00d7a119-7a07-40de-a4cd-3d25e8850c40",
+      "name": "Roofing Accessories",
+      "tokens": [
+        "Shutter Quantity",
+        "Shutter Area",
+        "Vents Quantity",
+        "Vents Area",
+        "Curb Mount Skylights"
+      ]
+    },
+    {
+      "uid": "9f181c8d-602b-432c-8cb4-cca7c41f9cce",
+      "name": "Permanent Lights",
+      "tokens": []
+    },
+    {
+      "uid": "27def77d-622b-43e0-bcb7-a89d15d4b6ee",
+      "name": "Additional Roof Considerations",
+      "tokens": []
+    },
+    {
+      "uid": "924c3c41-ba5b-47b5-b5ad-bfdb3bce76bd",
+      "name": "Metal Roofing",
+      "tokens": [
+        "Total Roof Area"
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "location_uid": "d47d6eb6-c132-4a6d-9e1f-e4db4e619bc2",
+      "location_name": "Warehouse",
+      "location_type": "WAREHOUSE",
+      "location_description": "",
+      "location_address": {
+        "city": "New York",
+        "state": "New York",
+        "street": "123 William Street",
+        "country": "United States",
+        "zip_code": "10038",
+        "geo_cordinates": [
+          40.7091546,
+          -74.0069774
+        ]
+      },
+      "location_access": "ALL",
+      "allowed_users": [],
+      "allowed_teams": [],
+      "display_order": 1,
+      "is_deleted": false,
+      "created_by": {
+        "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+        "first_name": "Zuper",
+        "last_name": "Admin",
+        "email": "migration@zuper.co",
+        "external_login_id": null,
+        "home_phone_number": null,
+        "designation": "Admin",
+        "emp_code": "Z001",
+        "prefix": null,
+        "work_phone_number": "1234567890",
+        "mobile_phone_number": null,
+        "profile_picture": null,
+        "hourly_labor_charge": null,
+        "is_active": true,
+        "is_deleted": false,
+        "created_at": "2026-06-12T17:11:30.000Z",
+        "updated_at": "2026-06-12T17:11:30.000Z",
+        "last_login_at": "2026-06-15T10:17:22.000Z"
+      },
+      "id": "undefined"
+    }
+  ],
+  "layouts": [
+    {
+      "layout_config": {
+        "font_style": "Inter",
+        "background_image": "",
+        "company_logo": "https://s3.ap-south-1.amazonaws.com/production.in.pro.zuper/logo/fa75c952-7101-478a-9f48-f79b0d753f00.png"
+      },
+      "layout_constraints": {
+        "pick_from_gallery": true,
+        "job_checklist": true
+      },
+      "is_active": true,
+      "is_deleted": false,
+      "layout_pages": [
+        {
+          "page_uid": "a360ee69-7b57-49e5-ae15-68b5a29bfe26",
+          "page_title": "Cover Page",
+          "display_order": 1,
+          "is_enabled": true,
+          "page_type": "COVER",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "f31f6af8-ee41-4996-87a6-3093c1636615",
+          "page_title": "About Us",
+          "display_order": 2,
+          "is_enabled": true,
+          "page_type": "TEXT_EDITOR",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "9815178a-0e56-4a2c-8317-ca711711bf01",
+          "page_title": "Scope of Work",
+          "display_order": 3,
+          "is_enabled": true,
+          "page_type": "TEXT_EDITOR",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "a762b509-1de1-4412-9bd0-46e08ec9e5f1",
+          "page_title": "Term & Conditions",
+          "display_order": 4,
+          "is_enabled": true,
+          "page_type": "TEXT_EDITOR",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "e1ee3377-6d5b-4194-a9a5-c653f4077628",
+          "page_title": "Estimate Options",
+          "display_order": 5,
+          "is_enabled": true,
+          "page_type": "PROPOSAL_OPTIONS",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "14f853a3-3f76-4905-9b62-6dc126773733",
+          "page_title": "Signature",
+          "display_order": 6,
+          "is_enabled": true,
+          "page_type": "SIGNATURE",
+          "is_default": true,
+          "is_locked": false
+        }
+      ],
+      "created_at": "2026-06-12T17:18:35.398Z",
+      "updated_at": "2026-06-12T17:18:35.423Z",
+      "business_unit": [],
+      "layout_uid": "b41150e0-e196-4a7a-8bdd-960c5e95a02c",
+      "created_by": {
+        "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+        "first_name": "Zuper",
+        "last_name": "Admin",
+        "email": "migration@zuper.co",
+        "external_login_id": null,
+        "home_phone_number": null,
+        "designation": "Admin",
+        "emp_code": "Z001",
+        "prefix": null,
+        "work_phone_number": "1234567890",
+        "mobile_phone_number": null,
+        "profile_picture": null,
+        "hourly_labor_charge": null,
+        "is_active": true,
+        "is_deleted": false,
+        "created_at": "2026-06-12T17:11:30.000Z",
+        "updated_at": "2026-06-12T17:11:30.000Z",
+        "last_login_at": "2026-06-15T10:17:22.000Z",
+        "role": {
+          "role_uid": "504e4eac-ff7d-11e7-8be5-0ed5f89f718b",
+          "role_name": "Admin",
+          "role_key": "ADMIN"
+        }
+      },
+      "layout_name": "Residential Roofing Proposal",
+      "display_order": 1
+    },
+    {
+      "layout_config": {
+        "font_style": "Inter",
+        "font_color": null,
+        "background_image": null,
+        "company_logo": "https://s3.ap-south-1.amazonaws.com/production.in.pro.zuper/logo/fa75c952-7101-478a-9f48-f79b0d753f00.png"
+      },
+      "layout_constraints": {
+        "pick_from_gallery": true,
+        "job_checklist": true
+      },
+      "is_active": true,
+      "is_deleted": false,
+      "layout_pages": [
+        {
+          "page_uid": "c85fae58-2ad0-4746-9db0-dc31461884e8",
+          "page_title": "Cover Page",
+          "display_order": 1,
+          "is_enabled": true,
+          "page_type": "COVER",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "ad497b7d-a373-4bfa-aa14-00ff3f3613f7",
+          "page_title": "About Us",
+          "display_order": 2,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "2a966c97-5617-4031-bde0-ddf8d8cfcd7a",
+          "page_title": "Scope of Work",
+          "display_order": 3,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "8566371b-38a5-4014-9aee-d61c364f6a36",
+          "page_title": "Estimate Options",
+          "display_order": 4,
+          "is_enabled": true,
+          "page_type": "PROPOSAL_OPTIONS",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "59251391-a2c2-4c87-afc0-c353d7458dcf",
+          "page_title": "Term & Conditions",
+          "display_order": 5,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "abd1f4e2-4761-42d3-9964-3bb84bf5ef8b",
+          "page_title": "Signature",
+          "display_order": 6,
+          "is_enabled": true,
+          "page_type": "SIGNATURE",
+          "is_default": true,
+          "is_locked": false
+        }
+      ],
+      "created_at": "2026-06-12T17:18:36.035Z",
+      "updated_at": "2026-06-12T17:18:36.054Z",
+      "business_unit": [],
+      "layout_uid": "b5609eb0-f2e6-44c3-a1c7-09eff2a8e898",
+      "created_by": {
+        "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+        "first_name": "Zuper",
+        "last_name": "Admin",
+        "email": "migration@zuper.co",
+        "external_login_id": null,
+        "home_phone_number": null,
+        "designation": "Admin",
+        "emp_code": "Z001",
+        "prefix": null,
+        "work_phone_number": "1234567890",
+        "mobile_phone_number": null,
+        "profile_picture": null,
+        "hourly_labor_charge": null,
+        "is_active": true,
+        "is_deleted": false,
+        "created_at": "2026-06-12T17:11:30.000Z",
+        "updated_at": "2026-06-12T17:11:30.000Z",
+        "last_login_at": "2026-06-15T10:17:22.000Z",
+        "role": {
+          "role_uid": "504e4eac-ff7d-11e7-8be5-0ed5f89f718b",
+          "role_name": "Admin",
+          "role_key": "ADMIN"
+        }
+      },
+      "layout_name": "Test",
+      "display_order": 2
+    }
+  ],
+  "jobCategories": {
+    "endpoint": "jobs/category?count=100&page=1",
+    "rows": [
+      {
+        "category_uid": "1910953b-3202-45b9-a34e-96ef9033ca51",
+        "category_name": "Lead Qualification",
+        "category_description": null,
+        "category_color": "#D97706",
+        "display_order": 1,
+        "estimated_duration": {
+          "days": 0,
+          "hours": 0,
+          "minutes": 30
+        },
+        "job_timelog": {
+          "job_timer": false,
+          "travel_timer": false,
+          "meal_break_timer": true
+        },
+        "business_unit": [],
+        "is_dispatchable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+          "first_name": "Zuper",
+          "last_name": "Admin",
+          "email": "migration@zuper.co",
+          "external_login_id": null,
+          "home_phone_number": null,
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "1234567890",
+          "mobile_phone_number": null,
+          "profile_picture": null,
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-06-12T17:11:30.000Z",
+          "updated_at": "2026-06-12T17:11:30.000Z",
+          "last_login_at": "2026-06-15T10:17:22.000Z"
+        },
+        "created_at": "2026-01-02T07:57:44.526Z",
+        "updated_at": "2026-06-12T17:12:21.663Z",
+        "job_statuses": []
+      },
+      {
+        "category_uid": "04461702-eb3f-405e-b1eb-28d54d02cc24",
+        "category_name": "Inspection",
+        "category_color": "#8e44ad",
+        "display_order": 2,
+        "estimated_duration": {
+          "days": 0,
+          "hours": 2,
+          "minutes": 0
+        },
+        "job_timelog": {
+          "job_timer": true,
+          "travel_timer": true,
+          "meal_break_timer": true
+        },
+        "business_unit": [],
+        "is_dispatchable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+          "first_name": "Zuper",
+          "last_name": "Admin",
+          "email": "migration@zuper.co",
+          "external_login_id": null,
+          "home_phone_number": null,
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "1234567890",
+          "mobile_phone_number": null,
+          "profile_picture": null,
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-06-12T17:11:30.000Z",
+          "updated_at": "2026-06-12T17:11:30.000Z",
+          "last_login_at": "2026-06-15T10:17:22.000Z"
+        },
+        "created_at": "2024-02-07T20:22:40.723Z",
+        "updated_at": "2026-06-12T17:12:43.884Z",
+        "job_statuses": []
+      },
+      {
+        "category_uid": "ed35d21f-54ea-4e8b-b440-7c724ac74513",
+        "category_name": "Repair Service",
+        "category_color": "#27ae60",
+        "display_order": 3,
+        "estimated_duration": {
+          "days": 0,
+          "hours": 2,
+          "minutes": 0
+        },
+        "job_timelog": {
+          "job_timer": true,
+          "travel_timer": true,
+          "meal_break_timer": true
+        },
+        "business_unit": [],
+        "is_dispatchable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+          "first_name": "Zuper",
+          "last_name": "Admin",
+          "email": "migration@zuper.co",
+          "external_login_id": null,
+          "home_phone_number": null,
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "1234567890",
+          "mobile_phone_number": null,
+          "profile_picture": null,
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-06-12T17:11:30.000Z",
+          "updated_at": "2026-06-12T17:11:30.000Z",
+          "last_login_at": "2026-06-15T10:17:22.000Z"
+        },
+        "created_at": "2024-01-09T13:18:54.277Z",
+        "updated_at": "2026-06-12T17:13:31.600Z",
+        "job_statuses": []
+      },
+      {
+        "category_uid": "c4fc1028-0cec-4ad0-98e7-a4e7f5cfde7c",
+        "category_name": "Production - Roof",
+        "category_color": "#3498db",
+        "display_order": 4,
+        "estimated_duration": {
+          "days": 0,
+          "hours": 10,
+          "minutes": 0
+        },
+        "job_timelog": {
+          "job_timer": true,
+          "travel_timer": true,
+          "meal_break_timer": true
+        },
+        "business_unit": [],
+        "is_dispatchable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+          "first_name": "Zuper",
+          "last_name": "Admin",
+          "email": "migration@zuper.co",
+          "external_login_id": null,
+          "home_phone_number": null,
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "1234567890",
+          "mobile_phone_number": null,
+          "profile_picture": null,
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-06-12T17:11:30.000Z",
+          "updated_at": "2026-06-12T17:11:30.000Z",
+          "last_login_at": "2026-06-15T10:17:22.000Z"
+        },
+        "created_at": "2024-01-09T13:18:42.672Z",
+        "updated_at": "2026-06-12T17:13:46.112Z",
+        "job_statuses": []
+      },
+      {
+        "category_uid": "5c33589e-65dd-4c0d-ba7c-d10e1aca7257",
+        "category_name": "Production - Metal Roof",
+        "category_description": null,
+        "category_color": "#E11D48",
+        "display_order": 5,
+        "estimated_duration": {
+          "days": 5,
+          "hours": 0,
+          "minutes": 0
+        },
+        "job_timelog": {
+          "job_timer": true,
+          "travel_timer": true,
+          "meal_break_timer": true
+        },
+        "business_unit": [],
+        "is_dispatchable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+          "first_name": "Zuper",
+          "last_name": "Admin",
+          "email": "migration@zuper.co",
+          "external_login_id": null,
+          "home_phone_number": null,
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "1234567890",
+          "mobile_phone_number": null,
+          "profile_picture": null,
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-06-12T17:11:30.000Z",
+          "updated_at": "2026-06-12T17:11:30.000Z",
+          "last_login_at": "2026-06-15T10:17:22.000Z"
+        },
+        "created_at": "2025-12-16T13:01:57.768Z",
+        "updated_at": "2026-06-12T17:14:04.711Z",
+        "job_statuses": []
+      },
+      {
+        "category_uid": "ffdc649b-3e24-4656-807b-bfe705114107",
+        "category_name": "Production - Gutters",
+        "category_description": null,
+        "category_color": "#E11D48",
+        "display_order": 6,
+        "estimated_duration": {
+          "days": 0,
+          "hours": 4,
+          "minutes": 0
+        },
+        "job_timelog": {
+          "job_timer": true,
+          "travel_timer": true,
+          "meal_break_timer": true
+        },
+        "business_unit": [],
+        "is_dispatchable": true,
+        "is_deleted": false,
+        "created_by": {
+          "user_uid": "1d9f78b0-f988-4331-893b-4083281b76b9",
+          "first_name": "Zuper",
+          "last_name": "Admin",
+          "email": "migration@zuper.co",
+          "external_login_id": null,
+          "home_phone_number": null,
+          "designation": "Admin",
+          "emp_code": "Z001",
+          "prefix": null,
+          "work_phone_number": "1234567890",
+          "mobile_phone_number": null,
+          "profile_picture": null,
+          "hourly_labor_charge": null,
+          "is_active": true,
+          "is_deleted": false,
+          "created_at": "2026-06-12T17:11:30.000Z",
+          "updated_at": "2026-06-12T17:11:30.000Z",
+          "last_login_at": "2026-06-15T10:17:22.000Z"
+        },
+        "created_at": "2025-12-16T13:05:07.308Z",
+        "updated_at": "2026-06-12T17:14:14.420Z",
+        "job_statuses": []
+      }
+    ]
+  },
+  "existingIko": {
+    "3896": null,
+    "3902": null,
+    "3911": null,
+    "4617": null,
+    "4679": null,
+    "4680": null,
+    "4681": null,
+    "4682": null,
+    "4683": null,
+    "4685": null,
+    "75734": null,
+    "75735": null,
+    "75739": null,
+    "75741": null,
+    "75743": null,
+    "75744": null,
+    "75746": null,
+    "75747": null,
+    "75748": null,
+    "75749": null,
+    "75751": null,
+    "75752": null,
+    "88171": null,
+    "88194": null,
+    "92747": null,
+    "92749": null,
+    "96356": null,
+    "113070": null,
+    "119521": null,
+    "136532": null,
+    "137994": null,
+    "184039": null
+  }
+}

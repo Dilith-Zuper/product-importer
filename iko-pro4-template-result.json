@@ -1,0 +1,40 @@
+{
+  "templateUid": "92e875e1-3921-48f8-82df-3eb1da41c3b5",
+  "options": [
+    {
+      "option_name": "Good",
+      "option_image": "",
+      "option_description": "IKO Pro4 — Cambridge System",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "78a4ea9e-a277-45a6-9167-05de397a4145",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Better",
+      "option_image": "",
+      "option_description": "IKO Pro4 — Dynasty System (ArmourZone)",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "2faa763c-6d61-454c-bb07-4945e72ad234",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Best",
+      "option_image": "",
+      "option_description": "IKO Pro4 — Armourshake Designer System",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "997b9709-e565-42b1-aae1-68814bfa1e6e",
+      "option_group_uid": null
+    }
+  ],
+  "trigger": {
+    "job_category_uid": "04461702-eb3f-405e-b1eb-28d54d02cc24",
+    "job_category_name": "Inspection",
+    "job_status_uid": "6d37b358-504b-4854-935f-f94a2ec8ef99",
+    "job_status_name": "Create Proposal"
+  },
+  "layoutUid": "b41150e0-e196-4a7a-8bdd-960c5e95a02c",
+  "published": true
+}
