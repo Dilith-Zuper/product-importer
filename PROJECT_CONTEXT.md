@@ -10,7 +10,7 @@
 - `0d62f9d` — IKO Pro4 catalog + G/B/B template build for Fisher Roofing (customer-specific)
 - `9882e63` — Atlas ABC + QXO vendor catalog exporter
 
-**⚠️ Untracked, uncommitted work — the OC golden template build (2026-07-01):** `OC_GOLDEN_TEMPLATE.md`, `build-oc-golden.js`, `oc-golden-{probe,products,template-result}.json`, source export `trust_roofing_cpq_json OC`, plus scratch (`export-high-option-products.js`, an invoice PDF). The template itself **is built and published** in the golden account (`template_uid df3430b4-c63c-4aab-a968-15f5a0649d23`) — only the files aren't committed. **First actions on resuming: commit the OC golden work, then merge/PR the branch to `main`.**
+**The OC golden template build (2026-07-01)** — `OC_GOLDEN_TEMPLATE.md`, `build-oc-golden.js`, `oc-golden-{probe,products,template-result}.json`, source export `trust_roofing_cpq_json OC` — is committed on this branch (2026-07-14). The template **is built and published** in the golden account (`template_uid df3430b4-c63c-4aab-a968-15f5a0649d23`). **First action on resuming: PR/merge this branch to `main`.**
 
 ### The golden-template track (newest workstream, June–July 2026)
 
@@ -20,7 +20,7 @@ Reference G/B/B CPQ templates built in the **golden account**, one per Big-3 bra
 |---|---|---|---|
 | GAF | `GAF_GOLDEN_TEMPLATE.md` | 2026-06-29 | `858f618d-b9a6-41fb-8347-90f2f4b5e44c` |
 | CertainTeed | `CERTAINTEED_GOLDEN_TEMPLATE.md` | (see doc) | see `certainteed-golden-template` branch history |
-| Owens Corning | `OC_GOLDEN_TEMPLATE.md` (uncommitted) | 2026-07-01 | `df3430b4-c63c-4aab-a968-15f5a0649d23` |
+| Owens Corning | `OC_GOLDEN_TEMPLATE.md` | 2026-07-01 | `df3430b4-c63c-4aab-a968-15f5a0649d23` |
 
 Shared rules learned: source-account UIDs never port (recreate against the golden account's own products/formulas/measurements); lean **material G/B/B only** with a true 3-shingle ladder per tier, not full 15-option customer ports; warranties/labor are account-created rows, not SRS parts.
 

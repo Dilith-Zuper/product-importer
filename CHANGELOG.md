@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+- OC golden CPQ template build (published 2026-07-01 in the golden account, template_uid df3430b4): OC_GOLDEN_TEMPLATE.md blueprint, build-oc-golden.js, probe/products/template-result JSONs, Trust Roofing source export, export-high-option-products.js helper.
+
 ### Changed
 - PROJECT_CONTEXT.md: new S0 current-state section (golden-template track, STX/IKO/ABC-QXO work since 2026-06-05, branch + uncommitted-work inventory, canonical-scripts move to the dilith skill).
 

@@ -1,0 +1,1010 @@
+{
+  "base": "https://us-east-1.zuperpro.com/api/",
+  "formulas": {
+    "synthetic_underlayment_rolls": {
+      "uid": "573b9f59-914a-4d87-b5ae-bb2468b56080",
+      "name": "Synthetic Underlayment (rolls)",
+      "custom": false
+    },
+    "hip_ridge_cap_shingles_bundles": {
+      "uid": "5cdc6f24-d45b-4145-8c4b-a7bc32a72be9",
+      "name": "Hip & Ridge Cap Shingles (bundles)",
+      "custom": false
+    },
+    "starter_shingles_bundles": {
+      "uid": "71473b45-1761-49ea-a89d-138089b6e7c7",
+      "name": "Starter Shingles (bundles)",
+      "custom": false
+    },
+    "ice_and_water_shield_rolls": {
+      "uid": "ffd962cc-35cd-4735-a357-6bf1b5743bec",
+      "name": "Ice and Water Shield (rolls)",
+      "custom": false
+    },
+    "valley_metal_pieces": {
+      "uid": "e6042ed4-c34b-4c11-be4f-d0dcf6824b1b",
+      "name": "Valley Metal (pieces)",
+      "custom": false
+    },
+    "ridge_vents_bundles": {
+      "uid": "fb041b4d-910a-46ec-a192-368700617656",
+      "name": "Ridge Vents (bundles)",
+      "custom": false
+    },
+    "shingles_squares": {
+      "uid": "b2376cc3-ad26-4f26-9232-ebced14f431c",
+      "name": "Shingles (squares)",
+      "custom": false
+    },
+    "drip_edge_pieces": {
+      "uid": "c525c51f-7f01-495a-a01d-53cfc65c2538",
+      "name": "Drip Edge (pieces)",
+      "custom": false
+    },
+    "shingle_qty": {
+      "uid": "c70d3034-a2e3-454b-8981-8178a6a33e7c",
+      "name": "Shingle Qty ( Bundle) ( with waste)",
+      "custom": true
+    },
+    "ice_water_barrier": {
+      "uid": "e3707b6c-bb55-48c8-ad28-163c39833e1f",
+      "name": "Ice Water barrier ( with waste)",
+      "custom": true
+    },
+    "underlay": {
+      "uid": "69b3dc42-ad99-4de8-99f9-aafe7fc5209c",
+      "name": "Underlayment  (with waste%)",
+      "custom": true
+    },
+    "valley_waste": {
+      "uid": "3460925f-a326-4fb2-b4c5-75c104843f10",
+      "name": "Valley flashing ( with waste)",
+      "custom": true
+    },
+    "drip_edge": {
+      "uid": "d9cfb712-6d30-4660-a73d-6cbca262febb",
+      "name": "Drip edge ( with Waste)",
+      "custom": true
+    },
+    "starter_strip": {
+      "uid": "b4ce6457-b9e6-4a20-9346-2e6d18399eb1",
+      "name": "Start strips ( with waste)",
+      "custom": true
+    },
+    "hip_ridge_shingle": {
+      "uid": "ec7acab1-0975-4015-81fc-d959e9be1bca",
+      "name": "Hip and Ridge Shingle (With Waste)",
+      "custom": true
+    },
+    "box_vent": {
+      "uid": "32f60407-4b67-433a-b4a2-4e65c49c981d",
+      "name": "box_vent (with waste)",
+      "custom": true
+    },
+    "shingle": {
+      "uid": "f1f035e9-e481-45bc-a01f-650dd95b68b0",
+      "name": "shingle qty",
+      "custom": true
+    },
+    "shingle_qty_1": {
+      "uid": "28282637-4979-413a-8c76-c4098618af4d",
+      "name": "shingle qty 1",
+      "custom": true
+    },
+    "total_shingle_qty": {
+      "uid": "953cf470-53fb-4d65-b52c-569d5e2f80ec",
+      "name": "Shingle Quantity",
+      "custom": true
+    },
+    "low_slope_labor": {
+      "uid": "4c157be5-46f4-4b44-a342-02e642e6411c",
+      "name": "Low Slope Labor",
+      "custom": true
+    },
+    "medium_slope_labor": {
+      "uid": "8296a45e-4eac-4fe0-bd30-dd03f80e3a2e",
+      "name": "Medium Slope Labor",
+      "custom": true
+    },
+    "high_slope_labor": {
+      "uid": "cee9c0a3-6782-46bd-8d4b-76ed5b199d74",
+      "name": "High Slope Labor",
+      "custom": true
+    },
+    "steep_slope_labor": {
+      "uid": "5e7d5355-b80d-4095-bbbc-bb82851c2e1e",
+      "name": "Steep Slope Labor",
+      "custom": true
+    },
+    "shingles_bundles": {
+      "uid": "4ca93912-de6f-4587-844b-67d2ffc65d64",
+      "name": "Shingles (Bundles)",
+      "custom": true
+    },
+    "test": {
+      "uid": "fde6fa92-da9c-476e-90f8-49cd4b2aa8e4",
+      "name": "test",
+      "custom": true
+    },
+    "hip_ridge_cap_bundles": {
+      "uid": "5b2f8876-4cf4-4eb0-ad54-10c4abc9d601",
+      "name": "Hip & Ridge Cap (bundles)",
+      "custom": true
+    },
+    "starter_strip_bundles": {
+      "uid": "339104ec-ffed-42ec-9a71-3d78567b209e",
+      "name": "Starter Strip (bundles)",
+      "custom": true
+    },
+    "underlayment_synthetic_rolls": {
+      "uid": "f280649b-eadd-42d6-b3ac-5543b816f08a",
+      "name": "Underlayment Synthetic (rolls)",
+      "custom": true
+    },
+    "underlayment_felt_15_rolls": {
+      "uid": "6791e539-802e-4227-a6cb-991026b55a80",
+      "name": "Underlayment Felt 15# (rolls)",
+      "custom": true
+    },
+    "underlayment_felt_30_rolls": {
+      "uid": "62d4618e-8307-40e2-b00d-82bc82b4834a",
+      "name": "Underlayment Felt 30# (rolls)",
+      "custom": true
+    },
+    "underlayment_ht_rolls": {
+      "uid": "47ff29e7-5d9f-4e5c-9135-156dc5074804",
+      "name": "Underlayment Self-Adhered HT (rolls)",
+      "custom": true
+    },
+    "gutter_apron_pieces": {
+      "uid": "11c0a535-9437-4568-9f9e-0b50983df05c",
+      "name": "Gutter Apron (pieces)",
+      "custom": true
+    },
+    "coil_nails_boxes": {
+      "uid": "162203ae-a869-43fa-8a23-8a2048e2a17f",
+      "name": "Coil Nails (boxes)",
+      "custom": true
+    },
+    "plastic_cap_nails_boxes": {
+      "uid": "c6db2851-14d2-457f-8190-6bedf5f13bc3",
+      "name": "Plastic Cap Nails (boxes)",
+      "custom": true
+    },
+    "ridge_vents_pieces": {
+      "uid": "1a854eb8-90dc-40bf-8539-5060449f811e",
+      "name": "Ridge Vents (pieces)",
+      "custom": true
+    },
+    "gutter_sections_pieces": {
+      "uid": "67c3c7af-c0cc-45d9-87ae-f45cd906cb85",
+      "name": "Gutter Sections (pieces)",
+      "custom": true
+    },
+    "downspouts_count": {
+      "uid": "6df16c3a-4cb9-4261-aa09-96cd0deab488",
+      "name": "Downspouts (count)",
+      "custom": true
+    },
+    "gutter_end_caps_count": {
+      "uid": "1422284b-47bc-46fc-9443-6fec5e847504",
+      "name": "Gutter End Caps (count)",
+      "custom": true
+    },
+    "gutter_outside_corners_count": {
+      "uid": "dafe7396-4610-47e5-a8de-bd65e9025f23",
+      "name": "Gutter Outside Corners (count)",
+      "custom": true
+    },
+    "gutter_inside_corners_count": {
+      "uid": "f58bf7a9-d53a-4cd9-a59c-ec362711f0c5",
+      "name": "Gutter Inside Corners (count)",
+      "custom": true
+    },
+    "gutter_elbows_count": {
+      "uid": "82da881e-a7c0-4975-9d37-04b117c77e5a",
+      "name": "Gutter Elbows (count)",
+      "custom": true
+    },
+    "step_flashing_pieces": {
+      "uid": "11bf2446-6dda-4cef-8b01-bc04fdcbb61b",
+      "name": "Step Flashing (pieces)",
+      "custom": true
+    },
+    "headwall_flashing_pieces": {
+      "uid": "e04bd817-b81a-4b71-9d5a-cffded59f389",
+      "name": "Headwall Flashing (pieces)",
+      "custom": true
+    },
+    "siding_squares": {
+      "uid": "0b786bf9-48b6-46cf-9556-fda499da4179",
+      "name": "Siding (squares)",
+      "custom": true
+    },
+    "commercial_membrane_squares": {
+      "uid": "937dc6f4-1d99-4256-99e9-77f034723141",
+      "name": "Commercial Membrane (squares)",
+      "custom": true
+    },
+    "roof_decking_sheets": {
+      "uid": "1a1746b7-b8eb-459d-b85e-ebca910afd36",
+      "name": "Roof Decking (sheets)",
+      "custom": true
+    },
+    "tear_off_low_slope_sq": {
+      "uid": "78601f0f-68c7-4a6f-8fb5-dcf4b135cd58",
+      "name": "Tear Off — Low Slope (squares)",
+      "custom": true
+    },
+    "tear_off_standard_slope_sq": {
+      "uid": "16d32447-392d-44c3-8f1a-8a61c4101cfd",
+      "name": "Tear Off — Standard Slope (squares)",
+      "custom": true
+    },
+    "tear_off_steep_slope_sq": {
+      "uid": "ea52342e-097d-42de-ab23-3f334339303f",
+      "name": "Tear Off — Steep Slope (squares)",
+      "custom": true
+    },
+    "tear_off_very_steep_sq": {
+      "uid": "eab9792f-2c6a-4871-a695-3d982d445447",
+      "name": "Tear Off — Very Steep (squares)",
+      "custom": true
+    },
+    "shingle_install_low_slope_sq": {
+      "uid": "e0fa397b-6e73-4ff4-8d92-a238ae1b49fe",
+      "name": "Shingle Install — Low Slope (squares)",
+      "custom": true
+    },
+    "shingle_install_standard_slope_sq": {
+      "uid": "a4198ca9-4020-472b-adf5-c549a54f558d",
+      "name": "Shingle Install — Standard Slope (squares)",
+      "custom": true
+    },
+    "shingle_install_steep_slope_sq": {
+      "uid": "4f5d1ea4-a74d-4484-ab15-f515c0aac764",
+      "name": "Shingle Install — Steep Slope (squares)",
+      "custom": true
+    },
+    "shingle_install_very_steep_sq": {
+      "uid": "2b22f2ae-bd95-4806-b028-6ffaf56acf25",
+      "name": "Shingle Install — Very Steep (squares)",
+      "custom": true
+    },
+    "whirly_vent": {
+      "uid": "3d070950-3f1f-4e8f-a290-fb1b81642e9d",
+      "name": "whirly bird vent",
+      "custom": true
+    },
+    "accessory_dryer_vent": {
+      "uid": "21410b50-9692-480d-b772-c21abbce7022",
+      "name": "Dryer Vent",
+      "custom": true
+    },
+    "accessory_power_mast": {
+      "uid": "fc9460e1-fd91-4cb7-96b7-efb5e76ca3dd",
+      "name": "Power Mast",
+      "custom": true
+    },
+    "accessory_versa_cap": {
+      "uid": "68c1571a-b6a7-4c09-98ee-b7d09f34d472",
+      "name": "Versa Cap",
+      "custom": true
+    },
+    "accessory_furnace_stack": {
+      "uid": "87ef7942-14a2-4ffb-907b-11d15271f76a",
+      "name": "Furnace Stack",
+      "custom": true
+    },
+    "accessory_satellite_dish": {
+      "uid": "affc7116-2435-455a-81b0-21f2130db751",
+      "name": "Satellite Dish",
+      "custom": true
+    },
+    "accessory_pipeboot_storm_collar": {
+      "uid": "f94a23f5-f2fa-4464-bd7f-ce15a471f0a1",
+      "name": "Pipeboot / Storm Collar",
+      "custom": true
+    },
+    "ct_shingles_squares": {
+      "uid": "fc3af594-4900-49f6-bf33-b97576aee01c",
+      "name": "CT Shingles (squares, waste)",
+      "custom": true
+    },
+    "ct_starter_shingles_bundles": {
+      "uid": "be281b5e-526a-423c-82e1-d3261d9ddb23",
+      "name": "CT Starter (bundles, round-up)",
+      "custom": true
+    },
+    "ct_ice_and_water_shield_rolls": {
+      "uid": "a7690fc2-19fa-4188-bafe-27caecf1fcc2",
+      "name": "CT Ice & Water (rolls, round-up)",
+      "custom": true
+    },
+    "ct_synthetic_underlayment_rolls": {
+      "uid": "9036b640-0bb9-42b6-b275-95c912a196c1",
+      "name": "CT Synthetic Underlayment (rolls, round-up)",
+      "custom": true
+    },
+    "ct_valley_metal_pieces": {
+      "uid": "1e2dc692-fe93-4b60-856b-2012a7a403a1",
+      "name": "CT Valley Metal (pieces, round-up)",
+      "custom": true
+    },
+    "starter_shingles_waste": {
+      "uid": "a545319e-2cc0-480b-9338-ab1a0a2097fb",
+      "name": "Starter Shingles (with waste)",
+      "custom": true
+    },
+    "nails_waste": {
+      "uid": "fcd7779b-d8f2-470e-ae6a-9ec1264cc328",
+      "name": "Roofing Nails",
+      "custom": true
+    },
+    "spray_paint": {
+      "uid": "42ae74f3-8f35-4e61-b9d4-e3b63e24c563",
+      "name": "Spray Paint",
+      "custom": true
+    },
+    "Ice Water barrier (Good)": {
+      "uid": "d89fc274-fd68-46b9-957c-d689d76efe99",
+      "name": "Ice Water barrier (Good)",
+      "custom": true
+    },
+    "Start strips (Good)": {
+      "uid": "14999da9-8fe5-4733-bcb1-18111b4f0136",
+      "name": "Start strips (Good)",
+      "custom": true
+    },
+    "Pipe Flashing": {
+      "uid": "85806fc1-1d49-443f-b91c-7d24f4cfe1a1",
+      "name": "Pipe Flashing",
+      "custom": true
+    },
+    "Step Flashing": {
+      "uid": "fac5af76-a432-40cc-ad82-0ea849a7666b",
+      "name": "Step Flashing",
+      "custom": true
+    },
+    "Ice Water barrier (Better & Best)": {
+      "uid": "2e7a0cec-fb98-4359-869e-3d4908d4ded1",
+      "name": "Ice Water barrier (Better & Best)",
+      "custom": true
+    },
+    "Start strips (Better & Best)": {
+      "uid": "3c124512-f682-4854-b61e-b6a3f99aeaf2",
+      "name": "Start strips (Better & Best)",
+      "custom": true
+    },
+    "Duraridge": {
+      "uid": "d07d05d5-36fa-4d64-8d48-8b96eea02922",
+      "name": "Duraridge",
+      "custom": true
+    },
+    "moss boss": {
+      "uid": "f736b139-6aa9-4a7d-b070-29d839043c30",
+      "name": "Moss boss",
+      "custom": true
+    },
+    "CT Shadow Ridge H&R Cap": {
+      "uid": "90654315-c3cf-44d8-b550-c56dcb7be907",
+      "name": "CT Shadow Ridge H&R Cap",
+      "custom": true
+    },
+    "CertainTeed Filtered Ridge Vent": {
+      "uid": "30b6d930-71c2-476b-bcf2-6bc3046279c8",
+      "name": "CertainTeed Filtered Ridge Vent",
+      "custom": true
+    },
+    "CT Swift Start Starter": {
+      "uid": "39b20845-74d2-4d20-be10-151ec2dcac6e",
+      "name": "CT Swift Start Starter",
+      "custom": true
+    },
+    "Steep Pitch 7/12 to 9/12": {
+      "uid": "fd98c96e-7808-46bc-aded-8bad694e65e3",
+      "name": "Steep Pitch 7/12 to 9/12",
+      "custom": true
+    },
+    "Skylights - Normal Size": {
+      "uid": "61b0ee8e-1cf8-4bb3-9b13-24b3aa7e672f",
+      "name": "Skylights - Normal Size",
+      "custom": true
+    },
+    "Install Sun Tunnel": {
+      "uid": "63e513c0-37ce-4932-81fa-6f227e688073",
+      "name": "Install Sun Tunnel",
+      "custom": true
+    },
+    "Cut In Ridge Vent - Labor": {
+      "uid": "d32d9a5f-34f2-492e-a4a8-4fac0664855a",
+      "name": "Cut In Ridge Vent - Labor",
+      "custom": true
+    },
+    "CertainTeed High Performance Starter Strip Shingles": {
+      "uid": "fa0ce76a-fe4f-46b6-ba4a-d4f50489f49f",
+      "name": "CertainTeed High Performance Starter Strip Shingles",
+      "custom": true
+    },
+    "CertainTeed Shangle Ridge Hip & Ridge Shingles": {
+      "uid": "dc26ba8f-10f9-4ad7-b75a-f6e757e81501",
+      "name": "CertainTeed Shangle Ridge Hip & Ridge Shingles",
+      "custom": true
+    },
+    "ice_water_shingles": {
+      "uid": "f9293c88-e10c-4f4a-83f7-76a7f4aef8ac",
+      "name": "Ice & Water Shingles",
+      "custom": true
+    },
+    "cap_shingles": {
+      "uid": "5ce29df2-243a-4db2-8b53-7dc57f618edd",
+      "name": "Cap Shingles",
+      "custom": true
+    },
+    "start_shingles": {
+      "uid": "963ca258-90b1-459f-b2c9-dd73f79e5465",
+      "name": "Starter Shingles",
+      "custom": true
+    },
+    "ridge_vent_shingles": {
+      "uid": "3b18beb7-f3b9-4965-b871-2c9e74690847",
+      "name": "Ridge Vent - Shingles",
+      "custom": true
+    },
+    "roof_anchors": {
+      "uid": "2ae00e06-c016-4117-a320-1c04ecc13ff4",
+      "name": "Roof Anchors",
+      "custom": true
+    },
+    "drip_edge_shingles": {
+      "uid": "34d66f96-3f48-4316-a4f9-91b0d21eccaa",
+      "name": "Drip Edge - Shingles",
+      "custom": true
+    },
+    "Slope_8-9": {
+      "uid": "35c6add4-126f-41e3-a76d-1a25cb848770",
+      "name": "Slope Increase 8-9/12",
+      "custom": true
+    },
+    "Slope_10-11": {
+      "uid": "5153f492-740b-419b-bdb9-96a0caf70eeb",
+      "name": "Slope Increase 10-11/12",
+      "custom": true
+    },
+    "Slope_12": {
+      "uid": "b9cea775-c941-4057-98c1-3220d39b5b0f",
+      "name": "Slope Increase 12/12",
+      "custom": true
+    },
+    "shingle_low_slope": {
+      "uid": "891998ae-f3d5-4ef1-b733-f027837a06ce",
+      "name": "Shingle Low Slope Upgrades",
+      "custom": true
+    },
+    "epdm": {
+      "uid": "ca74b6c4-1928-4cee-9733-7c06b10a1690",
+      "name": "EPDM",
+      "custom": true
+    },
+    "epdm_transitions": {
+      "uid": "108f7589-c46d-490f-9ce8-8d6be9762626",
+      "name": "EPDM Transition",
+      "custom": true
+    },
+    "epdm_eaves": {
+      "uid": "dc2f9c9b-0af3-4b6b-a78d-c45eb7c95907",
+      "name": "EPDM Eave Edging",
+      "custom": true
+    },
+    "epdm_rake": {
+      "uid": "4171e538-5075-40c8-ba9c-41e25a2b0649",
+      "name": "EPDM Rake Edging",
+      "custom": true
+    },
+    "russ": {
+      "uid": "9838e7ff-a7f7-44d7-abc7-4b30d4e5286b",
+      "name": "RUSS - LF",
+      "custom": true
+    },
+    "reset_siding_epdm": {
+      "uid": "a72e0246-814e-4a19-bef8-f95217c55dfa",
+      "name": "Reset Siding - EPDM",
+      "custom": true
+    },
+    "wood_nailer": {
+      "uid": "3a353327-89e4-4cd7-82b8-70c6e29a3c3e",
+      "name": "Wood Nailer",
+      "custom": true
+    },
+    "soffit": {
+      "uid": "f6fa36e8-5f8b-45e9-8d64-8dd87a226ebb",
+      "name": "Soffit 1 FT Depth",
+      "custom": true
+    },
+    "sealants": {
+      "uid": "e2f4204f-c9d5-4f4c-97be-4490a8473c61",
+      "name": "Sealants",
+      "custom": true
+    },
+    "plastic_cap_nails": {
+      "uid": "177c7d8e-0486-4a1a-a8a4-56bf107ca993",
+      "name": "Plastic Cap Nais",
+      "custom": true
+    },
+    "Hip & Ridge": {
+      "uid": "562f643c-8f40-4d41-8441-b550c0dcd421",
+      "name": "Hip & Ridge",
+      "custom": true
+    },
+    "Ice & Water(Good & Better)": {
+      "uid": "be5d0aa3-970c-45ba-b0ca-954470c6392b",
+      "name": "Ice & Water(Good & Better)",
+      "custom": true
+    },
+    "Pipe Boots": {
+      "uid": "d4775af5-0835-437d-b8a7-8e49c99860ab",
+      "name": "Pipe Boots",
+      "custom": true
+    },
+    "Box vent": {
+      "uid": "3d38a679-6afd-4951-a92d-e064c9776746",
+      "name": "Box vent",
+      "custom": true
+    },
+    "Kitchen Vent": {
+      "uid": "9bdc9caa-db3c-4189-8521-c21e66920a9a",
+      "name": "Kitchen Vent",
+      "custom": true
+    },
+    "Bath Vent": {
+      "uid": "4ff444e2-a622-4266-a52e-8ddd1e424b3e",
+      "name": "Bath Vent",
+      "custom": true
+    },
+    "Drip Edge": {
+      "uid": "385e0568-7d0a-4942-8f03-0b8aba58a587",
+      "name": "Drip Edge",
+      "custom": true
+    },
+    "Hip & Ridge Leading edge": {
+      "uid": "3ce300a5-7abe-44d6-8386-72ec3f6c86c8",
+      "name": "Hip & Ridge Leading edge",
+      "custom": true
+    }
+  },
+  "cats": {
+    "Metal Roofing": "c2f36064-d479-42c9-a8d8-765f866b3d63",
+    "Roofing Materials": "112945ab-1546-4baa-94e2-ce4fcd484edd",
+    "Gutter Materials": "a8bf6cac-376e-4191-b41c-e519c9b4b815",
+    "Siding Materials": "ab26e2db-774c-4f5d-b436-25ab0f5d2ecf",
+    "Window Materials": "5bfe19c3-f621-43b3-bd6f-2501a74c9750",
+    "Roof": "ab50670f-a5ce-4e14-812a-910c895c660c",
+    "Lumber": "291191d2-b055-42ef-b93f-ec2f981795f7",
+    "Fastner": "4dd6ace1-d65e-4b69-a7f5-fdda16fe0a0f",
+    "Other": "63890629-b82e-43c5-a011-73159d923b6b",
+    "Roof Accessory": "1e7f7324-b129-47a8-8af2-5411e1674d69",
+    "Shingle": "360e5271-7d8c-4267-93be-2d526cf3ea95",
+    "W-Valley": "a65a111a-64f3-4563-b3e5-249a2de3e59f",
+    "Other Flashing Metal": "267600a3-876f-4da3-bc94-6b1cb2a0212d",
+    "Gutter, Aluminum & Coil": "a1a9ca23-a138-4cba-8ad5-16085c43c85c",
+    "Shingles": "ff62617a-7195-49c2-9164-07c50065d280",
+    "Vents": "ddb6a35a-dc2a-43e1-a80e-49985149f7bd",
+    "Drip Edge": "e5e259f2-66cc-4ec9-8c56-d4856f255e34",
+    "Gutter Apron": "012e60ae-3e67-4056-bc29-5a45e7f226f3",
+    "Pipe Flashing": "e0c1bd26-97d0-4346-9f78-b1fe790aa134",
+    "Other Fasteners": "43fe1755-71f3-4299-9de5-1a8e8306a1b6",
+    "Underlayment": "2ad7f7be-6fda-4b9a-8c35-eaf83628d238",
+    "Coil Nails": "d53bacea-bfcf-4a40-8205-1933989fad4c",
+    "Caulk": "c537f9e6-05ac-4730-bc5e-4af89cc24022",
+    "Plastic Caps": "b05f0cc9-dfab-4372-b547-5ffebec3ae66",
+    "Spray Paint": "ffb0d48a-bf3e-4486-a0e4-713abf358c33",
+    "Hip & Ridge": "11b8be61-add3-4ba5-ad7e-3b70e994b45a",
+    "Ice & Water": "e2993ea3-e09d-4c1b-a667-5b01cd8acaf9",
+    "Roofing Services": "6d318e41-0a4b-42d6-8355-d2fef35e7fa6",
+    "Ventilation": "57d1eb0b-cbdd-4db2-b6ea-cc92dcc48bc5",
+    "Flashing": "a8f26461-2833-4f67-aedc-34e1b5034723",
+    "Accessories": "618970ad-55ac-4193-befc-a4f7a8fea32f",
+    "Standing Seam - Labor": "e9bee624-58ac-452b-a755-462ce294367d",
+    "Metal Panel - Labor": "639debd6-f6db-41db-ad78-20fd93495ab5",
+    "Metal Panel - Products": "8bda0685-c29b-4a71-b2a2-026153790c35",
+    "Standing Seam - Products": "86b3b4b5-697e-4b99-97f4-2ca3a8179443",
+    "Metal Panel - Fasteners": "b616ce32-2277-454b-becd-dbd2e3a6392e",
+    "Metal - Misc": "29f70443-76e3-487b-bb11-1bd664a3e4cd",
+    "Standing Seam Metal": "bb949179-a7c2-42ed-b43e-161724752f7f",
+    "Metal Panel - Flashings": "0e6b2d8f-191d-44b1-814a-a51e3c010a5d",
+    "Metal Panel - Chimneys": "cc6676a5-d173-48db-a313-b27244081f6e",
+    "Metal Panel - Snow Guards": "5b6a3065-9c39-49ac-82bc-8759ec71d617",
+    "Metal - Pipe Boots": "48dc5005-2a19-4ef8-9a00-fe66899d9f7c",
+    "Metal Panel - Lumber": "aa005e4a-ea32-449e-b005-2bb1fdb3953d",
+    "Metal Panel - Metal": "bb73e7c8-4e46-48ce-8a13-955e9620dd20",
+    "Exposed Fastener Metal": "0316eb76-8e98-4fbe-b8be-f0ed7d76cdff",
+    "Roof Labor": "86875a90-47ef-4b7a-ad75-d14d7227fa0e",
+    "Shingles SHI": "ba2c1fbc-8d97-4a12-8da0-10c33b3a0a99",
+    "Parts": "de4876f2-72f1-44e2-88ea-622a39c85dd9",
+    "Underlayments UND": "b3df1b07-36f7-444c-8382-7c3ad52f6f95",
+    "Ice & Water Barrier": "e348f181-695b-4cf4-98da-09ec80325399",
+    "Fasteners": "295d52ad-2a25-4759-afc8-bc14985533dd",
+    "Pipe Jack": "e1ef840d-c6a2-4024-a50f-cf1fea67265f",
+    "Roof Warranty": "4256299a-e231-4c11-82fa-f24efba54d74",
+    "Ridge Vent": "48f45685-612c-4d5e-85cd-6cb30b450724",
+    "Hip & Ridge Shingle": "456ba49a-1b0d-4638-b0cf-cc6f90a93716",
+    "Services": "dd2eec1b-8442-4f74-b8a8-07ba1461e3e8",
+    "Roofing Labor": "0c68d887-3e2b-48cf-8088-d1b6ccb4da75",
+    "Material and Labor": "0e464360-7356-42ea-b2f1-da186b7a37d4",
+    "Cap Shingles": "fc496994-e09e-4ecd-94fb-a09d04717754",
+    "Siding": "33fafc83-972d-4b11-b348-d917561f8732",
+    "EPDM": "7ba20317-5156-471e-8eff-9d7cbe6905e4",
+    "Soffit & Fascia": "877e2237-0b1e-43f6-9371-13c7f0c64b91",
+    "Skylights": "76fcee65-edb5-4d67-9097-652f047f805c",
+    "Warranties": "95137bda-90a5-4e52-b7ea-ac4330bef7d7",
+    "Chimneys": "71829d00-d011-48c5-a7bb-f6457bac52e7",
+    "HIP AND RIDGE": "ddf4eb3f-ac25-4564-9b26-78ed63c0354e",
+    "STARTER": "d3026bc2-c9d9-44dc-9c7d-babcfad62d20",
+    "ICE AND WATER": "e13f33b9-6774-4381-9ac0-12fe19a16ae7"
+  },
+  "existingOc": {
+    "672": null,
+    "676": null,
+    "684": null,
+    "685": null,
+    "686": null,
+    "75674": null,
+    "79663": null,
+    "96906": null,
+    "133782": null,
+    "133784": null
+  },
+  "locations": [
+    {
+      "location_uid": "b94326f2-e3a6-41cf-bac8-87d1540883ca",
+      "location_name": "Warehouse",
+      "location_type": "WAREHOUSE",
+      "location_description": "",
+      "location_address": {
+        "city": "New York",
+        "state": "New York",
+        "street": "123 William Street",
+        "country": "United States",
+        "zip_code": "10038",
+        "geo_cordinates": [
+          40.7091546,
+          -74.0069774
+        ]
+      },
+      "location_access": "ALL",
+      "allowed_users": [],
+      "allowed_teams": [],
+      "display_order": 1,
+      "is_deleted": false,
+      "created_by": {
+        "user_uid": "e8531c9d-59a9-47df-a3e8-6efda47a4fdb",
+        "first_name": "Golden",
+        "last_name": "Roofer",
+        "email": "dilith@zuper.co",
+        "external_login_id": null,
+        "home_phone_number": null,
+        "designation": "Admin",
+        "emp_code": "Z003",
+        "prefix": null,
+        "work_phone_number": "123",
+        "mobile_phone_number": null,
+        "profile_picture": null,
+        "hourly_labor_charge": null,
+        "is_active": true,
+        "is_deleted": false,
+        "created_at": "2026-03-10T10:13:50.000Z",
+        "updated_at": "2026-06-24T15:39:09.000Z",
+        "last_login_at": "2026-06-24T15:39:19.000Z"
+      },
+      "id": "undefined"
+    }
+  ],
+  "layouts": [
+    {
+      "layout_config": {
+        "font_style": "Inter",
+        "background_image": "",
+        "company_logo": "https://s3.ap-south-1.amazonaws.com/production.in.pro.zuper/logo/fa75c952-7101-478a-9f48-f79b0d753f00.png"
+      },
+      "layout_constraints": {
+        "pick_from_gallery": true,
+        "job_checklist": true
+      },
+      "is_active": true,
+      "is_deleted": false,
+      "layout_pages": [
+        {
+          "page_uid": "74030522-759d-47c4-9ea5-ac8e4f958225",
+          "page_title": "Cover Page",
+          "display_order": 1,
+          "is_enabled": true,
+          "page_type": "COVER",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "9bbf6b41-ef5b-4f5d-be38-edbb91fc1553",
+          "page_title": "About Us",
+          "display_order": 2,
+          "is_enabled": true,
+          "page_type": "TEXT_EDITOR",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "caf385e7-3c8f-4f2b-a390-9313ded2cab3",
+          "page_title": "Scope of Work",
+          "display_order": 3,
+          "is_enabled": true,
+          "page_type": "TEXT_EDITOR",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "a555b81b-d8b5-4a6e-b7a6-fb0f7067368d",
+          "page_title": "Term & Conditions",
+          "display_order": 4,
+          "is_enabled": true,
+          "page_type": "TEXT_EDITOR",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "6e76ada8-8678-44bb-8ed7-a7216ccb534b",
+          "page_title": "Estimate Options",
+          "display_order": 5,
+          "is_enabled": true,
+          "page_type": "PROPOSAL_OPTIONS",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "daec90ed-36c6-4ab2-981a-232c989e8e93",
+          "page_title": "Signature",
+          "display_order": 6,
+          "is_enabled": true,
+          "page_type": "SIGNATURE",
+          "is_default": true,
+          "is_locked": false
+        }
+      ],
+      "created_at": "2026-03-10T10:17:38.619Z",
+      "updated_at": "2026-05-29T19:13:18.585Z",
+      "layout_uid": "7c75a34a-ad78-439a-b68a-56928856dc2a",
+      "created_by": {
+        "user_uid": "e8531c9d-59a9-47df-a3e8-6efda47a4fdb",
+        "first_name": "Golden",
+        "last_name": "Roofer",
+        "email": "dilith@zuper.co",
+        "external_login_id": null,
+        "home_phone_number": null,
+        "designation": "Admin",
+        "emp_code": "Z003",
+        "prefix": null,
+        "work_phone_number": "123",
+        "mobile_phone_number": null,
+        "profile_picture": null,
+        "hourly_labor_charge": null,
+        "is_active": true,
+        "is_deleted": false,
+        "created_at": "2026-03-10T10:13:50.000Z",
+        "updated_at": "2026-06-24T15:39:09.000Z",
+        "last_login_at": "2026-06-24T15:39:19.000Z",
+        "role": {
+          "role_uid": "81479813-ead7-4074-a1b3-58dfc6ebe2d9",
+          "role_name": "Admin",
+          "role_key": "ADMIN"
+        }
+      },
+      "layout_name": "Residential Roofing Proposal",
+      "display_order": 1
+    },
+    {
+      "layout_config": {
+        "font_style": "Inter",
+        "font_color": null,
+        "background_image": null,
+        "company_logo": "https://s3.ap-south-1.amazonaws.com/production.in.pro.zuper/logo/fa75c952-7101-478a-9f48-f79b0d753f00.png"
+      },
+      "layout_constraints": {
+        "pick_from_gallery": true,
+        "job_checklist": true
+      },
+      "is_active": true,
+      "is_deleted": false,
+      "layout_pages": [
+        {
+          "page_uid": "a8c40106-9a13-4ad6-9247-c8ea0c7b61df",
+          "page_title": "Cover Page",
+          "display_order": 1,
+          "is_enabled": true,
+          "page_type": "COVER",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "a07aa72d-c9e4-44d7-b538-4443fcd2aacd",
+          "page_title": "About Us",
+          "display_order": 2,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "db1cb6a1-379c-4f58-9a9b-5a7c5b3ac76b",
+          "page_title": "Scope of Work",
+          "display_order": 3,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "e6366eec-d825-47e4-a476-ebd88513f708",
+          "page_title": "Estimate Options",
+          "display_order": 4,
+          "is_enabled": true,
+          "page_type": "PROPOSAL_OPTIONS",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "f00ddb34-c8ff-4792-b32e-7606f85d560a",
+          "page_title": "Term & Conditions",
+          "display_order": 5,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "069c4466-5a02-40dd-a64b-d951218410c7",
+          "page_title": "Signature",
+          "display_order": 6,
+          "is_enabled": true,
+          "page_type": "SIGNATURE",
+          "is_default": true,
+          "is_locked": false
+        }
+      ],
+      "created_at": "2026-06-12T13:24:27.822Z",
+      "updated_at": "2026-06-12T13:24:27.854Z",
+      "business_unit": [],
+      "layout_uid": "eaf2fe7a-b986-4653-9d5c-eb6645dae479",
+      "created_by": {
+        "user_uid": "86db88bf-0ca4-4fc8-b611-8648ca3f0289",
+        "first_name": "Andrea",
+        "last_name": "William",
+        "email": "backoffice@zuper.co",
+        "external_login_id": "",
+        "home_phone_number": "",
+        "designation": "Back Office Admin",
+        "emp_code": "R005",
+        "prefix": "",
+        "work_phone_number": "",
+        "mobile_phone_number": "",
+        "profile_picture": "https://s3.ap-south-1.amazonaws.com/prod.app.zuperpro/assets/profile_picture.jpg",
+        "hourly_labor_charge": null,
+        "is_active": true,
+        "is_deleted": false,
+        "created_at": "2026-05-14T16:42:59.000Z",
+        "updated_at": "2026-05-14T16:42:59.000Z",
+        "last_login_at": null,
+        "role": {
+          "role_uid": "81479813-ead7-4074-a1b3-58dfc6ebe2d9",
+          "role_name": "Admin",
+          "role_key": "ADMIN"
+        }
+      },
+      "layout_name": "Test",
+      "display_order": 2
+    },
+    {
+      "layout_config": {
+        "font_style": "Inter",
+        "font_color": null,
+        "background_image": null,
+        "company_logo": "https://s3.ap-south-1.amazonaws.com/production.in.pro.zuper/logo/fa75c952-7101-478a-9f48-f79b0d753f00.png"
+      },
+      "layout_constraints": {
+        "pick_from_gallery": true,
+        "job_checklist": true
+      },
+      "is_active": true,
+      "is_deleted": false,
+      "layout_pages": [
+        {
+          "page_uid": "7a7619ec-3433-4b21-95aa-89341c6a2ac2",
+          "page_title": "Cover Page",
+          "display_order": 1,
+          "is_enabled": true,
+          "page_type": "COVER",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "30cb4bb9-b6a9-46ab-8ac1-cd93848c5c6d",
+          "page_title": "About Us",
+          "display_order": 2,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "61a99104-294a-43b2-9325-10587bbe1222",
+          "page_title": "Scope of Work",
+          "display_order": 3,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "af8a98dc-ff5a-410f-bf57-2f13c6075588",
+          "page_title": "Estimate Options",
+          "display_order": 4,
+          "is_enabled": true,
+          "page_type": "PROPOSAL_OPTIONS",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "3c60417b-4d4f-4a9c-9bb5-746bb4394d5c",
+          "page_title": "Term & Conditions",
+          "display_order": 5,
+          "is_enabled": true,
+          "page_type": "PDF",
+          "is_default": true,
+          "is_locked": false
+        },
+        {
+          "page_uid": "07074b17-a494-4bae-a615-d996a0596cc9",
+          "page_title": "Signature",
+          "display_order": 6,
+          "is_enabled": true,
+          "page_type": "SIGNATURE",
+          "is_default": true,
+          "is_locked": false
+        }
+      ],
+      "created_at": "2026-06-25T10:28:18.260Z",
+      "updated_at": "2026-06-25T11:14:49.134Z",
+      "business_unit": [
+        {
+          "bu_uid": "9085be88-bd93-4f95-91e4-da959193c652",
+          "bu_name": "Roofing"
+        }
+      ],
+      "layout_uid": "5ffbb1e5-c5e7-457b-97b0-b7cadb47fdf8",
+      "created_by": {
+        "user_uid": "e8531c9d-59a9-47df-a3e8-6efda47a4fdb",
+        "first_name": "Golden",
+        "last_name": "Roofer",
+        "email": "dilith@zuper.co",
+        "external_login_id": null,
+        "home_phone_number": null,
+        "designation": "Admin",
+        "emp_code": "Z003",
+        "prefix": null,
+        "work_phone_number": "123",
+        "mobile_phone_number": null,
+        "profile_picture": null,
+        "hourly_labor_charge": null,
+        "is_active": true,
+        "is_deleted": false,
+        "created_at": "2026-03-10T10:13:50.000Z",
+        "updated_at": "2026-06-24T15:39:09.000Z",
+        "last_login_at": "2026-06-24T15:39:19.000Z",
+        "role": {
+          "role_uid": "81479813-ead7-4074-a1b3-58dfc6ebe2d9",
+          "role_name": "Admin",
+          "role_key": "ADMIN"
+        }
+      },
+      "layout_name": "test",
+      "display_order": 3
+    }
+  ]
+}

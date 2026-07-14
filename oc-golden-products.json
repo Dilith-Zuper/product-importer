@@ -1,0 +1,115 @@
+{
+  "672": {
+    "product_uid": "28306fcf-961f-4946-84c1-269556525155",
+    "name": "Owens Corning ProEdge AR Hip & Ridge",
+    "reused": true,
+    "tiers": [
+      "Good",
+      "Better"
+    ],
+    "cat": "11b8be61-add3-4ba5-ad7e-3b70e994b45a",
+    "f": "5b2f8876-4cf4-4eb0-ad54-10c4abc9d601"
+  },
+  "675": {
+    "product_uid": "8a70ba78-6b5e-4165-8cbe-a07daf7b60f7",
+    "name": "Owens Corning Woodmoor Shingles",
+    "reused": true,
+    "tiers": [
+      "Best"
+    ],
+    "cat": "ff62617a-7195-49c2-9164-07c50065d280",
+    "f": "fc3af594-4900-49f6-bf33-b97576aee01c"
+  },
+  "676": {
+    "product_uid": "c596e5f1-7659-418f-a474-2fa70d851181",
+    "name": "Owens Corning VentSure Ridge Vent",
+    "reused": true,
+    "tiers": [
+      "all"
+    ],
+    "cat": "ddb6a35a-dc2a-43e1-a80e-49985149f7bd",
+    "f": "1a854eb8-90dc-40bf-8539-5060449f811e"
+  },
+  "684": {
+    "product_uid": "ae49cdf1-bd57-4004-9000-52c833f03596",
+    "name": "Owens Corning WeatherLock Flex Ice & Water Barrier",
+    "reused": true,
+    "tiers": [
+      "all"
+    ],
+    "cat": "e2993ea3-e09d-4c1b-a667-5b01cd8acaf9",
+    "f": "a7690fc2-19fa-4188-bafe-27caecf1fcc2"
+  },
+  "685": {
+    "product_uid": "26c74291-a092-41b6-a1ea-b80a2237565f",
+    "name": "Owens Corning Berkshire Hip & Ridge",
+    "reused": true,
+    "tiers": [
+      "Best"
+    ],
+    "cat": "11b8be61-add3-4ba5-ad7e-3b70e994b45a",
+    "f": "5b2f8876-4cf4-4eb0-ad54-10c4abc9d601"
+  },
+  "686": {
+    "product_uid": "c75a00f5-1c0f-45cb-848b-6d67c39dcc22",
+    "name": "Owens Corning Starter Strip",
+    "reused": true,
+    "tiers": [
+      "Good",
+      "Better"
+    ],
+    "cat": "112945ab-1546-4baa-94e2-ce4fcd484edd",
+    "f": "be281b5e-526a-423c-82e1-d3261d9ddb23"
+  },
+  "688": {
+    "product_uid": "58acc07d-c6d8-4525-872f-ad43eedc88d7",
+    "name": "Owens Corning Oakridge Shingles",
+    "reused": true,
+    "tiers": [
+      "Good"
+    ],
+    "cat": "ff62617a-7195-49c2-9164-07c50065d280",
+    "f": "fc3af594-4900-49f6-bf33-b97576aee01c"
+  },
+  "75674": {
+    "product_uid": "e925cb86-8768-4203-92c9-2f4ec5f96018",
+    "name": "Owens Corning RhinoRoof U20 Synthetic Underlayment",
+    "reused": true,
+    "tiers": [
+      "Good",
+      "Better"
+    ],
+    "cat": "2ad7f7be-6fda-4b9a-8c35-eaf83628d238",
+    "f": "9036b640-0bb9-42b6-b275-95c912a196c1"
+  },
+  "75933": {
+    "product_uid": "a82abb6b-1870-488f-b687-74965e36055e",
+    "name": "Owens Corning TruDefinition Duration Shingles",
+    "reused": true,
+    "tiers": [
+      "Better"
+    ],
+    "cat": "ff62617a-7195-49c2-9164-07c50065d280",
+    "f": "fc3af594-4900-49f6-bf33-b97576aee01c"
+  },
+  "79663": {
+    "product_uid": "dbfff9e1-9cd3-4e76-8717-f3ee90994a38",
+    "name": "Owens Corning Titanium UDL30 Synthetic Underlayment",
+    "reused": true,
+    "tiers": [
+      "Best"
+    ],
+    "cat": "2ad7f7be-6fda-4b9a-8c35-eaf83628d238",
+    "f": "9036b640-0bb9-42b6-b275-95c912a196c1"
+  },
+  "133782": {
+    "product_uid": "f544ba03-32f8-4a1c-8cb8-495c8dfd42a6",
+    "name": "Owens Corning WoodStart Starter",
+    "reused": true,
+    "tiers": [
+      "Best"
+    ],
+    "cat": "112945ab-1546-4baa-94e2-ce4fcd484edd",
+    "f": "be281b5e-526a-423c-82e1-d3261d9ddb23"
+  }
+}

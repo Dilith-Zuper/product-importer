@@ -1,0 +1,36 @@
+{
+  "templateUid": "df3430b4-c63c-4aab-a968-15f5a0649d23",
+  "options": [
+    {
+      "option_name": "Good",
+      "option_image": "",
+      "option_description": "Owens Corning Oakridge Package",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "c09c74ec-73a8-4ee8-b943-8d964f97013d",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Better",
+      "option_image": "",
+      "option_description": "Owens Corning Duration Package",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "e99a1661-bd38-47f8-ab8f-5b72ad422a34",
+      "option_group_uid": null
+    },
+    {
+      "option_name": "Best",
+      "option_image": "",
+      "option_description": "Owens Corning Woodmoor Luxury Package",
+      "is_recommended": false,
+      "promo": "",
+      "option_uid": "7f3c989f-6b20-4e8f-aa10-35ee473fbe9b",
+      "option_group_uid": null
+    }
+  ],
+  "catUid": "96b23fdd-ff1f-4e74-bbb2-f397bde60fa4",
+  "statusUid": "590cae00-48ed-441c-829f-fb07d008b8e8",
+  "layoutUid": "7c75a34a-ad78-439a-b68a-56928856dc2a",
+  "published": true
+}
