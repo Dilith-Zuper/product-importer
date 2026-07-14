@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+- PROJECT_CONTEXT.md: new S0 current-state section (golden-template track, STX/IKO/ABC-QXO work since 2026-06-05, branch + uncommitted-work inventory, canonical-scripts move to the dilith skill).
+
 ### Added
 - `export-atlas-vendor-catalogs.js` — exports the **Atlas** brand catalog from the **ABC** and **QXO** vendor tables into two Excel files in `brandwise catalog/`, matching the SRS brandwise format (`export-brandwise.js` — same 14-column contract, navy frozen header, alternating rows, autofilter). **ABC** (`Atlas Catalog - ABC.xlsx`, 108 products) reads the family-level `abc_products` view + `abc_variants` (`manufacturer_norm='Atlas'`); mapped SRS 23-category taxonomy (COMMERCIAL 59, SHINGLES 14, UNDERLAYMENT 12, VENTS 9, HIP&RIDGE 5, STARTER 4, ICE&WATER 3, +2). **QXO** (`Atlas Catalog - QXO.xlsx`, 379 products) reads `qxo_products` + `qxo_variants` (`brand_norm='Atlas'`); keeps QXO's own raw category taxonomy (Polyiso 157, EPS 45, Insulation materials 31, …) since QXO isn't normalized to the SRS 23. Per-vendor variant shape handled: ABC `uoms` is an array of `{code,name,description}` objects (extract `.code`); QXO has no single size column so sizes are composed from `size_thickness`/`size_width`/`size_length`, colors from `color`/`color_family`, and SKUs from `manufacturer_number`→`product_number`→`variant_sku`. Idempotent, read-only against Supabase.
 

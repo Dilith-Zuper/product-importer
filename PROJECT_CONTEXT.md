@@ -1,6 +1,39 @@
 # SRS Product Importer — Full Project Context
 
-> **Purpose of this file:** Complete handoff document. Any AI model or developer can read this and continue the project from where it left off. Written: 2026-05-01.
+> **Purpose of this file:** Complete handoff document. Any AI model or developer can read this and continue the project from where it left off. Written: 2026-05-01. Last updated: 2026-07-13 — read §0 first for where things actually stand.
+
+---
+
+## 0. Current state & in-flight work (as of 2026-07-13)
+
+**⚠️ You are on branch `iko-pro4-fisher-roofing`, 2 commits ahead of `main`, not merged:**
+- `0d62f9d` — IKO Pro4 catalog + G/B/B template build for Fisher Roofing (customer-specific)
+- `9882e63` — Atlas ABC + QXO vendor catalog exporter
+
+**⚠️ Untracked, uncommitted work — the OC golden template build (2026-07-01):** `OC_GOLDEN_TEMPLATE.md`, `build-oc-golden.js`, `oc-golden-{probe,products,template-result}.json`, source export `trust_roofing_cpq_json OC`, plus scratch (`export-high-option-products.js`, an invoice PDF). The template itself **is built and published** in the golden account (`template_uid df3430b4-c63c-4aab-a968-15f5a0649d23`) — only the files aren't committed. **First actions on resuming: commit the OC golden work, then merge/PR the branch to `main`.**
+
+### The golden-template track (newest workstream, June–July 2026)
+
+Reference G/B/B CPQ templates built in the **golden account**, one per Big-3 brand, each documented in a `*_GOLDEN_TEMPLATE.md` blueprint at repo root with its build script and result JSONs:
+
+| Brand | Doc | Built | Template UID |
+|---|---|---|---|
+| GAF | `GAF_GOLDEN_TEMPLATE.md` | 2026-06-29 | `858f618d-b9a6-41fb-8347-90f2f4b5e44c` |
+| CertainTeed | `CERTAINTEED_GOLDEN_TEMPLATE.md` | (see doc) | see `certainteed-golden-template` branch history |
+| Owens Corning | `OC_GOLDEN_TEMPLATE.md` (uncommitted) | 2026-07-01 | `df3430b4-c63c-4aab-a968-15f5a0649d23` |
+
+Shared rules learned: source-account UIDs never port (recreate against the golden account's own products/formulas/measurements); lean **material G/B/B only** with a true 3-shingle ladder per tier, not full 15-option customer ports; warranties/labor are account-created rows, not SRS parts.
+
+### Other work landed since the 2026-06-05 update (sections below may not reflect these)
+
+- **STX Roofing account engagement** (merged PR #2): SRS option backfill + "srs catalog" tagging, rename-to-SRS with Legacy Part Name preserved, SRS-DB re-match after rename, coil-nail sizes sourced from SRS for specific part numbers.
+- **IKO Pro4 + Fisher Roofing** (on the current branch): IKO catalog ingested + customer G/B/B template build.
+- **ABC + QXO vendor catalog exporter** (on the current branch): exports Atlas ABC / QXO per-SKU vendor catalogs.
+- **ABC pipeline**: see `ABC-RUNBOOK.md` — key rule: `abc_products` is a **materialized view** over `abc_items` and does not auto-refresh after ingest.
+
+### Where the canonical scripts live now
+
+The account-ops scripts (`audit-account-options`, `backfill-account-options`, `update-vendor-catalog`, `export-zuper-products`, `match-account-to-srs`, `create-cpq-tokens`, `srs-query`, `build-cpq`) were copied into the **`../dilith` Claude Code skill repo, which is now the canonical home** — fix bugs there, not here. The `enrich-*` pipeline scripts (which mutate the shared Supabase) remain canonical **here**.
 
 ---
 
@@ -949,4 +982,4 @@ The vendor catalog step (Step 9 Vendor) creates an SRS Distribution vendor in Zu
 - Cleanup wizard — CSM tool to delete all products from a prior import in one click
 - `exclude_default` and `is_private_label` flags on `srs_products` — not yet populated, reserved for future rule engine
 
-*End of context file. Last updated: 2026-06-05 (v5 — ABC/QXO proposal product_id key-space gotcha + `resolveZuperProduct` fallback documented in §17; source-suffixed template names; note that create-proposals isn't re-run idempotent. Prior v4 — Select-all brand toggle on Gutters/Siding, dual back-nav on Preview, SRS→Zuper category-name sanitizer for slash-rejection 400s, validate route product-id fetch chunked into 500-batch groups, validate catch block hardened, ChecklistItem detail wraps on failure).*
+*End of context file. Last updated: 2026-07-13 (v6 — added §0 current-state/in-flight summary: golden-template track (GAF/CT/OC), STX engagement, IKO Pro4/Fisher Roofing, ABC+QXO vendor exporter, unmerged branch + uncommitted OC files, canonical-scripts move to the `dilith` skill). Prior v5 2026-06-05 — ABC/QXO proposal product_id key-space gotcha + `resolveZuperProduct` fallback documented in §17; source-suffixed template names; note that create-proposals isn't re-run idempotent. Prior v4 — Select-all brand toggle on Gutters/Siding, dual back-nav on Preview, SRS→Zuper category-name sanitizer for slash-rejection 400s, validate route product-id fetch chunked into 500-batch groups, validate catch block hardened, ChecklistItem detail wraps on failure).*
